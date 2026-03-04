@@ -1,0 +1,145 @@
+sources:
+  censos:
+    url_dropbox: https://www.dropbox.com/scl/fo/2jlvpqfz5ouve5mpatqq4/AFmA5P8JnYceWLnFBLRufUw?rlkey=xic69w0jg3kvq03sj44qn13e3&st=75w1wibl&dl=0
+    url_ine: https://censo2024.ine.gob.cl/resultados/
+    tables:
+      - name: hogares
+        dictionary_url_pdf: xxx
+        survey_dictionary_path: models/staging/censo_2024/docs/survey_dictionary_hogares.json
+        path: seeds/ine/hogares_censo2024.parquet
+      - name: viviendas
+        path: seeds/ine/viviendas_censo2024.parquet
+      - name: personas
+        path: seeds/ine/personas_censo2024.parquet
+        path_sample: seeds/censo_2024/Censo_2024-Personas/data/personas_censo2024_100k.csv
+        description: "tabla anivel de personas 100k filas sample"
+        survey_dictionary_path: "models/staging/censo_2024/docs/survey_dictionary_personas.json"
+        documentation_path: seeds/censo_2024/Diccionarios-y-Codigos/Censo2024-Diccionario_Codigos-PERSONAS.pdf
+        url: https://www.dropbox.com/scl/fi/qj2i9qsufyas67t36p2kw/personas_censo2024_100k.csv?rlkey=hfldahfjydvcocs67zgsnae3z&st=cpweiwnh&dl=0
+        columns:
+          - name: id_vivienda
+            description: "Llave identificadora de la vivienda o de la entrevista"
+          - name: id_hogar
+            description: "Llave identificadora de hogar"
+          - name: id_persona
+            description: "Llave identificadora de persona"
+          - name: region
+            description: "Región"
+          - name: provincia
+            description: "Provincia"
+          - name: comuna
+            description: "Comuna"
+          - name: comuna_bajo_umbral
+            description: "Comuna con menos de 6.000 personas censadas"
+          - name: area
+            description: "Área urbana o rural"
+          - name: tipo_operativo
+            description: "Tipo de operativo"
+          - name: sexo
+            description: "20. ¿Cuál es su sexo?"
+          - name: edad
+            description: "21. ¿Cuántos años cumplidos tiene?"
+          - name: edad_quinquenal
+            description: "Edad en quinquenios"
+          - name: parentesco
+            description: "19. ¿Qué relación de parentesco tiene con la jefa o jefe de hogar?"
+          - name: p23_est_civil
+            description: "23. ¿Cuál es su estado conyugal o civil actual?"
+          - name: p24_lug_resid5
+            description: "24. ¿En qué comuna o país vivía en abril de 2019?"
+          - name: p24_lug_resid5_esp
+            description: "Lugar específico de residencia hace 5 años"
+          - name: p25_lug_nacimiento
+            description: "25. ¿Cuándo nació, ¿en qué comuna o país vivía su madre?"
+          - name: p25_lug_nacimiento_rec
+            description: "Nació en Chile"
+          - name: p25_lug_nacimiento_esp
+            description: "Lugar específico de nacimiento"
+          - name: p26_llegada_periodo
+            description: "26. ¿En qué año llegó a vivir a Chile?"
+          - name: p27_nacionalidad
+            description: "27. ¿Cuál es su nacionalidad?"
+          - name: p27_nacionalidad_esp
+            description: "País de nacionalidad"
+          - name: p27_nacionalidad_rec
+            description: "Nacionalidad chilena"
+          - name: p28_autoid_pueblo
+            description: "28. ¿Es o se considera perteneciente a algún pueblo indígena u originario?"
+          - name: p28_pueblo_pert
+            description: "28. ¿A cuál?"
+          - name: p29_afrodescendencia
+            description: "29. De acuerdo con sus antepasados, tradiciones y cultura, es o se considera:"
+          - name: p29_afrodescendencia_rec
+            description: "Afrodescendencia"
+          - name: p30_lengua_indigena
+            description: "30. ¿Habla o entiende una de las siguientes lenguas indígenas u originarias?"
+          - name: p30_lengua_indigena_rec
+            description: "Habla o entiende alguna lengua originaria"
+          - name: p31_religion
+            description: "31. ¿Cuál es su religión o credo?"
+          - name: p31_religion_rec
+            description: "Tiene religión o credo"
+          - name: p32a_dificultad_ver
+            description: "32. ¿Tiene dificultad para ver, aun usando anteojos o lentes?"
+          - name: p32b_dificultad_oir
+            description: "32. ¿Tiene dificultad para oír, aun usando un dispositivo auditivo?"
+          - name: p32c_dificultad_mover
+            description: "32. ¿Tiene dificultad para caminar o subir escaleras?"
+          - name: p32d_dificultad_cogni
+            description: "32. ¿Tiene dificultad para recordar o concentrarse?"
+          - name: p32e_dificultad_cuidado
+            description: "32. ¿Tiene dificultad para realizar tareas de cuidado personal, como bañarse o vestirse?"
+          - name: p32f_dificultad_comunic
+            description: "32. ¿Tiene dificultad para hablar o comunicarse usando su idioma habitual, por ejemplo, entender o ser entendido por otras personas?"
+          - name: discapacidad
+            description: "Discapacidad"
+          - name: p33_edu_asiste
+            description: "33. ¿Asiste actualmente a la educación formal? Incluye educación parvularia, especial, básica, media y superior"
+          - name: asistencia_parv
+            description: "Asistencia a nivel de educación parvularia o preescolar"
+          - name: asistencia_basica
+            description: "Asistencia a nivel de educación básica"
+          - name: asistencia_media
+            description: "Asistencia a nivel de educación media"
+          - name: asistencia_superior
+            description: "Asistencia a nivel de educación superior"
+          - name: p37_alfabet
+            description: "37. ¿Sabe leer y escribir?"
+          - name: escolaridad
+            description: "Años de escolaridad"
+          - name: cine11
+            description: "Logro educativo de acuerdo con la Clasificación Internacional Normalizada de la Educación"
+          - name: sit_fuerza_trabajo
+            description: "Situación en la fuerza de trabajo"
+          - name: p40_cise_rec
+            description: "Categoría en la ocupación"
+          - name: depend_econ_deficit_hab
+            description: "Dependencia económica y déficit habitacional"
+          - name: cod_ciuo
+            description: "CIUO-08.CL a 1 dígito"
+          - name: cod_caenes
+            description: "CAENES a 1 dígito"
+          - name: p44_lug_trab
+            description: "44. ¿En qué comuna o país se ubica su trabajo?"
+          - name: p44_lug_trab_esp
+            description: "Lugar de trabajo"
+          - name: p45_medio_transporte
+            description: "45. ¿Cuál es el medio de transporte principal que utiliza para dirigirse a su lugar de trabajo?"
+          - name: p46a_tot_hijs_nac
+            description: "46. ¿Cuántas hijas e hijos nacidos vivos ha tenido en total?"
+          - name: p46b_hijas_nac
+            description: "46. Del total de hijas e hijos nacidos vivos, ¿cuántos son mujeres?"
+          - name: p46c_hijos_nac
+            description: "46. Del total de hijas e hijos nacidos vivos, ¿cuántos son hombres?"
+          - name: p47a_tot_hijs_sobrev
+            description: "47. ¿Cuántas hijas e hijos están vivos actualmente?"
+          - name: p47b_hijas_sobrev
+            description: "47. Del total de hijas e hijos que se encuentran vivos, ¿cuántos son mujeres?"
+          - name: p47c_hijos_sobrev
+            description: "47. Del total de hijas e hijos que se encuentran vivos, ¿cuántos son hombres?"
+          - name: p48_anio_nac_uh
+            description: "48. ¿En qué mes y año nació su última hija o hijo nacido vivo? Año"
+          - name: p48_mes_nac_uh
+            description: "48. ¿En qué mes y año nació su última hija o hijo nacido vivo? Mes"
+          - name: div_genero
+            description: "Diversidades de género"

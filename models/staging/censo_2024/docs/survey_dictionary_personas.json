@@ -1,0 +1,345 @@
+{
+    "escalas_comunes": {
+        "si_no_nr_na": {
+            "1": "Sí",
+            "2": "No",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "dificultad_salud": {
+            "1": "No, sin dificultad",
+            "2": "Sí, algo de dificultad",
+            "3": "Sí, mucha dificultad",
+            "4": "No puede hacerlo",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "asistencia_escolar": {
+            "1": "Sí",
+            "2": "No",
+            "99": "No respuesta",
+            "NA": "No aplica",
+            "66": "Valor suprimido por anonimización"
+        }
+    },
+    "mapeo_variables": {
+        "area": {
+            "1": "Urbano",
+            "2": "Rural"
+        },
+        "comuna_bajo_umbral": {
+            "1": "Sí",
+            "2": "No"
+        },
+        "tipo_operativo": {
+            "1": "Persona en situación de calle",
+            "2": "Vivienda particular",
+            "3": "Vivienda colectiva"
+        },
+        "parentesco": {
+            "1": "Jefe/a de hogar",
+            "2": "Esposo/a o cónyuge",
+            "3": "Conviviente por unión civil",
+            "4": "Conviviente de hecho o pareja",
+            "5": "Hijo/a",
+            "6": "Hijo/a de cónyuge o pareja",
+            "7": "Hermano/a",
+            "8": "Padre/Madre",
+            "9": "Cuñado/a",
+            "10": "Suegro/a",
+            "11": "Yerno/Nuera",
+            "12": "Nieto/a",
+            "13": "Abuelo/a",
+            "14": "Otro Pariente",
+            "15": "No Pariente",
+            "16": "Servicio doméstico puertas adentro",
+            "17": "Vivienda colectiva",
+            "19": "Operativo calle"
+        },
+        "sexo": {
+            "1": "Hombre",
+            "2": "Mujer"
+        },
+        "edad": {
+            "-66": "Valor suprimido por anonimización"
+        },
+        "edad_quinquenal": {
+            "0": "0-4",
+            "5": "5-9",
+            "10": "10-14",
+            "15": "15-19",
+            "20": "20-24",
+            "25": "25-29",
+            "30": "30-34",
+            "35": "35-39",
+            "40": "40-44",
+            "45": "45-49",
+            "50": "50-54",
+            "55": "55-59",
+            "60": "60-64",
+            "65": "65-69",
+            "70": "70-74",
+            "75": "75-79",
+            "80": "80-84",
+            "85": "85 o más"
+        },
+        "p23_est_civil": {
+            "1": "Casado/a",
+            "2": "Conviviente sin acuerdo",
+            "3": "Conviviente civil",
+            "4": "Anulado/a",
+            "5": "Separado/a",
+            "6": "Divorciado/a",
+            "7": "Viudo/a",
+            "8": "Soltero/a",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p24_lug_resid5": {
+            "1": "Aún no nacía",
+            "2": "En esta comuna",
+            "3": "En otra comuna",
+            "4": "En otro país",
+            "99": "No respuesta"
+        },
+        "p25_lug_nacimiento": {
+            "1": "En esta comuna",
+            "2": "En otra comuna",
+            "3": "En otro país",
+            "99": "No respuesta"
+        },
+        "p25_lug_nacimiento_rec": {
+            "1": "Sí (Nació en Chile)",
+            "2": "No",
+            "99": "No respuesta"
+        },
+        "p26_llegada_periodo": {
+            "1": "Entre 2023 y 2024",
+            "2": "Entre 2020 y 2022",
+            "3": "Entre 2017 y 2018",
+            "5": "Entre 2014 y 2016",
+            "6": "Entre 2010 y 2013",
+            "7": "Entre 1950 y 1999",
+            "8": "Antes de 1990",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p27_nacionalidad": {
+            "1": "Chilena",
+            "2": "Chilena y otra",
+            "3": "Otra nacionalidad",
+            "99": "No respuesta",
+            "-66": "Anonimizado"
+        },
+        "p27_nacionalidad_rec": {
+            "1": "Sí",
+            "2": "No",
+            "99": "No respuesta"
+        },
+        "p28_autoid_pueblo": {
+            "1": "Sí",
+            "2": "No",
+            "99": "No respuesta"
+        },
+        "p28_pueblo_pert": {
+            "1": "Mapuche",
+            "2": "Aymara",
+            "3": "Rapa Nui",
+            "4": "Atacameño o Lickanantay",
+            "5": "Quechua",
+            "6": "Colla",
+            "7": "Diaguita",
+            "8": "Kawésqar",
+            "9": "Yagán",
+            "10": "Chango",
+            "11": "Selk'nam",
+            "12": "Otro",
+            "66": "Anonimizado",
+            "NA": "No aplica"
+        },
+        "p29_afrodescendencia": {
+            "1": "Afrodescendiente",
+            "2": "Afrochileno/a",
+            "3": "Negro/a",
+            "4": "Del Pueblo Tribal Afrodescendiente Chileno",
+            "5": "Moreno/a de Azapa",
+            "6": "Negro/a de la Chimba",
+            "7": "Ninguna de las anteriores",
+            "99": "No respuesta",
+            "-66": "Anonimizado"
+        },
+        "p29_afrodescendencia_rec": {
+            "1": "Sí",
+            "2": "No",
+            "99": "No respuesta"
+        },
+        "p30_lengua_indigena": {
+            "1": "Mapuzugün",
+            "2": "Aymara",
+            "3": "Quechua",
+            "4": "Rapa Nui",
+            "5": "Chango",
+            "6": "Kawésqar",
+            "7": "Yagán",
+            "8": "Otra lengua indígena de Chile",
+            "9": "Ninguna",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p30_lengua_indigena_rec": {
+            "-66": "Anonimizado",
+            "1": "Sí",
+            "2": "No",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p31_religion": {
+            "1": "Católica",
+            "2": "Evangélica o Protestante",
+            "5": "Iglesia SUD",
+            "10": "Testigo de Jehová",
+            "12": "Ninguna",
+            "999": "Otra religión",
+            "-66": "Anonimizado",
+            "49": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p31_religion_rec": {
+            "1": "Sí",
+            "2": "No",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "discapacidad": {
+            "1": "Con discapacidad",
+            "2": "Sin discapacidad",
+            "49": "No respuesta",
+            "NA": "No aplica"
+        },
+        "cine11": {
+            "1": "Nunca cursó",
+            "2": "Educación primera infancia",
+            "3": "Primaria parcial",
+            "4": "Primaria nivel 1",
+            "5": "Primaria nivel 2",
+            "6": "Secundaria general",
+            "7": "Secundaria vocacional",
+            "9": "Terciaria ciclo corto",
+            "10": "Maestría o equivalente",
+            "11": "Doctorado",
+            "12": "Educación especial",
+            "99": "No respuesta"
+        },
+        "sit_fuerza_trabajo": {
+            "1": "Ocupado",
+            "2": "Desocupado",
+            "3": "Fuera de la fuerza de trabajo",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p40_cise_rec": {
+            "1": "Independiente",
+            "2": "Dependiente",
+            "3": "Familiar no remunerado",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "depend_econ_deficit_hab": {
+            "1": "Económicamente independiente",
+            "2": "Económicamente dependiente",
+            "99": "No respuesta"
+        },
+        "cod_cluo": {
+            "1": "Directores/Gerentes",
+            "2": "Profesionales/Científicos",
+            "3": "Técnicos",
+            "4": "Apoyo administrativo",
+            "5": "Servicios/Vendedores",
+            "6": "Agrícolas/Pesqueros",
+            "7": "Artesanos/Oficios",
+            "8": "Operadores",
+            "9": "Ocupaciones elementales",
+            "10": "Fuerzas Armadas",
+            "99": "No respuesta",
+            "999": "Respuesta no codificable",
+            "NA": "No aplica"
+        },
+        "cod_caenes": {
+            "A": "Agricultura/Pesca",
+            "B": "Minería",
+            "C": "Industria",
+            "D": "Electricidad/Gas",
+            "E": "Agua/Desechos",
+            "F": "Construcción",
+            "G": "Comercio",
+            "H": "Transporte/Almacenamiento",
+            "I": "Alojamiento/Comida",
+            "J": "Información/Comunicaciones",
+            "K": "Finanzas/Seguros",
+            "L": "Inmobiliaria",
+            "M": "Profesionales/Científicas",
+            "N": "Servicios Administrativos",
+            "O": "Admin Pública/Defensa",
+            "P": "Enseñanza",
+            "Q": "Salud/Asistencia Social",
+            "R": "Artes/Recreación",
+            "S": "Otras actividades",
+            "T": "Hogares empleadores",
+            "U": "Extraterritoriales",
+            "999": "Respuesta no codificable",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p44_lug_trab": {
+            "1": "En su vivienda",
+            "2": "En su comuna, fuera de vivienda",
+            "3": "En otra comuna",
+            "4": "En otro país",
+            "5": "Varias comunas o países",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p45_medio_transporte": {
+            "1": "Auto particular",
+            "2": "Transporte público",
+            "3": "Caminando",
+            "4": "Bicicleta",
+            "5": "Motocicleta",
+            "6": "Caballo, lancha o bote",
+            "7": "Otro",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p46a_tot_hijs_nac": {
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "p48_anio_nac_uh": {
+            "99": "No responde",
+            "NA": "No aplica"
+        },
+        "p48_mes_nac_uh": {
+            "1": "Enero",
+            "2": "Febrero",
+            "3": "Marzo",
+            "4": "Abril",
+            "5": "Mayo",
+            "6": "Junio",
+            "7": "Julio",
+            "8": "Agosto",
+            "9": "Septiembre",
+            "10": "Octubre",
+            "11": "Noviembre",
+            "12": "Diciembre",
+            "99": "No respuesta",
+            "NA": "No aplica"
+        },
+        "div_genero": {
+            "1": "Sí",
+            "2": "No",
+            "3": "No clasificable",
+            "66": "Anonimizado",
+            "NA": "No aplica"
+        }
+    }
+}

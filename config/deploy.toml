@@ -1,0 +1,11 @@
+[gcp]
+project_id = "consulting-data-studio"
+region = "southamerica-west1"
+
+[cloud_run]
+service_name = "greenlab-data-platform"
+secret_name = "greenlab-data-platform-secrets"
+repo_name = "greenlab-data-platform"
+
+[streamlit]
+secrets_file = ".streamlit/secrets.toml"

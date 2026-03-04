@@ -1,0 +1,98 @@
+{
+    "area": {
+        "1": "Urbano",
+        "2": "Rural"
+    },
+    "comuna_bajo_umbral": {
+        "1": "Sí",
+        "2": "No"
+    },
+    "p12_tenencia_viv": {
+        "1": "Propia pagada",
+        "2": "Propia pagándose",
+        "3": "Arrendada con contrato",
+        "4": "Arrendada sin contrato",
+        "5": "Cedida por trabajo o servicio",
+        "6": "Cedida por familiar u otro",
+        "7": "Usufructo: solo uso y goce",
+        "8": "Ocupada de hecho",
+        "9": "Propiedad en sucesión o litigio",
+        "49": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p13_comb_cocina": {
+        "1": "Gas",
+        "2": "Parafina o petróleo",
+        "3": "Leña",
+        "4": "Pellet",
+        "5": "Carbón",
+        "6": "Electricidad",
+        "7": "Energía solar",
+        "8": "No utiliza",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p14_comb_calefaccion": {
+        "1": "Gas",
+        "2": "Parafina o petróleo",
+        "3": "Leña",
+        "4": "Pellet",
+        "5": "Carbón",
+        "6": "Electricidad",
+        "7": "Otra",
+        "8": "No utiliza",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p15a_serv_tel_movil": {
+        "1": "Sí",
+        "2": "No",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p15b_serv_compu": {
+        "1": "Sí",
+        "2": "No",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p15c_serv_tablet": {
+        "1": "Sí",
+        "2": "No",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p15d_serv_internet_fija": {
+        "1": "Sí",
+        "2": "No",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p15e_serv_internet_movil": {
+        "1": "Sí",
+        "2": "No",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "p15f_serv_internet_satelital": {
+        "1": "Sí",
+        "2": "No",
+        "99": "No respuesta",
+        "NA": "No aplica"
+    },
+    "tipo_operativo": {
+        "1": "Persona en Situación de Calle",
+        "2": "Vivienda Particular",
+        "3": "Vivienda Colectiva"
+    },
+    "tipologia_hogar": {
+        "1": "Unipersonal",
+        "2": "Nuclear monoparental",
+        "3": "Nuclear pareja sin hijos",
+        "4": "Nuclear pareja con hijos",
+        "5": "Extenso",
+        "6": "Compuesto",
+        "7": "Sin núcleo",
+        "NA": "No aplica"
+    }
+}
