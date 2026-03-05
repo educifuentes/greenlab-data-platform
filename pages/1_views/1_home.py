@@ -17,4 +17,4 @@ st.markdown("- UI amigable y facil de usar")
 
 st.subheader("Ejemplos")
 
-st.page_link("pages/1_views/3_contaminantes.py", icon=":material/co2:")
+st.page_link("pages/1_views/2_contaminantes.py", icon=":material/co2:")
