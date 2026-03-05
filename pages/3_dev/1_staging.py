@@ -1,16 +1,9 @@
 import streamlit as st
 
 from models.contaminantes.staging._stg_contaminantes__energia_centrales_00_15 import stg_contaminantes__energia_centrales_00_15
-
-# from models.staging.censo_2024._stg_censo_2024__personas import stg_censo_2024__personas
-# from models.staging.censo_2024._stg_censo_2024__hogares import stg_censo_2024__hogares
-# from models.staging.censo_2024._stg_censo_2024__viviendas import stg_censo_2024__viviendas
-
-# from models.staging.censo_2024._stg_censo_2024__codigos import (
-#     stg_censo_2024__codigos_regiones,
-#     stg_censo_2024__codigos_provincias,
-#     stg_censo_2024__codigos_comunas
-# )
+from models.contaminantes.staging._stg_contaminantes__energia_centrales_16_19 import stg_contaminantes__energia_centrales_16_19
+from models.contaminantes.staging._stg_contaminantes__energia_centrales_20_23 import stg_contaminantes__energia_centrales_20_23
+from models.contaminantes.staging._stg_contaminantes__energia_centrales_24 import stg_contaminantes__energia_centrales_24
 
 from utilities.ui_components.render_model import render_model_ui
 from utilities.ui_components.icons import render_icon
@@ -22,6 +15,15 @@ st.header("Contaminantes")
 
 render_model_ui(stg_contaminantes__energia_centrales_00_15(), 
                 table_name="Energia 2000 al 2015")
+
+# render_model_ui(stg_contaminantes__energia_centrales_16_19(), 
+#                 table_name="Energia 2016 al 2019")
+
+# render_model_ui(stg_contaminantes__energia_centrales_20_23(), 
+#                 table_name="Energia 2020 al 2023")
+
+# render_model_ui(stg_contaminantes__energia_centrales_24(), 
+#                 table_name="Energia 2024")
 
 
 # # Create tabs for organization
