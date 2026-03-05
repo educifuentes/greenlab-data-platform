@@ -1,4 +1,5 @@
 import pandas as pd
+
 from utilities.yaml_loader import load_yaml_config
 
 def load_source_dataframe(table_name: str, yaml_path: str = "models/contaminantes/sources/_src_contaminantes.yml") -> pd.DataFrame:

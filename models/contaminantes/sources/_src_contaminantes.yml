@@ -3,8 +3,19 @@ sources:
     schema_url: https://www.dropbox.com/home/Datos/3_Datos_Originales/Energia
     description: energia generado por las centrales
     tables:
-      - name: Generacion de Energia por Central - 2000 al 2015
-        path: seeds/contaminantes/2000 al 2015 - SIC-Table 1.csv
+      - name: Generacion de Energia por Central - 2000 a 2015
+        path: seeds/contaminantes/CEN-hist_gen_de_energía_por_central_00_15.xlsx
+        worksheet: "2000 al 2015 - SIC"
+      - name: Generacion de Energia por Central - 2016 a 2019
+        path: seeds/contaminantes/CEN-hist_gen_de_energia_por_central_16_19.xlsx
+        worksheet: "2016 al 2019"
+      - name: Generacion de Energia por Central - 2020 a 2023
+        path: seeds/contaminantes/CEN-hist_gen_de_energia_por_central_20_23.xlsx
+        worksheet: "2020 al 2023"
+      - name: Generacion de Energia por Central - 2024
+        path: seeds/contaminantes/CEN-hist_gen_de_energia_por_central_2024.xlsx
+        worksheet: "2024"
+
   - name: CEMS
     description: emision de contaminantes de termoelectricas.
     url_2_cems: https://www.dropbox.com/home/Datos/3_Datos_Originales/Contaminacion/Emisiones/CEMS_Termoelectricas
