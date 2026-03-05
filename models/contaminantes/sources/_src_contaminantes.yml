@@ -9,12 +9,15 @@ sources:
       - name: Generacion de Energia por Central - 2016 a 2019
         path: seeds/contaminantes/CEN-hist_gen_de_energia_por_central_16_19.xlsx
         worksheet: "2016 al 2019"
-      - name: Generacion de Energia por Central - 2020 a 2023
+      - name: Generacion de Energia por Central - 2020 a 2022
         path: seeds/contaminantes/CEN-hist_gen_de_energia_por_central_20_23.xlsx
-        worksheet: "2020 al 2023"
+        worksheet: "2020 al 2022"
+      - name: Generacion de Energia por Central - 2023
+        path: seeds/contaminantes/CEN-hist_gen_de_energia_por_central_20_23.xlsx
+        worksheet: "2023"
       - name: Generacion de Energia por Central - 2024
         path: seeds/contaminantes/CEN-hist_gen_de_energia_por_central_2024.xlsx
-        worksheet: "2024"
+        worksheet: "Hoja2"
 
   - name: CEMS
     description: emision de contaminantes de termoelectricas.
