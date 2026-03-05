@@ -17,6 +17,7 @@ pages = {
     "Vistas": [
         st.Page("pages/1_views/1_overview.py", title="Overview", icon=render_icon("dashboard")),
         st.Page("pages/1_views/2_query_builder_semantic_models.py", title="Query Builder", icon=render_icon("query")),
+        st.Page("pages/1_views/3_contaminantes.py", title="Contaminantes", icon=render_icon("co2")),
     ],
     "Herramientas": [
         st.Page("pages/2_tools/1_documentation.py", title="Documentación", icon=render_icon("documentation")),

@@ -28,7 +28,10 @@ ICONS = {
     "staging": "steppers",
     "intermediate": "factory",
     "finals": "rocket",
-    "bi_tables": "bar_chart_4_bars"
+    "bi_tables": "bar_chart_4_bars",
+    # models
+    "contaminantes": "co2",
+    "censos": "family_group"
 }
 
 def render_icon(icon_key: str) -> str:
