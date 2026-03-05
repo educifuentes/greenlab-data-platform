@@ -15,6 +15,7 @@ st.set_page_config(
 # Defining the pages based on the directory structure
 pages = {
     "Vistas": [
+        st.Page("pages/1_views/1_home.py", title="Home", icon=render_icon("logo"), default=True),
         st.Page("pages/1_views/2_contaminantes.py", title="Contaminantes", icon=render_icon("co2")),
     ],
     "Herramientas": [
