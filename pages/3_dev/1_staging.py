@@ -20,7 +20,7 @@ st.title("Staging")
 
 st.header("Contaminantes")
 
-render_model_ui(stg_contaminantes__energia_centrales_00_15().head(500), 
+render_model_ui(stg_contaminantes__energia_centrales_00_15(), 
                 table_name="Energia 2000 al 2015")
 
 
