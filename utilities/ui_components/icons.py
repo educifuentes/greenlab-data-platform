@@ -23,7 +23,12 @@ ICONS = {
     "search": "search",
     "layers": "layers_clear",
     "settings": "settings_input_component",
-    "database": "database"
+    "database": "database",
+    # dev data build
+    "staging": "steppers",
+    "intermediate": "factory",
+    "finals": "rocket",
+    "bi_tables": "bar_chart_4_bars"
 }
 
 def render_icon(icon_key: str) -> str:
@@ -32,3 +37,6 @@ def render_icon(icon_key: str) -> str:
     """
     icon_name = ICONS.get(icon_key, "help")
     return f":material/{icon_name}:"
+
+
+# icons from https://fonts.google.com/icons
