@@ -19,7 +19,7 @@ def render_model_ui(df, source_name=None, table_name=None):
     max_col_width = max(len(col) for col in df.columns)
     schema_str = "\n".join([f"{col.ljust(max_col_width)} : {dtype}" for col, dtype in df.dtypes.items()])
     
-    with st.expander("View columns", expanded=True):
+    with st.expander("View columns", expanded=False):
         st.code(schema_str, language="python")
 
     st.divider()

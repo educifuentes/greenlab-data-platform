@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import unicodedata
 
 def to_snake_case(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -16,6 +17,9 @@ def to_snake_case(df: pd.DataFrame) -> pd.DataFrame:
     def clean_name(name):
         if not isinstance(name, str):
             name = str(name)
+            
+        # Remove accents
+        name = ''.join(c for c in unicodedata.normalize('NFD', name) if unicodedata.category(c) != 'Mn')
             
         # Insert underscore between lower case and upper case letters (for CamelCase)
         name = re.sub(r'(?<=[a-z0-9])([A-Z])', r'_\1', name)
