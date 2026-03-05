@@ -1,7 +1,0 @@
-sources:
-  - name: energia
-    url_1: https://www.dropbox.com/home/Datos/3_Datos_Originales/Energia
-    description: energia generado por las centrales
-  - name: CEMS ,
-    description: emision de contaminantes de termoelectricas.
-    url_2_cems: https://www.dropbox.com/home/Datos/3_Datos_Originales/Contaminacion/Emisiones/CEMS_Termoelectricas
