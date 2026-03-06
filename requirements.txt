@@ -6,3 +6,5 @@ pyyaml
 tomli
 pyarrow
 openpyxl
+psycopg2-binary 
+sqlalchemy

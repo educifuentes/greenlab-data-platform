@@ -9,3 +9,9 @@ repo_name = "greenlab-data-platform"
 
 [streamlit]
 secrets_file = ".streamlit/secrets.toml"
+
+[cloud_sql]
+user = "postgres"
+password = "S*rg_3mHU.euF.X#"
+instance_id = "greenlab-data-platform-sample"
+connection_name = "consulting-data-studio:southamerica-west1:greenlab-data-platform-sample"
