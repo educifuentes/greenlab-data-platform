@@ -21,6 +21,7 @@ from utilities.data_transformations.column_names_tosnakecase import to_snake_cas
 from utilities.data_transformations.cast_to_date import cast_column_to_date, cast_spanish_month_col_to_date
 
 OUTPUT_PATH = "seeds/outputs/fct_emisiones_energia.parquet"
+OUTPUT_CSV_PATH = "seeds/outputs/fct_emisiones_energia.csv"
 
 COLUMNS = [
     "nombre_central",
@@ -95,6 +96,8 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     df.to_parquet(OUTPUT_PATH, index=False)
     print(f"\nSaved → {OUTPUT_PATH}")
+    df.to_csv(OUTPUT_CSV_PATH, index=False)
+    print(f"Saved → {OUTPUT_CSV_PATH}")
 
 
 if __name__ == "__main__":
