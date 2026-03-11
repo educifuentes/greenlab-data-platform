@@ -6,5 +6,5 @@
 
 ### Example
 
-`_stg_contaminantes__energia_centrales_00_15.py`
-`_int_contaminantes__energia_centrales_00_15.py`
+`_stg_generacion_electrica__energia_centrales_00_15.py`
+`_int_generacion_electrica__energia_centrales_00_15.py`

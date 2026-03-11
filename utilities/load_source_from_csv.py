@@ -2,7 +2,7 @@ import pandas as pd
 
 from utilities.yaml_loader import load_yaml_config
 
-def load_source_dataframe(table_name: str, yaml_path: str = "models/contaminantes/sources/_src_contaminantes.yml") -> pd.DataFrame:
+def load_source_dataframe(table_name: str, yaml_path: str = "models/generacion_electrica/sources/_src_generacion_electrica.yml") -> pd.DataFrame:
     """
     Loads a source CSV into a pandas DataFrame using the table name.
     It reads the YAML configuration to find the corresponding CSV path.

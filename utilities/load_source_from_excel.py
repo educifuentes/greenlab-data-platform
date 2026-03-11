@@ -3,7 +3,7 @@ import openpyxl
 
 from utilities.yaml_loader import load_yaml_config
 
-def load_source_from_excel(table_name: str, yaml_path: str = "models/contaminantes/sources/_src_contaminantes.yml", nrows: int = None) -> pd.DataFrame:
+def load_source_from_excel(table_name: str, yaml_path: str = "models/generacion_electrica/sources/_src_generacion_electrica.yml", nrows: int = None) -> pd.DataFrame:
     """
     Loads a source Excel file into a pandas DataFrame using the table name.
     It reads the YAML configuration to find the corresponding Excel path and worksheet name.

@@ -2,7 +2,7 @@
 load_final_tables.py
 ---------------------
 Loads all contaminantes energy data (no row limit), applies the same
-transformations as _int_contaminantes__energia_centrales, and exports
+transformations as _int_generacion_electrica__energia_centrales, and exports
 the result to seeds/outputs/fct_emisiones_energia.parquet.
 
 Run from the repo root:

@@ -1,1 +1,1 @@
-NROWS = 10
+NROWS = 250
