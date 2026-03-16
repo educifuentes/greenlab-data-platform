@@ -1,3 +1,7 @@
+import streamlit as st
+
+from utilities.widgets.explorer_de_datos import explorer_de_datos
+
 def render_model_ui(df, table_name=None):
     """
     Renders a standard UI component for a data model summary.
