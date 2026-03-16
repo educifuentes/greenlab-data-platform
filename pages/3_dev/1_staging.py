@@ -12,10 +12,16 @@ from utilities.ui_components.icons import render_icon
 # Page settings and header
 st.title("Staging")
 
-st.header("Generacion Electrica")
+tabs = st.tabs([
+    "Generacion Electrica",
+    "Termoelectricas"
+])
 
-render_model_ui(stg_generacion_electrica__energia_centrales_00_15(), 
-                table_name="Energia 2000 al 2015")
+with tabs[0]:
+    st.header("Generacion Electrica")
+
+    render_model_ui(stg_generacion_electrica__energia_centrales_00_15(), 
+                    table_name="Energia 2000 al 2015")
 
 render_model_ui(stg_generacion_electrica__energia_centrales_16_19(), 
                 table_name="Energia 2016 al 2019")
@@ -28,7 +34,3 @@ render_model_ui(stg_generacion_electrica__energia_centrales_23(),
 
 render_model_ui(stg_generacion_electrica__energia_centrales_24(), 
                 table_name="Energia 2024")
-
-
-
-st.code(stg_generacion_electrica__energia_centrales_24().columns)

@@ -1,12 +1,12 @@
 import streamlit as st
 
-from models.generacion_electrica.finals._fct_emisiones_energia import fct_emisiones_energia
+from models.generacion_electrica.finals._fct_generacion_electrica import fct_generacion_electrica
 
 st.title("Generacion Electrica")
 
 st.subheader("Analisis Exploratorio")
 
-df_energia = fct_emisiones_energia()
+df_energia = fct_generacion_electrica()
 
 
 df_energia["year"] = df_energia["fecha"].apply(lambda d: d.year if d else None)
