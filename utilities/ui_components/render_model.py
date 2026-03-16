@@ -1,25 +1,18 @@
-import streamlit as st
-
-def render_model_ui(df, source_name=None, table_name=None):
+def render_model_ui(df, table_name=None):
     """
     Renders a standard UI component for a data model summary.
     Includes shape, columns, and the dataframe.
     Optionally fetches and displays description from YAML config.
     """
 
-    st.subheader(table_name)
 
-    st.dataframe(df)
-
-    col_count = len(df.columns)
-    row_count = len(df)
-    st.markdown(f"**Shape:** `{row_count:,} rows` × `{col_count} columns`")
-    
-    # Format dtypes: column_name : type (aligned)
-    max_col_width = max(len(col) for col in df.columns)
-    schema_str = "\n".join([f"{col.ljust(max_col_width)} : {dtype}" for col, dtype in df.dtypes.items()])
-    
-    with st.expander("View columns", expanded=False):
-        st.code(schema_str, language="python")
-
+    with st.expander(f"Tabla: `{table_name}`"):
+        st.write(df.shape)
+        with st.expander("Columnas"):
+            st.code("\n".join(df.columns))
+        with st.expander("Data Types"):
+            dtypes_str = " | ".join([f"{col}: {dtype}" for col, dtype in df.dtypes.items()])
+            st.code(dtypes_str)
+        df = explorer_de_datos(df)
+        st.dataframe(df)
     st.divider()

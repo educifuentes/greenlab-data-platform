@@ -2,7 +2,7 @@ import streamlit as st
 
 from models.generacion_electrica.finals._fct_emisiones_energia import fct_emisiones_energia
 
-st.title("Data Contaminantes")
+st.title("Generacion Electrica")
 
 st.subheader("Analisis Exploratorio")
 
