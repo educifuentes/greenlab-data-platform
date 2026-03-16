@@ -12,7 +12,7 @@ from utilities.ui_components.icons import render_icon
 # Page settings and header
 st.title("Staging")
 
-st.header("Contaminantes")
+st.header("Generacion Electrica")
 
 render_model_ui(stg_generacion_electrica__energia_centrales_00_15(), 
                 table_name="Energia 2000 al 2015")

@@ -12,6 +12,13 @@ def explorer_de_datos(df: pd.DataFrame, key_prefix: str = "") -> pd.DataFrame:
     Versión en español de dataframe_explorer.
     Permite filtrar un dataframe con una interfaz en español.
     """
+    # Auto-generar un prefijo único si no se proporciona uno
+    if not key_prefix:
+        if "_explorer_counter" not in st.session_state:
+            st.session_state._explorer_counter = 0
+        st.session_state._explorer_counter += 1
+        key_prefix = f"_explorer_{st.session_state._explorer_counter}"
+
     df = df.copy()
     
     # Intentar convertir objetos a fechas si es posible
@@ -30,7 +37,7 @@ def explorer_de_datos(df: pd.DataFrame, key_prefix: str = "") -> pd.DataFrame:
             "Filtrar dataframe por:", 
             df.columns,
             placeholder="Selecciona columnas...",
-            key=f"{key_prefix}_columnas" if key_prefix else None
+            key=f"{key_prefix}_columnas"
         )
         
         for col in columnas_a_filtrar:
