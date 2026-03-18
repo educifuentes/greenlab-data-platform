@@ -24,7 +24,8 @@ pages = {
     ],
     "Herramientas": [
         st.Page("pages/2_tools/1_catalog.py", title="Catalogo", icon=render_icon("catalog")),
-        st.Page("pages/2_tools/2_documentation.py", title="Documentación", icon=render_icon("documentation"))
+        st.Page("pages/2_tools/2_documentation.py", title="Documentación", icon=render_icon("documentation")),
+        st.Page("pages/others/model_details.py", title="view Model", visibility="hidden")
     ],
 }
 
@@ -38,7 +39,7 @@ if is_local:
         st.Page("pages/3_dev/4_bi_tables.py", title="BI Tables", icon=render_icon("bi_tables")),
     ]
 
-st.Page("pages/others/view_model.py", title="view Model",  visibility="hidden")
+# Only expose the development environment tabs locally
 
 
 
@@ -61,6 +62,9 @@ with st.sidebar:
 
 # --- NAVIGATION ---
 pg = st.navigation(pages)
+
+if "model" in st.query_params and pg.title != "view Model":
+    st.switch_page("pages/others/model_details.py")
 
 # --- RUN NAVIGATION ---
 pg.run()
