@@ -13,6 +13,8 @@ st.set_page_config(
 )
 
 # --- PAGE SETUP ---
+import os
+
 # Defining the pages based on the directory structure
 pages = {
     "Vistas": [
@@ -24,13 +26,17 @@ pages = {
         st.Page("pages/2_tools/1_catalog.py", title="Catalogo", icon=render_icon("catalog")),
         st.Page("pages/2_tools/2_documentation.py", title="Documentación", icon=render_icon("documentation"))
     ],
-    "Desarrollo": [
+}
+
+# Only expose the development environment tabs locally
+is_local = os.environ.get("ENVIRONMENT", "local").lower() == "local"
+if is_local:
+    pages["Desarrollo"] = [
         st.Page("pages/3_dev/1_staging.py", title="Staging", icon=render_icon("staging")),
         st.Page("pages/3_dev/2_intermediate.py", title="Intermediate", icon=render_icon("intermediate")),
         st.Page("pages/3_dev/3_finals.py", title="Finals", icon=render_icon("finals")),
         st.Page("pages/3_dev/4_bi_tables.py", title="BI Tables", icon=render_icon("bi_tables")),
-    ],
-}
+    ]
 
 st.Page("pages/others/view_model.py", title="view Model",  visibility="hidden")
 
