@@ -8,6 +8,8 @@ from models.generacion_electrica.staging._stg_generacion_electrica__energia_cent
 
 from helpers.data_transformations.column_names_tosnakecase import to_snake_case
 from helpers.data_transformations.cast_to_date import cast_column_to_date, cast_spanish_month_col_to_date
+    from helpers.build_model_lineage import build_model_lineage
+
 
 def int_generacion_electrica__energia_centrales():
 
@@ -93,5 +95,7 @@ def int_generacion_electrica__energia_centrales():
     df_24 = df_24[columns]
 
     df = pd.concat([df, df_24])
+
+    df.attrs.update(build_model_lineage())
 
     return df

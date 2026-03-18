@@ -2,10 +2,17 @@ import inspect
 import ast
 import os
 
-def set_lineage(df):
+def build_model_lineage():
     """
-    Stamps the dataframe with its name and its parent sources by introspecting the caller's file.
-    It reads the caller's imports to find any imported models and categorizes them into layers.
+    Introspects the caller's file to extract the model name and imported models.
+    Returns a dictionary structured as:
+    {
+      "model_name": "...",
+      "models": {
+        "staging": [...],
+        "intermediate": [...]
+      }
+    }
     """
     # 1. Get the caller's frame to find the filename
     stack = inspect.stack()
@@ -20,10 +27,7 @@ def set_lineage(df):
     if model_name.startswith('_'):
         model_name = model_name[1:]
         
-    df.attrs['model_name'] = model_name
-    
     # 3. Parse the caller file to find imports from 'models'
-    sources_list = []
     models_dict = {}
     
     try:
@@ -50,12 +54,10 @@ def set_lineage(df):
                             models_dict[layer] = []
                         if src not in models_dict[layer]:
                             models_dict[layer].append(src)
-                        if src not in sources_list:
-                            sources_list.append(src)
     except Exception:
         pass # Fail gracefully if file cannot be parsed
         
-    df.attrs['sources'] = sources_list
-    df.attrs['models'] = models_dict
-    
-    return df
+    return {
+        "model_name": model_name,
+        "models": models_dict
+    }
