@@ -1,16 +1,13 @@
 import streamlit as st
 
-from helpers.model_catalog import build_global_model_registry
+from helpers.find_model import find_model
 from helpers.ui_components.render_model_lineage import render_model_lineage
 
-# Retrieve query params from URL
-query_params = st.query_params
-model_name = query_params.get("model", None)
+# Retrieve query params from URL or session state (since st.switch_page drops query params)
+model_name = st.query_params.get("model") or st.session_state.get("selected_model")
 
 if model_name:
     st.header(f"Model: {model_name}")
-    
-    from helpers.find_model import find_model
     
     df = find_model(model_name)
     

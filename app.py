@@ -63,8 +63,10 @@ with st.sidebar:
 # --- NAVIGATION ---
 pg = st.navigation(pages)
 
-if "model" in st.query_params and pg.title != "view Model":
-    st.switch_page("pages/others/model_details.py")
+if "model" in st.query_params:
+    st.session_state["selected_model"] = st.query_params["model"]
+    if pg.title != "view Model":
+        st.switch_page("pages/others/model_details.py")
 
 # --- RUN NAVIGATION ---
 pg.run()
