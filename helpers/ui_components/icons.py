@@ -5,6 +5,7 @@ ICONS = {
     "home": "home",
     "catalog": "view_list",
     "documentation": "article",
+    "projects": "rocket",
     "metrics": "calculate",
     "not_apply": "circle",
     "query": "query_stats",

@@ -5,7 +5,7 @@ sources:
     tables:
       - name: hogares
         dictionary_url_pdf: xxx
-        survey_dictionary_path: models/staging/censo_2024/docs/survey_dictionary_hogares.json
+        survey_dictionary_path: models/censos/docs/survey_dictionary_hogares.json
         path: seeds/censos/ine/hogares_censo2024.parquet
       - name: viviendas
         path: seeds/censos/ine/viviendas_censo2024.parquet
@@ -13,8 +13,8 @@ sources:
         path: seeds/censos/ine/personas_censo2024.parquet
         path_sample: seeds/censo_2024/Censo_2024-Personas/data/personas_censo2024_100k.csv
         description: "tabla anivel de personas 100k filas sample"
-        survey_dictionary_path: "models/staging/censo_2024/docs/survey_dictionary_personas.json"
-        documentation_path: seeds/censo_2024/Diccionarios-y-Codigos/Censo2024-Diccionario_Codigos-PERSONAS.pdf
+        survey_dictionary_path: "models/censos/docs/survey_dictionary_personas.json"
+        documentation_path: models/censos/docs/Censo2024-Diccionario_Codigos-PERSONAS.pdf
         url: https://www.dropbox.com/scl/fi/qj2i9qsufyas67t36p2kw/personas_censo2024_100k.csv?rlkey=hfldahfjydvcocs67zgsnae3z&st=cpweiwnh&dl=0
         columns:
           - name: id_vivienda

@@ -3,12 +3,12 @@ import os
 
 from helpers.yaml_loader import load_yaml_config
 
-def stg_censo_2024__personas():
+def stg_censos__censo_2024_personas():
     """
     Loads personas data using the path defined in the YAML configuration.
     """
     # Load the YAML file as a dictionary
-    config = load_yaml_config('models/staging/censo_2024/_src_censo_2024.yml')
+    config = load_yaml_config('models/censos/sources/_src_censo_2024.yml')
     
     # Extract the path for the 'personas' table
     tables = config['sources']['censos']['tables']

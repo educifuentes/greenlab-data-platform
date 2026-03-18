@@ -3,7 +3,7 @@ import os
 
 from helpers.load_source_from_csv import load_source_dataframe
 
-def stg_censo_2024__hogares():
+def stg_censos__censo_2024_hogares():
     """
     Loads hogares data using the path defined in the YAML configuration.
     """
