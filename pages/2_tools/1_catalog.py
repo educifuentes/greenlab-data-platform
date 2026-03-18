@@ -1,6 +1,7 @@
 import streamlit as st
 from helpers.model_catalog import build_global_model_registry
 from helpers.ui_components.icons import render_icon
+from helpers.ui_components.dataframe_column_display import dataframe_column_display
 
 st.title(f"{render_icon('catalog')} Data Catalog")
 st.markdown("Browse and search across all multi-schema models registered in the codebase.")
@@ -29,6 +30,8 @@ if not df_catalog.empty:
     if selected_stage:
         df_filtered = df_filtered[df_filtered["stage"].isin(selected_stage)]
 
+    df_filtered["stage"] = df_filtered["stage"].apply(lambda x: [x])
+
     # Configure dataframe columns for proper Links
     st.dataframe(
         df_filtered,
@@ -36,7 +39,16 @@ if not df_catalog.empty:
         hide_index=True,
         column_config={
             "schema": st.column_config.TextColumn("Schema"),
-            "stage": st.column_config.TextColumn("Stage"),
+            "stage": st.column_config.MultiselectColumn(
+                "Stage",
+                options=[
+                    "staging",
+                    "intermediate",
+                    "finals",
+                    "exposures",
+                ],
+                color=["#28a745", "#007bff", "#ffc107", "#dc3545"]
+            ),
             "model": st.column_config.TextColumn("Model Name"),
             "link": st.column_config.LinkColumn("View Model", display_text="View Details ↗")
         }
