@@ -32,6 +32,10 @@ pages = {
     ],
 }
 
+st.Page("pages/others/view_model.py", title="view Model",  visibility="hidden")
+
+
+
 # --- SIDEBAR & BRANDING ---
 with st.sidebar:
     st.markdown(f"# {render_icon('logo')} Greenlab")

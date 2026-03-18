@@ -3,6 +3,7 @@ Build a function that scnas the tree of models folder, and based on that, build 
 schema
 stage
 model
+link
 
 To pouplate it, grab the names of the oy files and follow
 
@@ -57,3 +58,7 @@ models/generacion_electrica
     generacion_electrica | intermediate | _int_generacion_electrica__energia_centrales
     generacion_electrica | final | _fct_generacion_electrica
     generacion_electrica | exposure | exp_generacion_electrica_by_month
+
+in link
+
+make a st.page link to the model page with model_namme as argument
