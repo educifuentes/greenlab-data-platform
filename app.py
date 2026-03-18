@@ -21,7 +21,7 @@ pages = {
         st.Page("pages/1_views/1_home.py", title="Home", icon=render_icon("home"), default=True),
         st.Page("pages/2_tools/1_catalog.py", title="Catalogo", icon=render_icon("catalog")),
         st.Page("pages/2_tools/2_documentation.py", title="Documentación", icon=render_icon("documentation")),
-        st.Page("pages/1_views/3_charts.py", title="Charts", icon=render_icon("charts")),
+        # st.Page("pages/1_views/3_charts.py", title="Charts", icon=render_icon("charts")),
         st.Page("pages/others/model_details.py", title="view Model", visibility="hidden")
     ],
 }

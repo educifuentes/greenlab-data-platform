@@ -1,0 +1,7 @@
+sources:
+  - name: termoelectricas
+    schema_url: https://www.dropbox.com/home/Datos/3_Datos_Originales/Energia
+    description: Termoelectricas contaminantes
+    tables:
+      - name: Termoelectricas
+        path: pending

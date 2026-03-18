@@ -1,25 +1,17 @@
 import pandas as pd
 import os
 
-from helpers.yaml_loader import load_yaml_config
+from helpers.load_source_from_csv import load_source_dataframe
 
 def stg_censo_2024__hogares():
     """
     Loads hogares data using the path defined in the YAML configuration.
     """
-    # Load the YAML file as a dictionary
-    config = load_yaml_config('models/staging/censo_2024/_src_censo_2024.yml')
-    
-    # Extract the path for the 'hogares' table
-    tables = config['sources']['censos']['tables']
-    rel_path = next(t['path'] for t in tables if t['name'] == 'hogares')
-    
-    # Construct the absolute path (project root is 3 levels up from this staging file)
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..'))
-    file_path = os.path.join(project_root, rel_path)
-
-    # read parquet
-    df = pd.read_parquet(file_path)
+    # Load the YAML file and extract DataFrame securely through the helper wrapper
+    df = load_source_dataframe(
+        table_name="hogares", 
+        yaml_path="models/censos/sources/_src_censo_2024.yml"
+    )
 
     # data types
     
