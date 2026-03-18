@@ -1,38 +1,36 @@
 ICONS = {
     # branding
     "logo": "energy_program_saving",
-    
-    # tables
-    "person": "person",
-    "hogares": "family_group",
-    "bases_ccu": "assignment",
-    "contratos": "contract",
-    
-    # VALIDATIONS   
-    "check": "check_box",
-    "warning": "warning",
-    "close": "close",
-    
-    # pages
+    # core pages
+    "home": "home",
+    "catalog": "view_list",
     "documentation": "article",
     "metrics": "calculate",
     "not_apply": "circle",
     "query": "query_stats",
-    "catalog": "view_list",
+    "lineage": "layers",
+    # other pages
     "dashboard": "dashboard",
     "search": "search",
     "layers": "layers_clear",
     "settings": "settings_input_component",
     "database": "database",
+    # validations   
+    "check": "check_box",
+    "warning": "warning",
+    "close": "close",
+    # models
+    # censos
+    "person": "person",
+    "hogares": "family_group",
+    # energia
+    "contaminantes": "co2",
+    "censos": "family_group",
     # dev data build
     "staging": "steppers",
     "intermediate": "factory",
     "finals": "rocket",
     "bi_tables": "bar_chart_4_bars",
-    "lineage": "layers",
-    # models
-    "contaminantes": "co2",
-    "censos": "family_group"
 }
 
 def render_icon(icon_key: str) -> str:
