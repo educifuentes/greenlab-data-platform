@@ -3,7 +3,7 @@ import streamlit_mermaid as st_mm
 
 from helpers.widgets.generate_mermaid import generate_mermaid
 
-def render_lineage(df):
+def render_model_lineage(df):
     """
     Renders the Mermaid diagram and provides an expander for raw metadata.
     """
