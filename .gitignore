@@ -6,3 +6,4 @@ models/marts/__pycache__
 config/keys/*
 z_legacy_greenlab/*
 config/deploy.toml
+notes/*
