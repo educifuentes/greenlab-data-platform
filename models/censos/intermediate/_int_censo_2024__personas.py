@@ -3,8 +3,8 @@ import pandas as pd
 from models.staging.censo_2024._stg_censo_2024__personas import stg_censo_2024__personas
 from models.staging.censo_2024._stg_censo_2024__codigos import stg_censo_2024__codigos_regiones, stg_censo_2024__codigos_provincias, stg_censo_2024__codigos_comunas
 
-from utilities.data_transformations.survey_processing import map_survey_personas
-from utilities.yaml_loader import get_table_config
+from helpers.data_transformations.survey_processing import map_survey_personas
+from helpers.yaml_loader import get_table_config
 
 def int_censo_2024__personas():
     personas_df = stg_censo_2024__personas()

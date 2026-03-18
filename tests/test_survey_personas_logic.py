@@ -7,7 +7,7 @@ import sys
 # Add project root to path
 sys.path.append('/Users/educifuentes/code/greenlab-censos')
 
-from utilities.data_transformations.survey_processing import map_survey_personas
+from helpers.data_transformations.survey_processing import map_survey_personas
 
 def test_map_survey_personas():
     # Create a dummy mapping

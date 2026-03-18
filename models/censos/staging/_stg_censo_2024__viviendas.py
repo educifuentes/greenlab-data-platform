@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-from utilities.yaml_loader import load_yaml_config
+from helpers.yaml_loader import load_yaml_config
 
 def stg_censo_2024__viviendas():
     """

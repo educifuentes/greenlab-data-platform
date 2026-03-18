@@ -2,8 +2,8 @@ import streamlit as st
 
 from models.generacion_electrica.intermediate._int_generacion_electrica__energia_centrales import int_generacion_electrica__energia_centrales
 
-from utilities.ui_components.render_model import render_model_ui
-from utilities.ui_components.icons import render_icon
+from helpers.ui_components.render_model import render_model_ui
+from helpers.ui_components.icons import render_icon
 
 st.title("Intermediate")
 

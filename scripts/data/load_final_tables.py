@@ -16,9 +16,9 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 import pandas as pd
-from utilities.load_source_from_excel import load_source_from_excel
-from utilities.data_transformations.column_names_tosnakecase import to_snake_case
-from utilities.data_transformations.cast_to_date import cast_column_to_date, cast_spanish_month_col_to_date
+from helpers.load_source_from_excel import load_source_from_excel
+from helpers.data_transformations.column_names_tosnakecase import to_snake_case
+from helpers.data_transformations.cast_to_date import cast_column_to_date, cast_spanish_month_col_to_date
 
 OUTPUT_PATH = "seeds/outputs/fct_generacion_electrica.parquet"
 OUTPUT_CSV_PATH = "seeds/outputs/fct_generacion_electrica.csv"

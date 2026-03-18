@@ -1,7 +1,7 @@
 import streamlit as st
 
-from utilities.ui_components.render_docs import render_model_docs
-from utilities.ui_components.icons import render_icon
+from helpers.ui_components.render_docs import render_model_docs
+from helpers.ui_components.icons import render_icon
 
 st.set_page_config(page_title="Documentation", layout="wide")
 

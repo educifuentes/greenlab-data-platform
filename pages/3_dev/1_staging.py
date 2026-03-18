@@ -6,8 +6,8 @@ from models.generacion_electrica.staging._stg_generacion_electrica__energia_cent
 from models.generacion_electrica.staging._stg_generacion_electrica__energia_centrales_23 import stg_generacion_electrica__energia_centrales_23
 from models.generacion_electrica.staging._stg_generacion_electrica__energia_centrales_24 import stg_generacion_electrica__energia_centrales_24
 
-from utilities.ui_components.render_model import render_model_ui
-from utilities.ui_components.icons import render_icon
+from helpers.ui_components.render_model import render_model_ui
+from helpers.ui_components.icons import render_icon
 
 # Page settings and header
 st.title("Staging")

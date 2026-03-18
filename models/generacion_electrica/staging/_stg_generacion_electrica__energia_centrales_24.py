@@ -1,7 +1,7 @@
 import pandas as pd
 
-from utilities.load_source_from_excel import load_source_from_excel
-from utilities.constants.nrows import NROWS
+from helpers.load_source_from_excel import load_source_from_excel
+from helpers.constants.nrows import NROWS
 
 
 def stg_generacion_electrica__energia_centrales_24():

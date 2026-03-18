@@ -1,7 +1,7 @@
 import streamlit as st
 
-from utilities.ui_components.icons import ICONS, render_icon
-from utilities.get_version import get_git_version
+from helpers.ui_components.icons import ICONS, render_icon
+from helpers.get_version import get_git_version
 
 # --- PAGE CONFIG ---
 st.set_page_config(
@@ -16,7 +16,7 @@ st.set_page_config(
 pages = {
     "Vistas": [
         st.Page("pages/1_views/1_home.py", title="Home", icon=render_icon("logo"), default=True),
-        st.Page("pages/1_views/2_contaminantes.py", title="Contaminantes", icon=render_icon("co2")),
+        st.Page("pages/1_views/2_generacion_electrica.py", title="Generacion Electrica", icon=render_icon("co2")),
     ],
     "Herramientas": [
         st.Page("pages/2_tools/1_documentation.py", title="Documentación", icon=render_icon("documentation")),
