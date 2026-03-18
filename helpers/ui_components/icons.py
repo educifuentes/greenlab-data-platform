@@ -29,6 +29,7 @@ ICONS = {
     "intermediate": "factory",
     "finals": "rocket",
     "bi_tables": "bar_chart_4_bars",
+    "lineage": "layers",
     # models
     "contaminantes": "co2",
     "censos": "family_group"

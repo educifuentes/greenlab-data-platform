@@ -8,3 +8,4 @@ pyarrow
 openpyxl
 psycopg2-binary 
 sqlalchemy
+streamlit-mermaid

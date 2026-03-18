@@ -1,6 +1,6 @@
-def generate_mermaid(final_df, all_models_dict):
+def generate_mermaid(df):
     """
-    Recursively builds the Mermaid flow chart starting from a final model.
+    Builds the Mermaid flow chart starting from a model's metadata.
     Includes styling for different layers (staging, intermediate, final).
     """
     nodes = set()
@@ -13,32 +13,21 @@ def generate_mermaid(final_df, all_models_dict):
         "    classDef final fill:#fff3cd,stroke:#ffc107,color:#856404"
     ]
 
-    def trace(name):
-        if name not in all_models_dict:
-            nodes.add(f'    {name}["{name} (External)"]')
-            return
+    model_name = df.attrs.get('model_name', 'Unknown')
+    sources = df.attrs.get('sources', [])
 
-        df = all_models_dict[name]
-        sources = df.attrs.get('sources', [])
+    def get_class(name):
+        if name.startswith("stg_"): return "staging"
+        elif name.startswith("int_"): return "intermediate"
+        return "final"
 
-        # Determine Class
-        if name.startswith("stg_"): cls = "staging"
-        elif name.startswith("int_"): cls = "intermediate"
-        else: cls = "final"
+    main_cls = get_class(model_name)
+    nodes.add(f'    {model_name}["{model_name}"]:::{main_cls}')
 
-        nodes.add(f'    {name}["{name}"]:::{cls}')
-
-        for src in sources:
-            edges.add(f'    {src} --> {name}')
-            trace(src)
-
-    initial_name = final_df.attrs.get('model_name', 'Final_Output')
-    
-    # Ensure final_df is in all_models_dict so trace can find it 
-    if initial_name not in all_models_dict:
-        all_models_dict[initial_name] = final_df
-        
-    trace(initial_name)
+    for src in sources:
+        src_cls = get_class(src)
+        nodes.add(f'    {src}["{src}"]:::{src_cls}')
+        edges.add(f'    {src} --> {model_name}')
 
     mermaid_lines = ["graph TD"] + styles + list(nodes) + list(edges)
     return "\n".join(mermaid_lines)
