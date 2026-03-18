@@ -39,13 +39,13 @@ with st.sidebar:
     
     st.divider()
     
-    current_theme = get_current_theme()
-    is_light = current_theme == "light"
+    # current_theme = get_current_theme()
+    # is_light = current_theme == "light"
     
-    def on_theme_change():
-        new_theme = "light" if st.session_state.theme_toggle else "dark"
-        if new_theme != current_theme:
-            set_theme(new_theme)
+    # def on_theme_change():
+    #     new_theme = "light" if st.session_state.theme_toggle else "dark"
+    #     if new_theme != current_theme:
+    #         set_theme(new_theme)
             
     # st.toggle("Modo Claro", value=is_light, key="theme_toggle", on_change=on_theme_change)
 
