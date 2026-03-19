@@ -2,7 +2,7 @@ import pandas as pd
 
 from helpers.yaml_loader import load_yaml_config
 
-def load_source_dataframe(table_name: str, yaml_path: str = "models/generacion_electrica/sources/_src_generacion_electrica.yml") -> pd.DataFrame:
+def load_source_dataframe(table_name: str, yaml_path: str = "models/generacion_electrica/sources/_src_generacion_electrica.yml", **kwargs) -> pd.DataFrame:
     """
     Loads a source CSV into a pandas DataFrame using the table name.
     It reads the YAML configuration to find the corresponding CSV path.
@@ -29,5 +29,5 @@ def load_source_dataframe(table_name: str, yaml_path: str = "models/generacion_e
         raise ValueError(f"Table '{table_name}' not found in {yaml_path}")
         
     if csv_path.endswith(".parquet"):
-        return pd.read_parquet(csv_path)
-    return pd.read_csv(csv_path)
+        return pd.read_parquet(csv_path, **kwargs)
+    return pd.read_csv(csv_path, **kwargs)
