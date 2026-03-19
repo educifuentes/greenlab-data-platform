@@ -1,5 +1,4 @@
 .streamlit/secrets.toml
-seeds/*
 models/censos/__pycache__
 models/intermediate/__pycache__
 models/marts/__pycache__

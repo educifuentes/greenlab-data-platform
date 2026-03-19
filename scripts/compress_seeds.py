@@ -19,10 +19,17 @@ def compress_csv(filepath):
             f.write(line)
 
 def compress_excel(filepath):
-    df = pd.read_excel(filepath)
-    if len(df) > 300:
-        df = df.head(300)
-        df.to_excel(filepath, index=False)
+    dfs = pd.read_excel(filepath, sheet_name=None)
+    modified = False
+    for sheet_name, df in dfs.items():
+        if len(df) > 300:
+            dfs[sheet_name] = df.head(300)
+            modified = True
+            
+    if modified:
+        with pd.ExcelWriter(filepath) as writer:
+            for sheet_name, df in dfs.items():
+                df.to_excel(writer, sheet_name=sheet_name, index=False)
 
 def compress_parquet(filepath):
     df = pd.read_parquet(filepath)
