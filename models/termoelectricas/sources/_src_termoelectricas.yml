@@ -3,6 +3,5 @@ sources:
     schema_url: https://www.dropbox.com/home/Datos/3_Datos_Originales/Energia
     description: Termoelectricas contaminantes
     tables:
-      - name: Contaminantes de centrales por año
-        path: seeds/termoelectricas/PH2018-4_Act2020-11-01.csv, seeds/termoelectricas/PH2019-4_Act2020-11-01.csv, seeds/termoelectricas/PH2020-3_Act2020-11-01.csv
-        multiple_tables: true
+      - name: Emisiones de centrales termoelectricas - 2020
+        path: seeds/termoelectricas/PH2018-4_Act2020-11-01.csv
