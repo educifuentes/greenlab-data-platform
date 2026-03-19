@@ -32,7 +32,7 @@ if is_local:
         st.Page("pages/3_dev/1_staging.py", title="Staging", icon=render_icon("staging")),
         st.Page("pages/3_dev/2_intermediate.py", title="Intermediate", icon=render_icon("intermediate")),
         st.Page("pages/3_dev/3_marts.py", title="Marts", icon=render_icon("marts")),
-        st.Page("pages/3_dev/4_exposures.py", title="BI Tables", icon=render_icon("exposures")),
+        st.Page("pages/3_dev/4_exposures.py", title="Exposures", icon=render_icon("exposures")),
     ]
 
 # Only expose the development environment tabs locally

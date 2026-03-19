@@ -5,7 +5,7 @@ from helpers.find_model import find_model
 from helpers.ui_components.render_model import render_model_ui
 from helpers.ui_components.icons import render_icon
 
-st.title("BI Tables (Exposures)")
+st.title("Exposures")
 
 df_catalog = build_global_model_registry("models")
 # In catalog generation, stage would be either 'exposures' or 'exposures' depending on naming
