@@ -18,8 +18,7 @@ import os
 # Defining the pages based on the directory structure
 pages = {
     "Vistas": [
-        st.Page("pages/1_views/1_home.py", title="Home", icon=render_icon("home"), default=True),
-        st.Page("pages/1_views/2_catalog.py", title="Catalogo", icon=render_icon("catalog")),
+        st.Page("pages/1_views/2_catalog.py", title="Catalogo", icon=render_icon("catalog"), default=True),
         st.Page("pages/1_views/3_projects.py", title="Projects", icon=render_icon("projects")),
         st.Page("pages/1_views/4_how_to_use.py", title="Guias", icon=render_icon("documentation")),
         st.Page("pages/others/model_details.py", title="view Model", visibility="hidden")
