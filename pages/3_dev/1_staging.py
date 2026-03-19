@@ -1,36 +1,30 @@
 import streamlit as st
 
-from models.generacion_electrica.staging._stg_generacion_electrica__energia_centrales_00_15 import stg_generacion_electrica__energia_centrales_00_15
-from models.generacion_electrica.staging._stg_generacion_electrica__energia_centrales_16_19 import stg_generacion_electrica__energia_centrales_16_19
-from models.generacion_electrica.staging._stg_generacion_electrica__energia_centrales_20_22 import stg_generacion_electrica__energia_centrales_20_22
-from models.generacion_electrica.staging._stg_generacion_electrica__energia_centrales_23 import stg_generacion_electrica__energia_centrales_23
-from models.generacion_electrica.staging._stg_generacion_electrica__energia_centrales_24 import stg_generacion_electrica__energia_centrales_24
-
+from helpers.model_catalog import build_global_model_registry
+from helpers.find_model import find_model
 from helpers.ui_components.render_model import render_model_ui
 from helpers.ui_components.icons import render_icon
 
-# Page settings and header
 st.title("Staging")
 
-tabs = st.tabs([
-    "Generacion Electrica",
-    "Termoelectricas"
-])
+df_catalog = build_global_model_registry("models")
+df_stage = df_catalog[df_catalog["stage"] == "staging"]
 
-with tabs[0]:
-    st.header("Generacion Electrica")
-
-    render_model_ui(stg_generacion_electrica__energia_centrales_00_15(), 
-                    table_name="Energia 2000 al 2015")
-
-render_model_ui(stg_generacion_electrica__energia_centrales_16_19(), 
-                table_name="Energia 2016 al 2019")
-
-render_model_ui(stg_generacion_electrica__energia_centrales_20_22(), 
-                table_name="Energia 2020 al 2022")
-
-render_model_ui(stg_generacion_electrica__energia_centrales_23(), 
-                table_name="Energia 2023")
-
-render_model_ui(stg_generacion_electrica__energia_centrales_24(), 
-                table_name="Energia 2024")
+if not df_stage.empty:
+    schemas = sorted(df_stage["schema"].unique().tolist())
+    
+    tabs = st.tabs([schema.replace("_", " ").title() for schema in schemas])
+    
+    for i, schema in enumerate(schemas):
+        with tabs[i]:
+            st.header(schema.replace("_", " ").title())
+            
+            df_schema = df_stage[df_stage["schema"] == schema]
+            for _, row in df_schema.iterrows():
+                model_name = row["model"]
+                df = find_model(model_name)
+                
+                if df is not None:
+                    render_model_ui(df, table_name=model_name)
+else:
+    st.info("No staging models found.")
