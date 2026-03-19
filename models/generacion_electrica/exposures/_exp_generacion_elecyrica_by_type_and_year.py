@@ -1,5 +1,5 @@
 import pandas as pd
-from models.generacion_electrica.finals._fct_generacion_electrica import fct_generacion_electrica
+from models.generacion_electrica.marts._fct_generacion_electrica import fct_generacion_electrica
 
 def exp_generacion_electrica_by_type_and_year():
     df = fct_generacion_electrica()

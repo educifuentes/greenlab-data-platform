@@ -45,7 +45,7 @@ if not df_catalog.empty:
                 options=[
                     "staging",
                     "intermediate",
-                    "finals",
+                    "marts",
                     "exposures",
                 ],
                 color=["#28a745", "#007bff", "#ffc107", "#dc3545"]

@@ -30,8 +30,8 @@ ICONS = {
     # dev data build
     "staging": "steppers",
     "intermediate": "factory",
-    "finals": "rocket",
-    "bi_tables": "bar_chart_4_bars",
+    "marts": "rocket",
+    "exposures": "bar_chart_4_bars",
 }
 
 def render_icon(icon_key: str) -> str:

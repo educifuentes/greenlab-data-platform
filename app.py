@@ -32,8 +32,8 @@ if is_local:
     pages["Desarrollo"] = [
         st.Page("pages/3_dev/1_staging.py", title="Staging", icon=render_icon("staging")),
         st.Page("pages/3_dev/2_intermediate.py", title="Intermediate", icon=render_icon("intermediate")),
-        st.Page("pages/3_dev/3_finals.py", title="Finals", icon=render_icon("finals")),
-        st.Page("pages/3_dev/4_bi_tables.py", title="BI Tables", icon=render_icon("bi_tables")),
+        st.Page("pages/3_dev/3_marts.py", title="Marts", icon=render_icon("marts")),
+        st.Page("pages/3_dev/4_exposures.py", title="BI Tables", icon=render_icon("exposures")),
     ]
 
 # Only expose the development environment tabs locally
