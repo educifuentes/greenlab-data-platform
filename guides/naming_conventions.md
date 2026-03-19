@@ -1,8 +1,8 @@
-# Naming Conventions
+# Convenciones de Nombres
 
-## Models
-Format: `_<layer>_<schema>__<table_name>.py`
+## Modelos
+Formato: `_<capa>_<esquema>__<nombre_tabla>.py`
 
-### Examples:
+### Ejemplos:
 - `_stg_generacion_electrica__energia_centrales_00_15.py`
 - `_int_generacion_electrica__energia_centrales_00_15.py`

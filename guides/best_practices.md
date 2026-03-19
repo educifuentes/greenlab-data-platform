@@ -1,13 +1,13 @@
-# Buenas Prácticas de Codigo
+# Buenas Prácticas de Código
 
-Orden en los imports
+Orden en las importaciones:
 
-1. libreries core: pandas, streamlit
-2. modelos
-3. helpers
+1. Librerías principales (core): pandas, streamlit
+2. Modelos
+3. Helpers (funciones auxiliares)
 
 # Algunos Principios
 
-Single responsabilitie
-Una funcina debe hacer una cosa y una sola.
-Organizar modularmente en dircctorio ej helpers/ui o utilitews/data
+Responsabilidad Única (Single Responsibility):
+Una función debe hacer una cosa y solo una.
+Organizar modularmente en directorios, ej. helpers/ui o utilities/data.

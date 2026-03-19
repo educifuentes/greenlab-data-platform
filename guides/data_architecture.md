@@ -1,20 +1,20 @@
-# Data Architecture Layers
+# Capas de Arquitectura de Datos
 
-## 1. Staging
-- **Goal**: Raw data ingestion.
-- **Rules**: No transformations. 1:1 representation with the source data.
+## 1. Staging (Ingesta)
+- **Objetivo**: Ingesta de datos sin procesar (raw).
+- **Reglas**: Sin transformaciones. Representación 1:1 con los datos de origen.
 
-## 2. Intermediate
-- **Goal**: Data cleaning and normalization.
-- **Actions**:
-  - Rename columns for consistency.
-  - Cast correct data types.
-  - Column selection and ordering.
-  - Format strings and remove outliers.
+## 2. Intermediate (Intermedia)
+- **Objetivo**: Limpieza y normalización de datos.
+- **Acciones**:
+  - Renombrar columnas para mantener consistencia.
+  - Asignar los tipos de datos correctos (casting).
+  - Selección y ordenamiento de columnas.
+  - Formatear cadenas de texto (strings) y eliminar valores atípicos (outliers).
 
 ## 3. Final
-- **Goal**: Create Fact and Dimension tables.
-- **Prefixes**: `_fct_<name>` or `_dim_<name>`.
+- **Objetivo**: Crear tablas de Hechos (Fact) y Dimensiones (Dimension).
+- **Prefijos**: `_fct_<nombre>` o `_dim_<nombre>`.
 
-## 4. BI Tables
-- **Goal**: Final joined tables optimized for visualization and analysis tools (Tableau, Streamlit, etc.).
+## 4. Tablas BI
+- **Objetivo**: Tablas finales unidas, optimizadas para herramientas de visualización y análisis (Tableau, Streamlit, etc.).

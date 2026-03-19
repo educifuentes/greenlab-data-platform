@@ -1,17 +1,17 @@
-# Git Workflow
+# Flujo de Trabajo (Workflow) con Git
 
-## Repository Hosting
-We use **GitHub** for repository hosting and version control.
+## Alojamiento del Repositorio
+Utilizamos **GitHub** para el alojamiento del repositorio y el control de versiones.
 
-## Branches and Pull Requests
-- Use descriptive branch names.
-- Submit Pull Requests for code reviews.
+## Ramas (Branches) y Pull Requests
+- Usa nombres descriptivos para las ramas.
+- Envía Pull Requests para revisión de código.
 
-## Commit Messages
-Use clear with prefixes:
-- **feat**: Added a new feature or model.
-- **fix**: Fixed a bug.
-- **docs**: Updated documentation or comments.
-- **chore**: Deployment, architecture, or maintenance tasks.
+## Mensajes de Commit
+Usa mensajes claros con prefijos:
+- **feat**: Se agregó una nueva funcionalidad o modelo.
+- **fix**: Se corrigió un error (bug).
+- **docs**: Se actualizó la documentación o comentarios.
+- **chore**: Tareas de despliegue, arquitectura o mantenimiento.
 
-**Example**: `feat: add staging model for electricity exposures`
+**Ejemplo**: `feat: add staging model for electricity exposures`
