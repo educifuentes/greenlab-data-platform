@@ -1,6 +1,6 @@
 import streamlit as st
 
-from helpers.model_catalog import build_global_model_registry
+from helpers.utilities.model_catalog import build_global_model_registry
 from helpers.ui_components.icons import render_icon
 from helpers.ui_components.dataframe_column_display import dataframe_column_display
 

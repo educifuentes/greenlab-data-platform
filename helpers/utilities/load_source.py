@@ -1,5 +1,5 @@
 import pandas as pd
-from helpers.yaml_loader import load_yaml_config
+from helpers.utilities.yaml_loader import load_yaml_config
 
 def load_source(table_name: str, yaml_path: str = "models/generacion_electrica/sources/_src_generacion_electrica.yml", format: str = "csv", **kwargs) -> pd.DataFrame:
     """

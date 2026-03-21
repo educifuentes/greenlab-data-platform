@@ -1,8 +1,8 @@
 import streamlit as st
 
 from helpers.ui_components.icons import ICONS, render_icon
-from helpers.get_version import get_git_version
-from helpers.theme_manager import get_current_theme, set_theme
+from helpers.utilities.get_version import get_git_version
+from helpers.utilities.theme_manager import get_current_theme, set_theme
 
 # --- PAGE CONFIG ---
 st.set_page_config(

@@ -2,7 +2,7 @@ import importlib
 import inspect
 import streamlit as st
 
-from helpers.model_catalog import build_global_model_registry
+from helpers.utilities.model_catalog import build_global_model_registry
 
 def find_model(model_name):
     """

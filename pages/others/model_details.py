@@ -1,6 +1,6 @@
 import streamlit as st
 
-from helpers.find_model import find_model
+from helpers.utilities.find_model import find_model
 from helpers.ui_components.render_model_lineage import render_model_lineage
 
 # Retrieve query params from URL or session state (since st.switch_page drops query params)
