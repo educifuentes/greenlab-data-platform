@@ -1,7 +1,7 @@
 def generate_lineage_chart(df):
     """
     Builds the Mermaid flow chart starting from a model's metadata.
-    Uses subgraphs to visually separate Staging, Intermediate, and Final layers.
+    Uses subgraphs to visually separate layers.
     """
     model_name = df.attrs.get('model_name', 'Unknown')
     models_dict = df.attrs.get('models', {})
@@ -9,10 +9,12 @@ def generate_lineage_chart(df):
     def get_layer(name):
         if name.startswith("stg_"): return "staging"
         elif name.startswith("int_"): return "intermediate"
-        return "final"
+        elif name.startswith("fct_"): return "marts"
+        elif name.startswith("exp_"): return "exposures"
+        return "source"
 
     # Collect all nodes by layer
-    layers = {"staging": set(), "intermediate": set(), "final": set()}
+    layers = {"source": set(), "staging": set(), "intermediate": set(), "marts": set(), "exposures": set()}
     
     main_layer = get_layer(model_name)
     if main_layer in layers:
@@ -26,32 +28,25 @@ def generate_lineage_chart(df):
 
     mermaid_lines = ["graph LR"]
     
-    # Subgraph Staging
-    if layers["staging"]:
-        mermaid_lines.append("    subgraph Staging_Layer [Staging]")
-        mermaid_lines.append("        direction TB")
-        for node in sorted(list(layers["staging"])):
-            mermaid_lines.append(f'        {node}["{node}"]')
-        mermaid_lines.append("    end")
+    # Generate Subgraphs dynamically
+    layer_display_names = {
+        "source": "Source",
+        "staging": "Staging",
+        "intermediate": "Intermediate",
+        "marts": "Marts",
+        "exposures": "Exposures"
+    }
 
-    # Subgraph Intermediate
-    if layers["intermediate"]:
-        mermaid_lines.append("    subgraph Intermediate_Layer [Intermediate]")
-        mermaid_lines.append("        direction TB")
-        for node in sorted(list(layers["intermediate"])):
-            mermaid_lines.append(f'        {node}["{node}"]')
-        mermaid_lines.append("    end")
-
-    # Subgraph Final
-    if layers["final"]:
-        mermaid_lines.append("    subgraph Final_Layer [Final]")
-        mermaid_lines.append("        direction TB")
-        for node in sorted(list(layers["final"])):
-            mermaid_lines.append(f'        {node}["{node}"]')
-        mermaid_lines.append("    end")
+    for layer_key in layer_display_names.keys():
+        if layers[layer_key]:
+            mermaid_lines.append(f"    subgraph {layer_key.capitalize()}_Layer [{layer_display_names[layer_key]}]")
+            for node in sorted(list(layers[layer_key])):
+                mermaid_lines.append(f'        {node}["{node}"]')
+            mermaid_lines.append("    end")
 
     mermaid_lines.append("")
     mermaid_lines.append("    %% Lineage Connections")
+    # All previous connections point to the final model
     for layer_name, sources in models_dict.items():
         for src in sources:
             mermaid_lines.append(f"    {src} --> {model_name}")
@@ -59,25 +54,21 @@ def generate_lineage_chart(df):
     mermaid_lines.append("")
     mermaid_lines.append("    %% Styling")
     
-    # Modern minimal node styles (transparent backgrounds, rounded corners)
+    # Modern minimal node styles
+    mermaid_lines.append("    classDef source fill:transparent,stroke:#5c6bc0,stroke-width:1.5px,rx:6px,ry:6px,color:#5c6bc0;")
     mermaid_lines.append("    classDef staging fill:transparent,stroke:#2e7d32,stroke-width:1.5px,rx:6px,ry:6px,color:#2e7d32;")
     mermaid_lines.append("    classDef intermediate fill:transparent,stroke:#1565c0,stroke-width:1.5px,rx:6px,ry:6px,color:#1565c0;")
-    mermaid_lines.append("    classDef final fill:transparent,stroke:#f57f17,stroke-width:1.5px,rx:6px,ry:6px,color:#f57f17;")
+    mermaid_lines.append("    classDef marts fill:transparent,stroke:#f57f17,stroke-width:1.5px,rx:6px,ry:6px,color:#f57f17;")
+    mermaid_lines.append("    classDef exposures fill:transparent,stroke:#e91e63,stroke-width:1.5px,rx:6px,ry:6px,color:#e91e63;")
     
-    # Minimal subgraph styles (transparent, dashed borders)
-    if layers["staging"]:
-        mermaid_lines.append("    style Staging_Layer fill:transparent,stroke:#cfd8dc,stroke-width:1px,stroke-dasharray: 4 4,color:#78909c;")
-    if layers["intermediate"]:
-        mermaid_lines.append("    style Intermediate_Layer fill:transparent,stroke:#cfd8dc,stroke-width:1px,stroke-dasharray: 4 4,color:#78909c;")
-    if layers["final"]:
-        mermaid_lines.append("    style Final_Layer fill:transparent,stroke:#cfd8dc,stroke-width:1px,stroke-dasharray: 4 4,color:#78909c;")
+    # Minimal subgraph styles
+    for layer_key in layer_display_names.keys():
+        if layers[layer_key]:
+            mermaid_lines.append(f"    style {layer_key.capitalize()}_Layer fill:transparent,stroke:#cfd8dc,stroke-width:1px,stroke-dasharray: 4 4,color:#78909c;")
 
     # Apply classes
-    if layers["staging"]:
-        mermaid_lines.append(f"    class {','.join(layers['staging'])} staging;")
-    if layers["intermediate"]:
-        mermaid_lines.append(f"    class {','.join(layers['intermediate'])} intermediate;")
-    if layers["final"]:
-        mermaid_lines.append(f"    class {','.join(layers['final'])} final;")
+    for layer_key in layer_display_names.keys():
+        if layers[layer_key]:
+            mermaid_lines.append(f"    class {','.join(layers[layer_key])} {layer_key};")
 
     return "\n".join(mermaid_lines)
