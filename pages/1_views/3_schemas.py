@@ -1,7 +1,6 @@
 import streamlit as st
 from helpers.utilities.model_catalog import build_global_model_registry
-from helpers.utilities.find_model import find_model
-from helpers.ui_components.render_model_lineage import render_model_lineage
+from helpers.ui_components.model_details_ui import render_model_details
 
 st.title("Schemas")
 st.markdown("Directorio de schemas")
@@ -22,13 +21,7 @@ if not df_catalog.empty:
     models = sorted(df_filtered["model"].dropna().unique().tolist())
     selected_model = st.selectbox("Seleccione un modelo", options=models)
 
-    if selected_model:
-        df_model = find_model(selected_model)
-        if df_model is not None:
-            render_model_lineage(df_model)
+    render_model_details(selected_model)
 
 else:
     st.info("No se encontraron esquemas ni modelos registrados.")
-
-st.subheader("Documentación")
-st.info("Aquí se mostrará la documentación del schema seleccionado próximamente.")
