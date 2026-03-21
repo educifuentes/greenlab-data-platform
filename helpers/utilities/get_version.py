@@ -1,8 +1,21 @@
 import subprocess
+import os
 
 def get_git_version():
+    # 1. Check for environment variable (most reliable in production containers)
+    if "APP_VERSION" in os.environ:
+        return os.environ["APP_VERSION"]
+        
+    # 2. Check for a hardcoded VERSION file if injected during CI/CD
+    if os.path.exists("VERSION"):
+        try:
+            with open("VERSION", "r") as f:
+                return f.read().strip()
+        except:
+            pass
+
+    # 3. Fallback to local git CLI lookup
     try:
-        # Get the latest tag; suppress stderr to avoid 'No names found' noise when no tags exist
         tag = subprocess.check_output(
             ['git', 'describe', '--tags', '--abbrev=0'],
             stderr=subprocess.DEVNULL
