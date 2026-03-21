@@ -1,0 +1,80 @@
+models:
+  - name: _fct_termoelectricas__emisiones
+    description: "Tabla mart que contiene información de emisiones diarias de centrales termoeléctricas."
+    columns:
+      - name: nombre_central
+        description: "Nombre de la central termoeléctrica."
+      - name: chimenea
+        description: "Nombre de la chimenea asociada a la UGE."
+      - name: uge
+        description: "Unidad Generadora Eléctrica."
+      - name: dia
+        description: "Fecha (agregación diaria)."
+      - name: n_registros_dia
+        description: "Número de registros horarios existentes ese día."
+      - name: horas_operativas
+        description: "Número de horas con generación positiva."
+      - name: mwh_dia
+        description: "Energía bruta generada en el día (MWh)."
+      - name: mwh_prom_por_hora_operativa
+        description: "Carga promedio durante horas operativas (MWh/h)."
+      - name: flujo_nm3_dia
+        description: "Volumen total diario de gases base seca normalizada (Nm3)."
+      - name: consumo_combustible_dia
+        description: "Consumo total diario de combustible."
+      - name: nox_mg_dia_from_mg_mwh
+        description: "Masa total diaria de NOX calculada desde intensidad mg/MWh (mg)."
+      - name: so2_mg_dia_from_mg_mwh
+        description: "Masa total diaria de SO2 calculada desde intensidad mg/MWh (mg)."
+      - name: mp_mg_dia_from_mg_mwh
+        description: "Masa total diaria de MP calculada desde intensidad mg/MWh (mg)."
+      - name: nox_kg_dia_from_mg_mwh
+        description: "Masa total diaria de NOX desde intensidad energética (kg)."
+      - name: so2_kg_dia_from_mg_mwh
+        description: "Masa total diaria de SO2 desde intensidad energética (kg)."
+      - name: mp_kg_dia_from_mg_mwh
+        description: "Masa total diaria de MP desde intensidad energética (kg)."
+      - name: co2_ton_dia_from_ton_mwh
+        description: "Masa total diaria de CO2 desde intensidad energética (ton)."
+      - name: nox_mg_dia_from_mg_nm3
+        description: "Masa total diaria de NOX calculada desde concentración física (mg)."
+      - name: so2_mg_dia_from_mg_nm3
+        description: "Masa total diaria de SO2 calculada desde concentración física (mg)."
+      - name: mp_mg_dia_from_mg_nm3
+        description: "Masa total diaria de MP calculada desde concentración física (mg)."
+      - name: nox_kg_dia_from_mg_nm3
+        description: "Masa total diaria de NOX desde concentración física (kg)."
+      - name: so2_kg_dia_from_mg_nm3
+        description: "Masa total diaria de SO2 desde concentración física (kg)."
+      - name: mp_kg_dia_from_mg_nm3
+        description: "Masa total diaria de MP desde concentración física (kg)."
+      - name: nox_mg_mwh_dia
+        description: "Intensidad diaria de NOX por energía (mg/MWh)."
+      - name: so2_mg_mwh_dia
+        description: "Intensidad diaria de SO2 por energía (mg/MWh)."
+      - name: mp_mg_mwh_dia
+        description: "Intensidad diaria de MP por energía (mg/MWh)."
+      - name: co2_ton_mwh_dia
+        description: "Intensidad diaria de CO2 por energía (ton/MWh)."
+      - name: nox_mg_nm3_prom_dia
+        description: "Concentración promedio diaria de NOX ponderada por flujo (mg/Nm3)."
+      - name: so2_mg_nm3_prom_dia
+        description: "Concentración promedio diaria de SO2 ponderada por flujo (mg/Nm3)."
+      - name: mp_mg_nm3_prom_dia
+        description: "Concentración promedio diaria de MP ponderada por flujo (mg/Nm3)."
+      - name: nox_ppm_prom_dia
+        description: "Concentración promedio diaria de NOX en ppm ponderada por flujo."
+      - name: so2_ppm_prom_dia
+        description: "Concentración promedio diaria de SO2 en ppm ponderada por flujo."
+      - name: o2_prom_mwh
+        description: "O2 promedio diario ponderado por generación (% base seca)."
+      - name: humedad_prom_mwh
+        description: "Humedad promedio diaria ponderada por generación (%)."
+      - name: temp_gases_prom_mwh
+        description: "Temperatura promedio diaria de gases ponderada por generación (°C)."
+      - name: presion_prom_mwh
+        description: "Presión promedio diaria ponderada por generación (atm)."
+      - name: estado_uge_mas_frecuente
+        description: "Estado operativo más frecuente del día."
+      - name: combustible_mas_frecuente
+        description: "Combustible más utilizado en el día."

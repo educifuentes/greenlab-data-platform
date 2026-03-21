@@ -1,0 +1,26 @@
+models:
+  - name: _fct_generacion_electrica
+    description: "Tabla mart que contiene métricas de generación de energía eléctrica por hora, planta de generación y fecha."
+    columns:
+      - name: nombre_central
+        description: "Nombre de la planta de generación de energía."
+      - name: llave_nombre
+        description: "Clave identificadora única de la planta de energía."
+        tests:
+          - not_null
+      - name: fuente_tipo
+        description: "Tipo de fuente de energía (ej. Solar, Eólica, Térmica)."
+      - name: fuente_subtipo
+        description: "Subtipo específico de la fuente de energía."
+      - name: region
+        description: "Región geográfica donde se ubica la planta."
+      - name: energia_tipo
+        description: "Clasificación de la energía (ej. ERNC o Convencional)."
+      - name: factor_ernc
+        description: "Factor que indica la contribución de Energía Renovable No Convencional."
+      - name: fecha
+        description: "Fecha del registro de generación."
+        tests:
+          - not_null
+      - name: hora_<num>
+        description: "Generación durante la hora <num>."
