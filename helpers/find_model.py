@@ -35,9 +35,7 @@ def find_model(model_name):
                     model_func = func
                     break
                     
-            if model_func:
-                st.info(f"Successfully mounted `{model_func.__name__}()` endpoint from `{module_path}`")
-                
+            if model_func:                
                 # 4. Invoke it natively!
                 df = model_func()
                 return df
