@@ -7,7 +7,7 @@ def load_yaml_config(file_path):
     """
     # If the path is relative, assume it's from the project root
     if not os.path.isabs(file_path):
-        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
         file_path = os.path.join(project_root, file_path)
     
     if not os.path.exists(file_path):

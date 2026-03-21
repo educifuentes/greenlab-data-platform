@@ -1,11 +1,16 @@
 import pandas as pd
 from helpers.utilities.load_source import load_source
+from helpers.utilities.get_source_metadata import get_source_metadata
 from helpers.utilities.build_model_lineage import build_model_lineage
 
 def stg_termoelectricas__emisiones():
-    df = load_source(
+    file_path, sheet_name = get_source_metadata(
         "Emisiones de centrales termoelectricas - 2020",
-        yaml_path="models/termoelectricas/sources/_src_termoelectricas.yml",
+        "models/termoelectricas/sources/_src_termoelectricas.yml"
+    )
+    df = load_source(
+        file_path,
+        sheet_name=sheet_name,
         encoding="latin-1",
         sep=";"
     )
