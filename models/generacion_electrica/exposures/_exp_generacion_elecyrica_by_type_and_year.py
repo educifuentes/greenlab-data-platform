@@ -1,5 +1,6 @@
 import pandas as pd
 from models.generacion_electrica.marts._fct_generacion_electrica import fct_generacion_electrica
+from helpers.build_model_lineage import build_model_lineage
 
 def exp_generacion_electrica_by_type_and_year():
     df = fct_generacion_electrica()
@@ -23,4 +24,6 @@ def exp_generacion_electrica_by_type_and_year():
     # Clean up column names (optional, removes the axis name 'energia_tipo')
     final_df.columns.name = None
     
+    final_df.attrs.update(build_model_lineage())
+
     return final_df

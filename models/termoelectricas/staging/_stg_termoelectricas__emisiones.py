@@ -1,5 +1,6 @@
 import pandas as pd
 from helpers.load_source_from_csv import load_source_dataframe
+from helpers.build_model_lineage import build_model_lineage
 
 def stg_termoelectricas__emisiones():
     df = load_source_dataframe(
@@ -8,4 +9,6 @@ def stg_termoelectricas__emisiones():
         encoding="latin-1",
         sep=";"
     )
+    df.attrs.update(build_model_lineage())
+
     return df

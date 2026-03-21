@@ -1,5 +1,6 @@
 import pandas as pd
 from models.generacion_electrica.marts._fct_generacion_electrica import fct_generacion_electrica
+from helpers.build_model_lineage import build_model_lineage
 
 def exp_generacion_electrica_by_month():
     df = fct_generacion_electrica()
@@ -20,4 +21,6 @@ def exp_generacion_electrica_by_month():
     # Group by month and nombre_central and sum
     final_df = df.groupby(['month', 'nombre_central'])['total_energy'].sum().reset_index()
     
+    final_df.attrs.update(build_model_lineage())
+
     return final_df

@@ -45,8 +45,10 @@ def build_model_lineage():
                             layer = 'staging'
                         elif src.startswith('int_'):
                             layer = 'intermediate'
-                        elif src.startswith('fct_') or src.startswith('final_'):
-                            layer = 'final'
+                        elif src.startswith('fct_') or src.startswith('fct_'):
+                            layer = 'marts'
+                        elif src.startswith('exp_') or src.startswith('exp_'):
+                            layer = 'exposures'
                         else:
                             continue # Ignore non-model imports
                             
