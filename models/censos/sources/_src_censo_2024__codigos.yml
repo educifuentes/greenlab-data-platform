@@ -1,7 +1,0 @@
-tables:
-  - name: comunas
-    path: seeds/censos/censo_2024/codigos/comunas.csv
-  - name: provincias
-    path: seeds/censos/censo_2024/codigos/provincia.csv
-  - name: regiones
-    path: seeds/censos/censo_2024/codigos/regiones.csv
