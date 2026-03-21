@@ -46,10 +46,15 @@ def generate_lineage_chart(df):
 
     mermaid_lines.append("")
     mermaid_lines.append("    %% Lineage Connections")
-    # All previous connections point to the final model
-    for layer_name, sources in models_dict.items():
-        for src in sources:
-            mermaid_lines.append(f"    {src} --> {model_name}")
+    ordered_layers = ["source", "staging", "intermediate", "marts", "exposures"]
+    populated_layers = [lyr for lyr in ordered_layers if layers.get(lyr)]
+    
+    for i in range(len(populated_layers) - 1):
+        current_layer = populated_layers[i]
+        next_layer = populated_layers[i + 1]
+        for src in sorted(list(layers[current_layer])):
+            for tgt in sorted(list(layers[next_layer])):
+                mermaid_lines.append(f"    {src} --> {tgt}")
 
     mermaid_lines.append("")
     mermaid_lines.append("    %% Styling")
@@ -70,5 +75,9 @@ def generate_lineage_chart(df):
     for layer_key in layer_display_names.keys():
         if layers[layer_key]:
             mermaid_lines.append(f"    class {','.join(layers[layer_key])} {layer_key};")
+
+    mermaid_lines.append("")
+    mermaid_lines.append("    %% Highlight Current Model")
+    mermaid_lines.append(f"    style {model_name} stroke-width:4px,stroke:#333333,color:#333333,fill:#fff59d;")
 
     return "\n".join(mermaid_lines)
