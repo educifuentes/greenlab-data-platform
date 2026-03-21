@@ -11,11 +11,11 @@ def render_model_ui(df, table_name=None):
 
 
     with st.expander(f"Tabla: `{table_name}`"):
-        st.write(df.shape)
+        st.code(f"Shape: {df.shape}")
         with st.expander("Columnas"):
             st.code("\n".join(df.columns))
         with st.expander("Data Types"):
-            dtypes_str = " | ".join([f"{col}: {dtype}" for col, dtype in df.dtypes.items()])
+            dtypes_str = "\n".join([f"{col}: {dtype}" for col, dtype in df.dtypes.items()])
             st.code(dtypes_str)
         df = explorer_de_datos(df)
         st.dataframe(df)
