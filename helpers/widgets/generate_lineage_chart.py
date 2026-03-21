@@ -1,4 +1,4 @@
-def generate_mermaid(df):
+def generate_lineage_chart(df):
     """
     Builds the Mermaid flow chart starting from a model's metadata.
     Uses subgraphs to visually separate Staging, Intermediate, and Final layers.

@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit_mermaid as st_mm
 
-from helpers.widgets.generate_mermaid import generate_mermaid
+from helpers.widgets.generate_lineage_chart import generate_lineage_chart
 
 def render_model_lineage(df):
     """
@@ -9,7 +9,7 @@ def render_model_lineage(df):
     """
     st.subheader("Data Lineage")
     
-    mermaid_code = generate_mermaid(df)
+    mermaid_code = generate_lineage_chart(df)
     
     st_mm.st_mermaid(mermaid_code, height=400)
     
