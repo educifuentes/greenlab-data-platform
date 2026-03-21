@@ -1,5 +1,7 @@
 import streamlit as st
 from helpers.model_catalog import build_global_model_registry
+from helpers.find_model import find_model
+from helpers.ui_components.render_model_lineage import render_model_lineage
 
 st.title("Schemas")
 st.markdown("Directorio de schemas")
@@ -17,27 +19,14 @@ if not df_catalog.empty:
     # 2. Filtrar el dataframe por el schema seleccionado
     df_filtered = df_catalog[df_catalog["schema"] == selected_schema]
     
-    # Renderizar el df con links
-    st.dataframe(
-        df_filtered,
-        use_container_width=True,
-        hide_index=True,
-        column_config={
-            "schema": st.column_config.TextColumn("Schema"),
-            "stage": st.column_config.MultiselectColumn(
-                "Stage",
-                options=[
-                    "staging",
-                    "intermediate",
-                    "marts",
-                    "exposures",
-                ],
-                color=["#28a745", "#007bff", "#ffc107", "#dc3545"]
-            ),
-            "model": st.column_config.TextColumn("Model Name"),
-            "link": st.column_config.LinkColumn("View Model", display_text="View Details ↗")
-        }
-    )
+    models = sorted(df_filtered["model"].dropna().unique().tolist())
+    selected_model = st.selectbox("Seleccione un modelo", options=models)
+
+    if selected_model:
+        df_model = find_model(selected_model)
+        if df_model is not None:
+            render_model_lineage(df_model)
+
 else:
     st.info("No se encontraron esquemas ni modelos registrados.")
 
