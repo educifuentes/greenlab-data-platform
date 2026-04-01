@@ -22,7 +22,7 @@ def find_model(model_name):
         stage = model_row.iloc[0]["stage"]
         
         # 2. Build explicit module python path: models.{schema}.{stage}.{model_name}
-        module_path = f"models.{schema}.{stage}.{model_name}"
+        module_path = f"models.{stage}.{schema}.{model_name}"
         
         try:
             # 3. Dynamically inject the raw module into execution scope

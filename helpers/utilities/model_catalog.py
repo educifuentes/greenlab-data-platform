@@ -21,8 +21,8 @@ def build_global_model_registry(root_path="models"):
         
         # Ensure we are inside at least a Schema and Stage
         if len(path_parts) >= 2:
-            schema = path_parts[0]
-            stage = path_parts[1]
+            stage = path_parts[0]
+            schema = path_parts[1]
             
             for file in filenames:
                 if file == "__init__.py" or not file.endswith(".py"):

@@ -2,6 +2,7 @@ import streamlit as st
 
 from helpers.utilities.model_catalog import build_global_model_registry
 from helpers.utilities.find_model import find_model
+
 from helpers.ui_components.render_model import render_model_ui
 from helpers.ui_components.icons import render_icon
 

@@ -1,4 +1,5 @@
 import streamlit as st
+
 from helpers.utilities.model_catalog import build_global_model_registry
 from helpers.ui_components.model_details_ui import render_model_details
 
