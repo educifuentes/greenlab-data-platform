@@ -9,7 +9,7 @@ from helpers.utilities.build_model_lineage import build_model_lineage
 def stg_generacion_electrica__energia_centrales_20_22():
     file_path, sheet_name = get_source_metadata(
         "Generacion de Energia por Central - 2020 a 2022",
-        "models/generacion_electrica/sources/_src_generacion_electrica.yml"
+        "models/sources/generacion_electrica/_src_generacion_electrica.yml"
     )
     df = load_source(file_path, format="excel", sheet_name=sheet_name, nrows=NROWS)
 
