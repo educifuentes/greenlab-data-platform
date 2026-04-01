@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 from helpers.utilities.model_catalog import build_global_model_registry
 from helpers.ui_components.icons import render_icon
@@ -31,18 +32,26 @@ if not df_catalog.empty:
         selected_schema = st.multiselect("Filter by Schema", options=schemas)
         
     with col2:
-        stages = sorted(df_catalog["stage"].unique().tolist())
+        expected_order = ["exposures", "marts", "intermediate", "staging", "sources"]
+        stages = sorted(df_catalog["stage"].unique().tolist(), key=lambda x: expected_order.index(x) if x in expected_order else len(expected_order))
         selected_stage = st.multiselect("Filter by Stage", options=stages)
         
     # Apply Filters
     df_filtered = df_catalog.copy()
+
+    # Apply Custom Sorting: first by schema (alphabetical), then by stage (custom order)
+    stage_order = ["exposures", "marts", "intermediate", "staging", "sources"]
+    df_filtered["stage"] = pd.Categorical(df_filtered["stage"], categories=stage_order, ordered=True)
+    df_filtered = df_filtered.sort_values(["schema", "stage"])
+
     if selected_schema:
         df_filtered = df_filtered[df_filtered["schema"].isin(selected_schema)]
         
     if selected_stage:
         df_filtered = df_filtered[df_filtered["stage"].isin(selected_stage)]
 
-    df_filtered["stage"] = df_filtered["stage"].apply(lambda x: [x])
+    # Prepare the stage column for st.column_config.MultiselectColumn (expects a list)
+    df_filtered["stage"] = df_filtered["stage"].astype(object).apply(lambda x: [x])
 
     # Configure dataframe columns for proper Links
     st.dataframe(
@@ -54,12 +63,14 @@ if not df_catalog.empty:
             "stage": st.column_config.MultiselectColumn(
                 "Stage",
                 options=[
-                    "staging",
-                    "intermediate",
-                    "marts",
                     "exposures",
+                    "marts",
+                    "intermediate",
+                    "staging",
+                    "sources",
                 ],
-                color=["#28a745", "#007bff", "#ffc107", "#dc3545"]
+                # Colors correspond sequentially to the options list above
+                color=["#dc3545", "#ffc107", "#007bff", "#28a745", "#6c757d"]
             ),
             "model": st.column_config.TextColumn("Model Name"),
             "link": st.column_config.LinkColumn("View Model", display_text="View Details ↗")
