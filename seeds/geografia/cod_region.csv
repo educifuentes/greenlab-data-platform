@@ -1,0 +1,17 @@
+id_region,region_n,region_romano,region_orden,region_corto,region_short,region_nombre_completo,region_name_completo,Fuente
+r1,1,I,1,Tarapacá,De Tarapaca,Región de Tarapaca,Region de Tarapaca,Censo 2024
+r10,10,X,14,Los Lagos,De Los Lagos,Región de Los Lagos,Region de Los Lagos,Censo 2024
+r11,11,XI,15,Aysén,De Aisen del Gral. C. Ibanez del Campo,Región de Aisen del General Carlos Ibañez del Campo,Region de Aisen del Gral. C. Ibanez del Campo,Censo 2024
+r12,12,XII,16,Magallanes,De Magallanes y de La Antartica Chilena,Región de Magallanes y de la Antártica Chilena,Region de Magallanes y de la Antartica Chilena,Censo 2024
+r13,13,XIII,7,Metropolitana,Metropolitana de Santiago,Región Metropolitana de Santiago,Region Metropolitana de Santiago,Censo 2024
+r14,14,XIV,13,Los Ríos,De Los Rios,Región de Los Rios,Region de Los Rios,Censo 2024
+r15,15,XV,2,Arica,De Arica y Parinacota,Región de Arica y Parinacota,Region de Arica y Parinacota,Censo 2024
+r16,16,XVI,10,Ñuble,De Nuble,Región de Ñuble,Region de Nuble,Censo 2024
+r2,2,II,3,Antofagasta,De Antofagasta,Región de Antofagasta,Region de Antofagasta,Censo 2024
+r3,3,III,4,Atacama,De Atacama,Región de Atacama,Region de Atacama,Censo 2024
+r4,4,IV,5,Coquimbo,De Coquimbo,Región de Coquimbo,Region de Coquimbo,Censo 2024
+r5,5,V,6,Valparaíso,De Valparaiso,Región de Valparaíso,Region de Valparaiso,Censo 2024
+r6,6,VI,8,O'Higgins,Del Libertador B. O'Higgins,Región del Libertador General Bernardo O'Higgins,Region del Libertador B. O'Higgins,Censo 2024
+r7,7,VII,9,Maule,Del Maule,Región del Maule,Region del Maule,Censo 2024
+r8,8,VIII,11,Biobío,Del Biobio,Región del Biobio,Region del Biobio,Censo 2024
+r9,9,IX,12,La Araucanía,De La Araucania,Región de la Araucanía,Region de La Araucania,Censo 2024

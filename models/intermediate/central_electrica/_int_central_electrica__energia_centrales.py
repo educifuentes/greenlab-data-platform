@@ -1,24 +1,24 @@
 import pandas as pd
 
-from models.staging.generacion_electrica._stg_generacion_electrica__energia_centrales_00_15 import stg_generacion_electrica__energia_centrales_00_15
-from models.staging.generacion_electrica._stg_generacion_electrica__energia_centrales_16_19 import stg_generacion_electrica__energia_centrales_16_19
-from models.staging.generacion_electrica._stg_generacion_electrica__energia_centrales_20_22 import stg_generacion_electrica__energia_centrales_20_22
-from models.staging.generacion_electrica._stg_generacion_electrica__energia_centrales_23 import stg_generacion_electrica__energia_centrales_23
-from models.staging.generacion_electrica._stg_generacion_electrica__energia_centrales_24 import stg_generacion_electrica__energia_centrales_24
+from models.staging.central_electrica._stg_central_electrica__energia_centrales_00_15 import stg_central_electrica__energia_centrales_00_15
+from models.staging.central_electrica._stg_central_electrica__energia_centrales_16_19 import stg_central_electrica__energia_centrales_16_19
+from models.staging.central_electrica._stg_central_electrica__energia_centrales_20_22 import stg_central_electrica__energia_centrales_20_22
+from models.staging.central_electrica._stg_central_electrica__energia_centrales_23 import stg_central_electrica__energia_centrales_23
+from models.staging.central_electrica._stg_central_electrica__energia_centrales_24 import stg_central_electrica__energia_centrales_24
 
 from helpers.data_transformations.column_names_tosnakecase import to_snake_case
 from helpers.data_transformations.cast_to_date import cast_column_to_date, cast_spanish_month_col_to_date
 from helpers.utilities.build_model_lineage import build_model_lineage
 
 
-def int_generacion_electrica__energia_centrales():
+def int_central_electrica__energia_centrales():
 
     # load all periods
-    df_00_15 = stg_generacion_electrica__energia_centrales_00_15()
-    df_16_19 = stg_generacion_electrica__energia_centrales_16_19()
-    df_20_22 = stg_generacion_electrica__energia_centrales_20_22()
-    df_23 = stg_generacion_electrica__energia_centrales_23()
-    df_24 = stg_generacion_electrica__energia_centrales_24()
+    df_00_15 = stg_central_electrica__energia_centrales_00_15()
+    df_16_19 = stg_central_electrica__energia_centrales_16_19()
+    df_20_22 = stg_central_electrica__energia_centrales_20_22()
+    df_23 = stg_central_electrica__energia_centrales_23()
+    df_24 = stg_central_electrica__energia_centrales_24()
 
     # tablas similares: 2000 al 2023
     df_00_15 = to_snake_case(df_00_15)

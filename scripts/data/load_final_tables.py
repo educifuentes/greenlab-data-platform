@@ -2,8 +2,8 @@
 load_final_tables.py
 ---------------------
 Loads all contaminantes energy data (no row limit), applies the same
-transformations as _int_generacion_electrica__energia_centrales, and exports
-the result to seeds/outputs/fct_generacion_electrica.parquet.
+transformations as _int_central_electrica__energia_centrales, and exports
+the result to seeds/outputs/fct_central_electrica.parquet.
 
 Run from the repo root:
     python scripts/data/load_final_tables.py
@@ -20,8 +20,8 @@ from helpers.load_source_from_excel import load_source_from_excel
 from helpers.data_transformations.column_names_tosnakecase import to_snake_case
 from helpers.data_transformations.cast_to_date import cast_column_to_date, cast_spanish_month_col_to_date
 
-OUTPUT_PATH = "seeds/outputs/fct_generacion_electrica.parquet"
-OUTPUT_CSV_PATH = "seeds/outputs/fct_generacion_electrica.csv"
+OUTPUT_PATH = "seeds/outputs/fct_central_electrica.parquet"
+OUTPUT_CSV_PATH = "seeds/outputs/fct_central_electrica.csv"
 
 COLUMNS = [
     "nombre_central",

@@ -6,10 +6,10 @@ from helpers.constants.nrows import NROWS
 from helpers.utilities.build_model_lineage import build_model_lineage
 
 
-def stg_generacion_electrica__energia_centrales_24():
+def stg_central_electrica__energia_centrales_23():
     file_path, sheet_name = get_source_metadata(
-        "Generacion de Energia por Central - 2024",
-        "models/sources/generacion_electrica/_src_generacion_electrica.yml"
+        "Generacion de Energia por Central - 2023",
+        "models/sources/central_electrica/_src_central_electrica.yml"
     )
     df = load_source(file_path, format="excel", sheet_name=sheet_name, nrows=NROWS)
 

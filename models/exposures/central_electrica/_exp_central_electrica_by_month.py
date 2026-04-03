@@ -1,9 +1,9 @@
 import pandas as pd
-from models.marts.generacion_electrica._fct_generacion_electrica import fct_generacion_electrica
+from models.marts.central_electrica._fct_central_electrica import fct_central_electrica
 from helpers.utilities.build_model_lineage import build_model_lineage
 
-def exp_generacion_electrica_by_month():
-    df = fct_generacion_electrica()
+def exp_central_electrica_by_month():
+    df = fct_central_electrica()
     
     # Identify the 24 hour columns
     hora_cols = [col for col in df.columns if col.startswith('hora_')]

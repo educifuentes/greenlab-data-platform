@@ -1,7 +1,7 @@
 sources:
   - name: energia
     schema_url: https://www.dropbox.com/home/Datos/3_Datos_Originales/Energia
-    description: generacion_electrica - energia generado por las centrales. generacion_centrales
+    description: central_electrica - energia generado por las centrales. generacion_centrales
     tables:
       - name: Generacion de Energia por Central - 2000 a 2015
         path: seeds/generacion_electrica/CEN-hist_gen_de_energía_por_central_00_15.xlsx
@@ -20,5 +20,5 @@ sources:
         worksheet: "Hoja2"
 
   - name: CEMS
-    description: emision de generacion_electrica de termoelectricas.
+    description: emision de central_electrica de termoelectricas.
     url_2_cems: https://www.dropbox.com/home/Datos/3_Datos_Originales/Contaminacion/Emisiones/CEMS_Termoelectricas

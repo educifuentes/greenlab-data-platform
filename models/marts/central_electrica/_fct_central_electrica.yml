@@ -1,5 +1,5 @@
 models:
-  - name: _fct_generacion_electrica
+  - name: _fct_central_electrica
     description: "Tabla mart que contiene métricas de generación de energía eléctrica por hora, planta de generación y fecha."
     columns:
       - name: nombre_central

@@ -1,0 +1,356 @@
+id_comuna,id_provincia,id_region,comuna_n,provincia_n,region_n,comuna_nombre,provincia_nombre,region_corto,comuna_name,superficie_km2,fuente
+c1101,p11,r1,1101,11,1,Iquique,Iquique,Tarapacá,Iquique,2290.74,codigos especificos Censo 2024
+c1107,p11,r1,1107,11,1,Alto Hospicio,Iquique,Tarapacá,Alto Hospicio,571.48,codigos especificos Censo 2024
+c1401,p14,r1,1401,14,1,Pozo Almonte,Del Tamarugal,Tarapacá,Pozo Almonte,13775.46,codigos especificos Censo 2024
+c1402,p14,r1,1402,14,1,Camiña,Del Tamarugal,Tarapacá,Camina,2201.45,codigos especificos Censo 2024
+c1403,p14,r1,1403,14,1,Colchane,Del Tamarugal,Tarapacá,Colchane,4010.99,codigos especificos Censo 2024
+c1404,p14,r1,1404,14,1,Huara,Del Tamarugal,Tarapacá,Huara,10479.18,codigos especificos Censo 2024
+c1405,p14,r1,1405,14,1,Pica,Del Tamarugal,Tarapacá,Pica,8989.52,codigos especificos Censo 2024
+c2101,p21,r2,2101,21,2,Antofagasta,Antofagasta,Antofagasta,Antofagasta,30702.19,codigos especificos Censo 2024
+c2102,p21,r2,2102,21,2,Mejillones,Antofagasta,Antofagasta,Mejillones,3577.59,codigos especificos Censo 2024
+c2103,p21,r2,2103,21,2,Sierra Gorda,Antofagasta,Antofagasta,Sierra Gorda,12892.42,codigos especificos Censo 2024
+c2104,p21,r2,2104,21,2,Taltal,Antofagasta,Antofagasta,Taltal,20424.16,codigos especificos Censo 2024
+c2201,p22,r2,2201,22,2,Calama,El Loa,Antofagasta,Calama,15544.66,codigos especificos Censo 2024
+c2202,p22,r2,2202,22,2,Ollagüe,El Loa,Antofagasta,Ollague,2927.64,codigos especificos Censo 2024
+c2203,p22,r2,2203,22,2,San Pedro de Atacama,El Loa,Antofagasta,San Pedro de Atacama,23612.8,codigos especificos Censo 2024
+c2301,p23,r2,2301,23,2,Tocopilla,Tocopilla,Antofagasta,Tocopilla,4122.92,codigos especificos Censo 2024
+c2302,p23,r2,2302,23,2,María Elena,Tocopilla,Antofagasta,Maria Elena,12339.14,codigos especificos Censo 2024
+c3101,p31,r3,3101,31,3,Copiapó,Copiapo,Atacama,Copiapo,17792.72,codigos especificos Censo 2024
+c3102,p31,r3,3102,31,3,Caldera,Copiapo,Atacama,Caldera,3680.84,codigos especificos Censo 2024
+c3103,p31,r3,3103,31,3,Tierra Amarilla,Copiapo,Atacama,Tierra Amarilla,11258.48,codigos especificos Censo 2024
+c3201,p32,r3,3201,32,3,Chañaral,Chañaral,Atacama,Chanaral,5760.88,codigos especificos Censo 2024
+c3202,p32,r3,3202,32,3,Diego de Almagro,Chañaral,Atacama,Diego de Almagro,18981.67,codigos especificos Censo 2024
+c3301,p33,r3,3301,33,3,Vallenar,Huasco,Atacama,Vallenar,7228.14,codigos especificos Censo 2024
+c3302,p33,r3,3302,33,3,Alto del Carmen,Huasco,Atacama,Alto del Carmen,6159.29,codigos especificos Censo 2024
+c3303,p33,r3,3303,33,3,Freirina,Huasco,Atacama,Freirina,3221.49,codigos especificos Censo 2024
+c3304,p33,r3,3304,33,3,Huasco,Huasco,Atacama,Huasco,1601.95,codigos especificos Censo 2024
+c4101,p41,r4,4101,41,4,La Serena,Elqui,Coquimbo,La Serena,1900.87,codigos especificos Censo 2024
+c4102,p41,r4,4102,41,4,Coquimbo,Elqui,Coquimbo,Coquimbo,1426.34,codigos especificos Censo 2024
+c4103,p41,r4,4103,41,4,Andacollo,Elqui,Coquimbo,Andacollo,514.25,codigos especificos Censo 2024
+c4104,p41,r4,4104,41,4,La Higuera,Elqui,Coquimbo,La Higuera,4165.53,codigos especificos Censo 2024
+c4105,p41,r4,4105,41,4,Paihuano,Elqui,Coquimbo,Paihuano,1514.19,codigos especificos Censo 2024
+c4106,p41,r4,4106,41,4,Vicuña,Elqui,Coquimbo,Vicuna,7581.82,codigos especificos Censo 2024
+c4201,p42,r4,4201,42,4,Illapel,Choapa,Coquimbo,Illapel,2629.14,codigos especificos Censo 2024
+c4202,p42,r4,4202,42,4,Canela,Choapa,Coquimbo,Canela,2195.75,codigos especificos Censo 2024
+c4203,p42,r4,4203,42,4,Los Vilos,Choapa,Coquimbo,Los Vilos,1858.8,codigos especificos Censo 2024
+c4204,p42,r4,4204,42,4,Salamanca,Choapa,Coquimbo,Salamanca,3446.8,codigos especificos Censo 2024
+c4301,p43,r4,4301,43,4,Ovalle,Limari,Coquimbo,Ovalle,3549.11,codigos especificos Censo 2024
+c4302,p43,r4,4302,43,4,Combarbalá,Limari,Coquimbo,Combarbala,2295.87,codigos especificos Censo 2024
+c4303,p43,r4,4303,43,4,Monte Patria,Limari,Coquimbo,Monte Patria,4212.32,codigos especificos Censo 2024
+c4304,p43,r4,4304,43,4,Punitaqui,Limari,Coquimbo,Punitaqui,1091.95,codigos especificos Censo 2024
+c4305,p43,r4,4305,43,4,Río Hurtado,Limari,Coquimbo,Rio Hurtado,2205.05,codigos especificos Censo 2024
+c5101,p51,r5,5101,51,5,Valparaíso,Valparaiso,Valparaíso,Valparaiso,310.67,codigos especificos Censo 2024
+c5102,p51,r5,5102,51,5,Casablanca,Valparaiso,Valparaíso,Casablanca,954.41,codigos especificos Censo 2024
+c5103,p51,r5,5103,51,5,Concón,Valparaiso,Valparaíso,Concon,76.89,codigos especificos Censo 2024
+c5104,p51,r5,5104,51,5,Juan Fernández,Valparaiso,Valparaíso,Juan Fernandez,110.58,codigos especificos Censo 2024
+c5105,p51,r5,5105,51,5,Puchuncaví,Valparaiso,Valparaíso,Puchuncavi,299.35,codigos especificos Censo 2024
+c5107,p51,r5,5107,51,5,Quintero,Valparaiso,Valparaíso,Quintero,146.02,codigos especificos Censo 2024
+c5109,p51,r5,5109,51,5,Viña del Mar,Valparaiso,Valparaíso,Vina del Mar,120.49,codigos especificos Censo 2024
+c5201,p52,r5,5201,52,5,Isla de Pascua,Isla de Pascua,Valparaíso,Isla de Pascua,163.85,codigos especificos Censo 2024
+c5301,p53,r5,5301,53,5,Los Andes,Los Andes,Valparaíso,Los Andes,1234.59,codigos especificos Censo 2024
+c5302,p53,r5,5302,53,5,Calle Larga,Los Andes,Valparaíso,Calle Larga,321.33,codigos especificos Censo 2024
+c5303,p53,r5,5303,53,5,Rinconada,Los Andes,Valparaíso,Rinconada,122.84,codigos especificos Censo 2024
+c5304,p53,r5,5304,53,5,San Esteban,Los Andes,Valparaíso,San Esteban,1374.98,codigos especificos Censo 2024
+c5401,p54,r5,5401,54,5,La Ligua,Petorca,Valparaíso,La Ligua,1163.75,codigos especificos Censo 2024
+c5402,p54,r5,5402,54,5,Cabildo,Petorca,Valparaíso,Cabildo,1455.1,codigos especificos Censo 2024
+c5403,p54,r5,5403,54,5,Papudo,Petorca,Valparaíso,Papudo,166.14,codigos especificos Censo 2024
+c5404,p54,r5,5404,54,5,Petorca,Petorca,Valparaíso,Petorca,1515.78,codigos especificos Censo 2024
+c5405,p54,r5,5405,54,5,Zapallar,Petorca,Valparaíso,Zapallar,288.24,codigos especificos Censo 2024
+c5501,p55,r5,5501,55,5,Quillota,Quillota,Valparaíso,Quillota,301.14,codigos especificos Censo 2024
+c5502,p55,r5,5502,55,5,Calera,Quillota,Valparaíso,Calera,59.98,codigos especificos Censo 2024
+c5503,p55,r5,5503,55,5,Hijuelas,Quillota,Valparaíso,Hijuelas,268.12,codigos especificos Censo 2024
+c5504,p55,r5,5504,55,5,La Cruz,Quillota,Valparaíso,La Cruz,77.84,codigos especificos Censo 2024
+c5506,p55,r5,5506,55,5,Nogales,Quillota,Valparaíso,Nogales,405.41,codigos especificos Censo 2024
+c5601,p56,r5,5601,56,5,San Antonio,San Antonio,Valparaíso,San Antonio,399.84,codigos especificos Censo 2024
+c5602,p56,r5,5602,56,5,Algarrobo,San Antonio,Valparaíso,Algarrobo,176.17,codigos especificos Censo 2024
+c5603,p56,r5,5603,56,5,Cartagena,San Antonio,Valparaíso,Cartagena,243.75,codigos especificos Censo 2024
+c5604,p56,r5,5604,56,5,El Quisco,San Antonio,Valparaíso,El Quisco,51.4,codigos especificos Censo 2024
+c5605,p56,r5,5605,56,5,El Tabo,San Antonio,Valparaíso,El Tabo,99.5,codigos especificos Censo 2024
+c5606,p56,r5,5606,56,5,Santo Domingo,San Antonio,Valparaíso,Santo Domingo,536.53,codigos especificos Censo 2024
+c5701,p57,r5,5701,57,5,San Felipe,San Felipe de Aconcagua,Valparaíso,San Felipe,187.26,codigos especificos Censo 2024
+c5702,p57,r5,5702,57,5,Catemu,San Felipe de Aconcagua,Valparaíso,Catemu,362.17,codigos especificos Censo 2024
+c5703,p57,r5,5703,57,5,Llaillay,San Felipe de Aconcagua,Valparaíso,Llaillay,348.85,codigos especificos Censo 2024
+c5704,p57,r5,5704,57,5,Panquehue,San Felipe de Aconcagua,Valparaíso,Panquehue,120.35,codigos especificos Censo 2024
+c5705,p57,r5,5705,57,5,Putaendo,San Felipe de Aconcagua,Valparaíso,Putaendo,1451.58,codigos especificos Censo 2024
+c5706,p57,r5,5706,57,5,Santa María,San Felipe de Aconcagua,Valparaíso,Santa Maria,165.77,codigos especificos Censo 2024
+c5801,p58,r5,5801,58,5,Quilpué,Marga Marga,Valparaíso,Quilpue,536.32,codigos especificos Censo 2024
+c5802,p58,r5,5802,58,5,Limache,Marga Marga,Valparaíso,Limache,294.78,codigos especificos Censo 2024
+c5803,p58,r5,5803,58,5,Olmué,Marga Marga,Valparaíso,Olmue,231.28,codigos especificos Censo 2024
+c5804,p58,r5,5804,58,5,Villa Alemana,Marga Marga,Valparaíso,Villa Alemana,96.33,codigos especificos Censo 2024
+c6101,p61,r6,6101,61,6,Rancagua,Cachapoal,O'Higgins,Rancagua,260.97,codigos especificos Censo 2024
+c6102,p61,r6,6102,61,6,Codegua,Cachapoal,O'Higgins,Codegua,284.24,codigos especificos Censo 2024
+c6103,p61,r6,6103,61,6,Coinco,Cachapoal,O'Higgins,Coinco,97.34,codigos especificos Censo 2024
+c6104,p61,r6,6104,61,6,Coltauco,Cachapoal,O'Higgins,Coltauco,221.9,codigos especificos Censo 2024
+c6105,p61,r6,6105,61,6,Doñihue,Cachapoal,O'Higgins,Donihue,80.57,codigos especificos Censo 2024
+c6106,p61,r6,6106,61,6,Graneros,Cachapoal,O'Higgins,Graneros,112.47,codigos especificos Censo 2024
+c6107,p61,r6,6107,61,6,Las Cabras,Cachapoal,O'Higgins,Las Cabras,750.99,codigos especificos Censo 2024
+c6108,p61,r6,6108,61,6,Machali,Cachapoal,O'Higgins,Machali,2594.25,codigos especificos Censo 2024
+c6109,p61,r6,6109,61,6,Malloa,Cachapoal,O'Higgins,Malloa,220.61,codigos especificos Censo 2024
+c6110,p61,r6,6110,61,6,Mostazal,Cachapoal,O'Higgins,Mostazal,525.89,codigos especificos Censo 2024
+c6111,p61,r6,6111,61,6,Olivar,Cachapoal,O'Higgins,Olivar,44.23,codigos especificos Censo 2024
+c6112,p61,r6,6112,61,6,Peumo,Cachapoal,O'Higgins,Peumo,155.17,codigos especificos Censo 2024
+c6113,p61,r6,6113,61,6,Pichidegua,Cachapoal,O'Higgins,Pichidegua,319.4,codigos especificos Censo 2024
+c6114,p61,r6,6114,61,6,Quinta de Tilcoco,Cachapoal,O'Higgins,Quinta de Tilcoco,86.75,codigos especificos Censo 2024
+c6115,p61,r6,6115,61,6,Rengo,Cachapoal,O'Higgins,Rengo,585.26,codigos especificos Censo 2024
+c6116,p61,r6,6116,61,6,Requínoa,Cachapoal,O'Higgins,Requinoa,677.26,codigos especificos Censo 2024
+c6117,p61,r6,6117,61,6,San Vicente,Cachapoal,O'Higgins,San Vicente,484.7,codigos especificos Censo 2024
+c6201,p62,r6,6201,62,6,Pichilemu,Cardenal Caro,O'Higgins,Pichilemu,714.76,codigos especificos Censo 2024
+c6202,p62,r6,6202,62,6,La Estrella,Cardenal Caro,O'Higgins,La Estrella,430.72,codigos especificos Censo 2024
+c6203,p62,r6,6203,62,6,Litueche,Cardenal Caro,O'Higgins,Litueche,619.42,codigos especificos Censo 2024
+c6204,p62,r6,6204,62,6,Marchihue,Cardenal Caro,O'Higgins,Marchihue,657.58,codigos especificos Censo 2024
+c6205,p62,r6,6205,62,6,Navidad,Cardenal Caro,O'Higgins,Navidad,301.1,codigos especificos Censo 2024
+c6206,p62,r6,6206,62,6,Paredones,Cardenal Caro,O'Higgins,Paredones,572.5,codigos especificos Censo 2024
+c6301,p63,r6,6301,63,6,San Fernando,Colchagua,O'Higgins,San Fernando,2321.84,codigos especificos Censo 2024
+c6302,p63,r6,6302,63,6,Chépica,Colchagua,O'Higgins,Chepica,477.2,codigos especificos Censo 2024
+c6303,p63,r6,6303,63,6,Chimbarongo,Colchagua,O'Higgins,Chimbarongo,508.76,codigos especificos Censo 2024
+c6304,p63,r6,6304,63,6,Lolol,Colchagua,O'Higgins,Lolol,596.69,codigos especificos Censo 2024
+c6305,p63,r6,6305,63,6,Nancagua,Colchagua,O'Higgins,Nancagua,151.66,codigos especificos Censo 2024
+c6306,p63,r6,6306,63,6,Palmilla,Colchagua,O'Higgins,Palmilla,235.59,codigos especificos Censo 2024
+c6307,p63,r6,6307,63,6,Peralillo,Colchagua,O'Higgins,Peralillo,282.97,codigos especificos Censo 2024
+c6308,p63,r6,6308,63,6,Placilla,Colchagua,O'Higgins,Placilla,144.27,codigos especificos Censo 2024
+c6309,p63,r6,6309,63,6,Pumanque,Colchagua,O'Higgins,Pumanque,441.05,codigos especificos Censo 2024
+c6310,p63,r6,6310,63,6,Santa Cruz,Colchagua,O'Higgins,Santa Cruz,393.27,codigos especificos Censo 2024
+c7101,p71,r7,7101,71,7,Talca,Talca,Maule,Talca,231.92,codigos especificos Censo 2024
+c7102,p71,r7,7102,71,7,Constitución,Talca,Maule,Constitucion,1338.66,codigos especificos Censo 2024
+c7103,p71,r7,7103,71,7,Curepto,Talca,Maule,Curepto,1070.06,codigos especificos Censo 2024
+c7104,p71,r7,7104,71,7,Empedrado,Talca,Maule,Empedrado,565.11,codigos especificos Censo 2024
+c7105,p71,r7,7105,71,7,Maule,Talca,Maule,Maule,242.88,codigos especificos Censo 2024
+c7106,p71,r7,7106,71,7,Pelarco,Talca,Maule,Pelarco,330.87,codigos especificos Censo 2024
+c7107,p71,r7,7107,71,7,Pencahue,Talca,Maule,Pencahue,955.13,codigos especificos Censo 2024
+c7108,p71,r7,7108,71,7,Río Claro,Talca,Maule,Rio Claro,433.49,codigos especificos Censo 2024
+c7109,p71,r7,7109,71,7,San Clemente,Talca,Maule,San Clemente,4501.05,codigos especificos Censo 2024
+c7110,p71,r7,7110,71,7,San Rafael,Talca,Maule,San Rafael,262.88,codigos especificos Censo 2024
+c7201,p72,r7,7201,72,7,Cauquenes,Cauquenes,Maule,Cauquenes,2124.54,codigos especificos Censo 2024
+c7202,p72,r7,7202,72,7,Chanco,Cauquenes,Maule,Chanco,527.76,codigos especificos Censo 2024
+c7203,p72,r7,7203,72,7,Pelluhue,Cauquenes,Maule,Pelluhue,369.36,codigos especificos Censo 2024
+c7301,p73,r7,7301,73,7,Curicó,Curico,Maule,Curico,1335.26,codigos especificos Censo 2024
+c7302,p73,r7,7302,73,7,Hualañé,Curico,Maule,Hualane,628.67,codigos especificos Censo 2024
+c7303,p73,r7,7303,73,7,Licantén,Curico,Maule,Licanten,272.74,codigos especificos Censo 2024
+c7304,p73,r7,7304,73,7,Molina,Curico,Maule,Molina,1517.39,codigos especificos Censo 2024
+c7305,p73,r7,7305,73,7,Rauco,Curico,Maule,Rauco,306.61,codigos especificos Censo 2024
+c7306,p73,r7,7306,73,7,Romeral,Curico,Maule,Romeral,1603.35,codigos especificos Censo 2024
+c7307,p73,r7,7307,73,7,Sagrada Familia,Curico,Maule,Sagrada Familia,554.16,codigos especificos Censo 2024
+c7308,p73,r7,7308,73,7,Teno,Curico,Maule,Teno,618.44,codigos especificos Censo 2024
+c7309,p73,r7,7309,73,7,Vichuquén,Curico,Maule,Vichuquen,451.51,codigos especificos Censo 2024
+c7401,p74,r7,7401,74,7,Linares,Linares,Maule,Linares,1466.18,codigos especificos Censo 2024
+c7402,p74,r7,7402,74,7,Colbún,Linares,Maule,Colbun,2926.99,codigos especificos Censo 2024
+c7403,p74,r7,7403,74,7,Longaví,Linares,Maule,Longavi,1452.79,codigos especificos Censo 2024
+c7404,p74,r7,7404,74,7,Parral,Linares,Maule,Parral,1637.96,codigos especificos Censo 2024
+c7405,p74,r7,7405,74,7,Retiro,Linares,Maule,Retiro,826.61,codigos especificos Censo 2024
+c7406,p74,r7,7406,74,7,San Javier,Linares,Maule,San Javier,1311.36,codigos especificos Censo 2024
+c7407,p74,r7,7407,74,7,Villa Alegre,Linares,Maule,Villa Alegre,188.59,codigos especificos Censo 2024
+c7408,p74,r7,7408,74,7,Yerbas Buenas,Linares,Maule,Yerbas Buenas,258.85,codigos especificos Censo 2024
+c8101,p81,r8,8101,81,8,Concepción,Concepcion,Biobío,Concepcion,220.19,codigos especificos Censo 2024
+c8102,p81,r8,8102,81,8,Coronel,Concepcion,Biobío,Coronel,281.3,codigos especificos Censo 2024
+c8103,p81,r8,8103,81,8,Chiguayante,Concepcion,Biobío,Chiguayante,71.4,codigos especificos Censo 2024
+c8104,p81,r8,8104,81,8,Florida,Concepcion,Biobío,Florida,605.75,codigos especificos Censo 2024
+c8105,p81,r8,8105,81,8,Hualqui,Concepcion,Biobío,Hualqui,535.8,codigos especificos Censo 2024
+c8106,p81,r8,8106,81,8,Lota,Concepcion,Biobío,Lota,114.71,codigos especificos Censo 2024
+c8107,p81,r8,8107,81,8,Penco,Concepcion,Biobío,Penco,108.37,codigos especificos Censo 2024
+c8108,p81,r8,8108,81,8,San Pedro de La paz,Concepcion,Biobío,San Pedro de La paz,112.87,codigos especificos Censo 2024
+c8109,p81,r8,8109,81,8,Santa Juana,Concepcion,Biobío,Santa Juana,777.43,codigos especificos Censo 2024
+c8110,p81,r8,8110,81,8,Talcahuano,Concepcion,Biobío,Talcahuano,92.56,codigos especificos Censo 2024
+c8111,p81,r8,8111,81,8,Tomé,Concepcion,Biobío,Tome,494.26,codigos especificos Censo 2024
+c8112,p81,r8,8112,81,8,Hualpén,Concepcion,Biobío,Hualpen,53.78,codigos especificos Censo 2024
+c8201,p82,r8,8201,82,8,Lebu,Arauco,Biobío,Lebu,564.58,codigos especificos Censo 2024
+c8202,p82,r8,8202,82,8,Arauco,Arauco,Biobío,Arauco,959.9,codigos especificos Censo 2024
+c8203,p82,r8,8203,82,8,Cañete,Arauco,Biobío,Canete,1088.85,codigos especificos Censo 2024
+c8204,p82,r8,8204,82,8,Contulmo,Arauco,Biobío,Contulmo,639.07,codigos especificos Censo 2024
+c8205,p82,r8,8205,82,8,Curanilahue,Arauco,Biobío,Curanilahue,1002.96,codigos especificos Censo 2024
+c8206,p82,r8,8206,82,8,Los Álamos,Arauco,Biobío,Los Alamos,600.54,codigos especificos Censo 2024
+c8207,p82,r8,8207,82,8,Tirúa,Arauco,Biobío,Tirua,626.73,codigos especificos Censo 2024
+c8301,p83,r8,8301,83,8,Los Ángeles,Biobio,Biobío,Los Angeles,1748.01,codigos especificos Censo 2024
+c8302,p83,r8,8302,83,8,Antuco,Biobio,Biobío,Antuco,1957.24,codigos especificos Censo 2024
+c8303,p83,r8,8303,83,8,Cabrero,Biobio,Biobío,Cabrero,656.67,codigos especificos Censo 2024
+c8304,p83,r8,8304,83,8,Laja,Biobio,Biobío,Laja,345.06,codigos especificos Censo 2024
+c8305,p83,r8,8305,83,8,Mulchén,Biobio,Biobío,Mulchen,1920.67,codigos especificos Censo 2024
+c8306,p83,r8,8306,83,8,Nacimiento,Biobio,Biobío,Nacimiento,904.42,codigos especificos Censo 2024
+c8307,p83,r8,8307,83,8,Negrete,Biobio,Biobío,Negrete,155.28,codigos especificos Censo 2024
+c8308,p83,r8,8308,83,8,Quilaco,Biobio,Biobío,Quilaco,1123.97,codigos especificos Censo 2024
+c8309,p83,r8,8309,83,8,Quilleco,Biobio,Biobío,Quilleco,1117.8,codigos especificos Censo 2024
+c8310,p83,r8,8310,83,8,San Rosendo,Biobio,Biobío,San Rosendo,94.43,codigos especificos Censo 2024
+c8311,p83,r8,8311,83,8,Santa Bárbara,Biobio,Biobío,Santa Barbara,1250.94,codigos especificos Censo 2024
+c8312,p83,r8,8312,83,8,Tucapel,Biobio,Biobío,Tucapel,913.67,codigos especificos Censo 2024
+c8313,p83,r8,8313,83,8,Yumbel,Biobio,Biobío,Yumbel,726.88,codigos especificos Censo 2024
+c8314,p83,r8,8314,83,8,Alto Biobío,Biobio,Biobío,Alto Biobio,2124.48,codigos especificos Censo 2024
+c9101,p91,r9,9101,91,9,Temuco,Cautin,La Araucanía,Temuco,466.78,codigos especificos Censo 2024
+c9102,p91,r9,9102,91,9,Carahue,Cautin,La Araucanía,Carahue,1337.13,codigos especificos Censo 2024
+c9103,p91,r9,9103,91,9,Cunco,Cautin,La Araucanía,Cunco,1888.71,codigos especificos Censo 2024
+c9104,p91,r9,9104,91,9,Curarrehue,Cautin,La Araucanía,Curarrehue,1165.66,codigos especificos Censo 2024
+c9105,p91,r9,9105,91,9,Freire,Cautin,La Araucanía,Freire,869.83,codigos especificos Censo 2024
+c9106,p91,r9,9106,91,9,Galvarino,Cautin,La Araucanía,Galvarino,567.79,codigos especificos Censo 2024
+c9107,p91,r9,9107,91,9,Gorbea,Cautin,La Araucanía,Gorbea,690.29,codigos especificos Censo 2024
+c9108,p91,r9,9108,91,9,Lautaro,Cautin,La Araucanía,Lautaro,905.76,codigos especificos Censo 2024
+c9109,p91,r9,9109,91,9,Loncoche,Cautin,La Araucanía,Loncoche,971.01,codigos especificos Censo 2024
+c9110,p91,r9,9110,91,9,Melipeuco,Cautin,La Araucanía,Melipeuco,1106.75,codigos especificos Censo 2024
+c9111,p91,r9,9111,91,9,Nueva Imperial,Cautin,La Araucanía,Nueva Imperial,730.76,codigos especificos Censo 2024
+c9112,p91,r9,9112,91,9,Padre Las Casas,Cautin,La Araucanía,Padre Las Casas,463.68,codigos especificos Censo 2024
+c9113,p91,r9,9113,91,9,Perquenco,Cautin,La Araucanía,Perquenco,330.89,codigos especificos Censo 2024
+c9114,p91,r9,9114,91,9,Pitrufquén,Cautin,La Araucanía,Pitrufquen,583.13,codigos especificos Censo 2024
+c9115,p91,r9,9115,91,9,Pucón,Cautin,La Araucanía,Pucon,1247.27,codigos especificos Censo 2024
+c9116,p91,r9,9116,91,9,Saavedra,Cautin,La Araucanía,Saavedra,398.45,codigos especificos Censo 2024
+c9117,p91,r9,9117,91,9,Teodoro Schmidt,Cautin,La Araucanía,Teodoro Schmidt,656.26,codigos especificos Censo 2024
+c9118,p91,r9,9118,91,9,Toltén,Cautin,La Araucanía,Tolten,851.89,codigos especificos Censo 2024
+c9119,p91,r9,9119,91,9,Vilcún,Cautin,La Araucanía,Vilcun,1415.41,codigos especificos Censo 2024
+c9120,p91,r9,9120,91,9,Villarrica,Cautin,La Araucanía,Villarrica,1291.82,codigos especificos Censo 2024
+c9121,p91,r9,9121,91,9,Cholchol,Cautin,La Araucanía,Cholchol,427.13,codigos especificos Censo 2024
+c9201,p92,r9,9201,92,9,Angol,Malleco,La Araucanía,Angol,1197.16,codigos especificos Censo 2024
+c9202,p92,r9,9202,92,9,Collipulli,Malleco,La Araucanía,Collipulli,1305.71,codigos especificos Censo 2024
+c9203,p92,r9,9203,92,9,Curacautín,Malleco,La Araucanía,Curacautin,1657.59,codigos especificos Censo 2024
+c9204,p92,r9,9204,92,9,Ercilla,Malleco,La Araucanía,Ercilla,498.65,codigos especificos Censo 2024
+c9205,p92,r9,9205,92,9,Lonquimay,Malleco,La Araucanía,Lonquimay,3928.3,codigos especificos Censo 2024
+c9206,p92,r9,9206,92,9,Los Sauces,Malleco,La Araucanía,Los Sauces,847.97,codigos especificos Censo 2024
+c9207,p92,r9,9207,92,9,Lumaco,Malleco,La Araucanía,Lumaco,1110.06,codigos especificos Censo 2024
+c9208,p92,r9,9208,92,9,Purén,Malleco,La Araucanía,Puren,463.99,codigos especificos Censo 2024
+c9209,p92,r9,9209,92,9,Renaico,Malleco,La Araucanía,Renaico,265.4,codigos especificos Censo 2024
+c9210,p92,r9,9210,92,9,Traiguén,Malleco,La Araucanía,Traiguen,896.85,codigos especificos Censo 2024
+c9211,p92,r9,9211,92,9,Victoria,Malleco,La Araucanía,Victoria,1261.78,codigos especificos Censo 2024
+c10101,p101,r10,10101,101,10,Puerto Montt,Llanquihue,Los Lagos,Puerto Montt,1670.27,codigos especificos Censo 2024
+c10102,p101,r10,10102,101,10,Calbuco,Llanquihue,Los Lagos,Calbuco,587.53,codigos especificos Censo 2024
+c10103,p101,r10,10103,101,10,Cochamó,Llanquihue,Los Lagos,Cochamo,3977.99,codigos especificos Censo 2024
+c10104,p101,r10,10104,101,10,Fresia,Llanquihue,Los Lagos,Fresia,1276.2,codigos especificos Censo 2024
+c10105,p101,r10,10105,101,10,Frutillar,Llanquihue,Los Lagos,Frutillar,828.39,codigos especificos Censo 2024
+c10106,p101,r10,10106,101,10,Los Muermos,Llanquihue,Los Lagos,Los Muermos,1230.18,codigos especificos Censo 2024
+c10107,p101,r10,10107,101,10,Llanquihue,Llanquihue,Los Lagos,Llanquihue,433.1,codigos especificos Censo 2024
+c10108,p101,r10,10108,101,10,Maullín,Llanquihue,Los Lagos,Maullin,823.3,codigos especificos Censo 2024
+c10109,p101,r10,10109,101,10,Puerto Varas,Llanquihue,Los Lagos,Puerto Varas,4027.15,codigos especificos Censo 2024
+c10201,p102,r10,10201,102,10,Castro,Chiloe,Los Lagos,Castro,471.63,codigos especificos Censo 2024
+c10202,p102,r10,10202,102,10,Ancud,Chiloe,Los Lagos,Ancud,1755.53,codigos especificos Censo 2024
+c10203,p102,r10,10203,102,10,Chonchi,Chiloe,Los Lagos,Chonchi,1361.93,codigos especificos Censo 2024
+c10204,p102,r10,10204,102,10,Curaco de Vélez,Chiloe,Los Lagos,Curaco de Velez,79.89,codigos especificos Censo 2024
+c10205,p102,r10,10205,102,10,Dalcahue,Chiloe,Los Lagos,Dalcahue,1229.92,codigos especificos Censo 2024
+c10206,p102,r10,10206,102,10,Puqueldón,Chiloe,Los Lagos,Puqueldon,96.63,codigos especificos Censo 2024
+c10207,p102,r10,10207,102,10,Queilén,Chiloe,Los Lagos,Queilen,331.04,codigos especificos Censo 2024
+c10208,p102,r10,10208,102,10,Quellón,Chiloe,Los Lagos,Quellon,3362.4,codigos especificos Censo 2024
+c10209,p102,r10,10209,102,10,Quemchi,Chiloe,Los Lagos,Quemchi,438.46,codigos especificos Censo 2024
+c10210,p102,r10,10210,102,10,Quinchao,Chiloe,Los Lagos,Quinchao,158.78,codigos especificos Censo 2024
+c10301,p103,r10,10301,103,10,Osorno,Osorno,Los Lagos,Osorno,954.71,codigos especificos Censo 2024
+c10302,p103,r10,10302,103,10,Puerto Octay,Osorno,Los Lagos,Puerto Octay,1793.4,codigos especificos Censo 2024
+c10303,p103,r10,10303,103,10,Purranque,Osorno,Los Lagos,Purranque,1452.12,codigos especificos Censo 2024
+c10304,p103,r10,10304,103,10,Puyehue,Osorno,Los Lagos,Puyehue,1634.78,codigos especificos Censo 2024
+c10305,p103,r10,10305,103,10,Río Negro,Osorno,Los Lagos,Rio Negro,1281.48,codigos especificos Censo 2024
+c10306,p103,r10,10306,103,10,San Juan de la Costa,Osorno,Los Lagos,San Juan de la Costa,1506.66,codigos especificos Censo 2024
+c10307,p103,r10,10307,103,10,San Pablo,Osorno,Los Lagos,San Pablo,630.06,codigos especificos Censo 2024
+c10401,p104,r10,10401,104,10,Chaitén,Palena,Los Lagos,Chaiten,8254.08,codigos especificos Censo 2024
+c10402,p104,r10,10402,104,10,Futaleufú,Palena,Los Lagos,Futaleufu,1235.68,codigos especificos Censo 2024
+c10403,p104,r10,10403,104,10,Hualaihué,Palena,Los Lagos,Hualaihue,2833.2,codigos especificos Censo 2024
+c10404,p104,r10,10404,104,10,Palena,Palena,Los Lagos,Palena,2654.23,codigos especificos Censo 2024
+c11101,p111,r11,11101,111,11,Coyhaique,Coyhaique,Aysén,Coyhaique,7277.05,codigos especificos Censo 2024
+c11102,p111,r11,11102,111,11,Lago Verde,Coyhaique,Aysén,Lago Verde,5436.76,codigos especificos Censo 2024
+c11201,p112,r11,11201,112,11,Aysén,Aysen,Aysén,Aysen,29891.62,codigos especificos Censo 2024
+c11202,p112,r11,11202,112,11,Cisnes,Aysen,Aysén,Cisnes,15421.24,codigos especificos Censo 2024
+c11203,p112,r11,11203,112,11,Guaitecas,Aysen,Aysén,Guaitecas,631.74,codigos especificos Censo 2024
+c11301,p113,r11,11301,113,11,Cochrane,Capitan Prat,Aysén,Cochrane,8630.26,codigos especificos Censo 2024
+c11302,p113,r11,11302,113,11,O'Higgins,Capitan Prat,Aysén,O'Higgins,7784.69,codigos especificos Censo 2024
+c11303,p113,r11,11303,113,11,Tortel,Capitan Prat,Aysén,Tortel,19991.43,codigos especificos Censo 2024
+c11401,p114,r11,11401,114,11,Chile Chico,General Carrera,Aysén,Chile Chico,5736.72,codigos especificos Censo 2024
+c11402,p114,r11,11402,114,11,Río Ibáñez,General Carrera,Aysén,Rio Ibanez,6019.49,codigos especificos Censo 2024
+c12101,p121,r12,12101,121,12,Punta Arenas,Magallanes,Magallanes,Punta Arenas,17766.77,codigos especificos Censo 2024
+c12102,p121,r12,12102,121,12,Laguna Blanca,Magallanes,Magallanes,Laguna Blanca,3568.08,codigos especificos Censo 2024
+c12103,p121,r12,12103,121,12,Río Verde,Magallanes,Magallanes,Rio Verde,9148.03,codigos especificos Censo 2024
+c12104,p121,r12,12104,121,12,San Gregorio,Magallanes,Magallanes,San Gregorio,6710.62,codigos especificos Censo 2024
+c12201,p122,r12,12201,122,12,Cabo de Hornos,Antartica Chilena,Magallanes,Cabo de Hornos,15729.96,codigos especificos Censo 2024
+c12202,p122,r12,12202,122,12,Antártica,Antartica Chilena,Magallanes,Antartica,1250257.6,codigos especificos Censo 2024
+c12301,p123,r12,12301,123,12,Porvenir,Tierra del Fuego,Magallanes,Porvenir,7462.68,codigos especificos Censo 2024
+c12302,p123,r12,12302,123,12,Primavera,Tierra del Fuego,Magallanes,Primavera,3949.42,codigos especificos Censo 2024
+c12303,p123,r12,12303,123,12,Timaukel,Tierra del Fuego,Magallanes,Timaukel,11020.1,codigos especificos Censo 2024
+c12401,p124,r12,12401,124,12,Natales,Ultima Esperanza,Magallanes,Natales,48968.17,codigos especificos Censo 2024
+c12402,p124,r12,12402,124,12,Torres del Paine,Ultima Esperanza,Magallanes,Torres del Paine,6216.33,codigos especificos Censo 2024
+c13101,p131,r13,13101,131,13,Santiago,Santiago,Metropolitana,Santiago,23.18,codigos especificos Censo 2024
+c13102,p131,r13,13102,131,13,Cerrillos,Santiago,Metropolitana,Cerrillos,16.82,codigos especificos Censo 2024
+c13103,p131,r13,13103,131,13,Cerro Navia,Santiago,Metropolitana,Cerro Navia,11.05,codigos especificos Censo 2024
+c13104,p131,r13,13104,131,13,Conchalí,Santiago,Metropolitana,Conchali,10.94,codigos especificos Censo 2024
+c13105,p131,r13,13105,131,13,El Bosque,Santiago,Metropolitana,El Bosque,14.25,codigos especificos Censo 2024
+c13106,p131,r13,13106,131,13,Estación Central,Santiago,Metropolitana,Estacion Central,14.38,codigos especificos Censo 2024
+c13107,p131,r13,13107,131,13,Huechuraba,Santiago,Metropolitana,Huechuraba,44.99,codigos especificos Censo 2024
+c13108,p131,r13,13108,131,13,Independencia,Santiago,Metropolitana,Independencia,7.35,codigos especificos Censo 2024
+c13109,p131,r13,13109,131,13,La Cisterna,Santiago,Metropolitana,La Cisterna,10.01,codigos especificos Censo 2024
+c13110,p131,r13,13110,131,13,La Florida,Santiago,Metropolitana,La Florida,71.06,codigos especificos Censo 2024
+c13111,p131,r13,13111,131,13,La Granja,Santiago,Metropolitana,La Granja,10.05,codigos especificos Censo 2024
+c13112,p131,r13,13112,131,13,La Pintana,Santiago,Metropolitana,La Pintana,30.48,codigos especificos Censo 2024
+c13113,p131,r13,13113,131,13,La Reina,Santiago,Metropolitana,La Reina,23.39,codigos especificos Censo 2024
+c13114,p131,r13,13114,131,13,Las Condes,Santiago,Metropolitana,Las Condes,99.09,codigos especificos Censo 2024
+c13115,p131,r13,13115,131,13,Lo Barnechea,Santiago,Metropolitana,Lo Barnechea,1024.02,codigos especificos Censo 2024
+c13116,p131,r13,13116,131,13,Lo Espejo,Santiago,Metropolitana,Lo Espejo,8.26,codigos especificos Censo 2024
+c13117,p131,r13,13117,131,13,Lo Prado,Santiago,Metropolitana,Lo Prado,6.54,codigos especificos Censo 2024
+c13118,p131,r13,13118,131,13,Macul,Santiago,Metropolitana,Macul,12.81,codigos especificos Censo 2024
+c13119,p131,r13,13119,131,13,Maipú,Santiago,Metropolitana,Maipu,136.81,codigos especificos Censo 2024
+c13120,p131,r13,13120,131,13,Ñuñoa,Santiago,Metropolitana,nunoa,16.9,codigos especificos Censo 2024
+c13121,p131,r13,13121,131,13,Pedro Aguirre Cerda,Santiago,Metropolitana,Pedro Aguirre Cerda,8.73,codigos especificos Censo 2024
+c13122,p131,r13,13122,131,13,Peñalolén,Santiago,Metropolitana,Penalolen,53.9,codigos especificos Censo 2024
+c13123,p131,r13,13123,131,13,Providencia,Santiago,Metropolitana,Providencia,14.45,codigos especificos Censo 2024
+c13124,p131,r13,13124,131,13,Pudahuel,Santiago,Metropolitana,Pudahuel,198.58,codigos especificos Censo 2024
+c13125,p131,r13,13125,131,13,Quilicura,Santiago,Metropolitana,Quilicura,57.33,codigos especificos Censo 2024
+c13126,p131,r13,13126,131,13,Quinta Normal,Santiago,Metropolitana,Quinta Normal,11.81,codigos especificos Censo 2024
+c13127,p131,r13,13127,131,13,Recoleta,Santiago,Metropolitana,Recoleta,15.61,codigos especificos Censo 2024
+c13128,p131,r13,13128,131,13,Renca,Santiago,Metropolitana,Renca,23.68,codigos especificos Censo 2024
+c13129,p131,r13,13129,131,13,San Joaquín,Santiago,Metropolitana,San Joaquin,9.94,codigos especificos Censo 2024
+c13130,p131,r13,13130,131,13,San Miguel,Santiago,Metropolitana,San Miguel,9.63,codigos especificos Censo 2024
+c13131,p131,r13,13131,131,13,San Ramón,Santiago,Metropolitana,San Ramon,6.32,codigos especificos Censo 2024
+c13132,p131,r13,13132,131,13,Vitacura,Santiago,Metropolitana,Vitacura,28.6,codigos especificos Censo 2024
+c13201,p132,r13,13201,132,13,Puente Alto,Cordillera,Metropolitana,Puente Alto,88.41,codigos especificos Censo 2024
+c13202,p132,r13,13202,132,13,Pirque,Cordillera,Metropolitana,Pirque,444.85,codigos especificos Censo 2024
+c13203,p132,r13,13203,132,13,San José de Maipo,Cordillera,Metropolitana,San Jose de Maipo,4984.74,codigos especificos Censo 2024
+c13301,p133,r13,13301,133,13,Colina,Chacabuco,Metropolitana,Colina,971.09,codigos especificos Censo 2024
+c13302,p133,r13,13302,133,13,Lampa,Chacabuco,Metropolitana,Lampa,449.54,codigos especificos Censo 2024
+c13303,p133,r13,13303,133,13,Tiltil,Chacabuco,Metropolitana,Tiltil,654.68,codigos especificos Censo 2024
+c13401,p134,r13,13401,134,13,San Bernardo,Maipo,Metropolitana,San Bernardo,153.87,codigos especificos Censo 2024
+c13402,p134,r13,13402,134,13,Buin,Maipo,Metropolitana,Buin,217.06,codigos especificos Censo 2024
+c13403,p134,r13,13403,134,13,Calera de Tango,Maipo,Metropolitana,Calera de Tango,73.12,codigos especificos Censo 2024
+c13404,p134,r13,13404,134,13,Paine,Maipo,Metropolitana,Paine,677.62,codigos especificos Censo 2024
+c13501,p135,r13,13501,135,13,Melipilla,Melipilla,Metropolitana,Melipilla,1352.35,codigos especificos Censo 2024
+c13502,p135,r13,13502,135,13,Alhué,Melipilla,Metropolitana,Alhue,844.33,codigos especificos Censo 2024
+c13503,p135,r13,13503,135,13,Curacaví,Melipilla,Metropolitana,Curacavi,694.01,codigos especificos Censo 2024
+c13504,p135,r13,13504,135,13,María Pinto,Melipilla,Metropolitana,Maria Pinto,394.2,codigos especificos Censo 2024
+c13505,p135,r13,13505,135,13,San Pedro,Melipilla,Metropolitana,San Pedro,786.54,codigos especificos Censo 2024
+c13601,p136,r13,13601,136,13,Talagante,Talagante,Metropolitana,Talagante,125.23,codigos especificos Censo 2024
+c13602,p136,r13,13602,136,13,El Monte,Talagante,Metropolitana,El Monte,115.96,codigos especificos Censo 2024
+c13603,p136,r13,13603,136,13,Isla de Maipo,Talagante,Metropolitana,Isla de Maipo,189.62,codigos especificos Censo 2024
+c13604,p136,r13,13604,136,13,Padre Hurtado,Talagante,Metropolitana,Padre Hurtado,80.69,codigos especificos Censo 2024
+c13605,p136,r13,13605,136,13,Peñaflor,Talagante,Metropolitana,Penaflor,69.49,codigos especificos Censo 2024
+c14101,p141,r14,14101,141,14,Valdivia,Valdivia,Los Ríos,Valdivia,1018.52,codigos especificos Censo 2024
+c14102,p141,r14,14102,141,14,Corral,Valdivia,Los Ríos,Corral,729.65,codigos especificos Censo 2024
+c14103,p141,r14,14103,141,14,Lanco,Valdivia,Los Ríos,Lanco,532.92,codigos especificos Censo 2024
+c14104,p141,r14,14104,141,14,Los Lagos,Valdivia,Los Ríos,Los Lagos,1788.32,codigos especificos Censo 2024
+c14105,p141,r14,14105,141,14,Máfil,Valdivia,Los Ríos,Mafil,579.13,codigos especificos Censo 2024
+c14106,p141,r14,14106,141,14,Mariquina,Valdivia,Los Ríos,Mariquina,1319.33,codigos especificos Censo 2024
+c14107,p141,r14,14107,141,14,Paillaco,Valdivia,Los Ríos,Paillaco,901.54,codigos especificos Censo 2024
+c14108,p141,r14,14108,141,14,Panguipulli,Valdivia,Los Ríos,Panguipulli,3294.61,codigos especificos Censo 2024
+c14201,p142,r14,14201,142,14,La Unión,Ranco,Los Ríos,La Union,2131.71,codigos especificos Censo 2024
+c14202,p142,r14,14202,142,14,Futrono,Ranco,Los Ríos,Futrono,2089.33,codigos especificos Censo 2024
+c14203,p142,r14,14203,142,14,Lago Ranco,Ranco,Los Ríos,Lago Ranco,1763.27,codigos especificos Censo 2024
+c14204,p142,r14,14204,142,14,Río Bueno,Ranco,Los Ríos,Rio Bueno,2171.65,codigos especificos Censo 2024
+c15101,p151,r15,15101,151,15,Arica,Arica,Arica,Arica,4802.22,codigos especificos Censo 2024
+c15102,p151,r15,15102,151,15,Camarones,Arica,Arica,Camarones,3924.67,codigos especificos Censo 2024
+c15201,p152,r15,15201,152,15,Putre,Parinacota,Arica,Putre,5889.8,codigos especificos Censo 2024
+c15202,p152,r15,15202,152,15,General Lagos,Parinacota,Arica,General Lagos,2258.78,codigos especificos Censo 2024
+c16101,p161,r16,16101,161,16,Chillán,Diguillin,Ñuble,Chillan,477.18,codigos especificos Censo 2024
+c16102,p161,r16,16102,161,16,Bulnes,Diguillin,Ñuble,Bulnes,426.12,codigos especificos Censo 2024
+c16103,p161,r16,16103,161,16,Chillán Viejo,Diguillin,Ñuble,Chillan Viejo,262.41,codigos especificos Censo 2024
+c16104,p161,r16,16104,161,16,El Carmen,Diguillin,Ñuble,El Carmen,665.51,codigos especificos Censo 2024
+c16105,p161,r16,16105,161,16,Pemuco,Diguillin,Ñuble,Pemuco,562.76,codigos especificos Censo 2024
+c16106,p161,r16,16106,161,16,Pinto,Diguillin,Ñuble,Pinto,1102,codigos especificos Censo 2024
+c16107,p161,r16,16107,161,16,Quillón,Diguillin,Ñuble,Quillon,406.35,codigos especificos Censo 2024
+c16108,p161,r16,16108,161,16,San Ignacio,Diguillin,Ñuble,San Ignacio,362.92,codigos especificos Censo 2024
+c16109,p161,r16,16109,161,16,Yungay,Diguillin,Ñuble,Yungay,823.99,codigos especificos Censo 2024
+c16201,p162,r16,16201,162,16,Quirihue,Itata,Ñuble,Quirihue,589.78,codigos especificos Censo 2024
+c16202,p162,r16,16202,162,16,Cobquecura,Itata,Ñuble,Cobquecura,569.14,codigos especificos Censo 2024
+c16203,p162,r16,16203,162,16,Coelemu,Itata,Ñuble,Coelemu,342.26,codigos especificos Censo 2024
+c16204,p162,r16,16204,162,16,Ninhue,Itata,Ñuble,Ninhue,402.98,codigos especificos Censo 2024
+c16205,p162,r16,16205,162,16,Portezuelo,Itata,Ñuble,Portezuelo,289.1,codigos especificos Censo 2024
+c16206,p162,r16,16206,162,16,Ránquil,Itata,Ñuble,Ranquil,247.34,codigos especificos Censo 2024
+c16207,p162,r16,16207,162,16,Trehuaco,Itata,Ñuble,Trehuaco,312.91,codigos especificos Censo 2024
+c16301,p163,r16,16301,163,16,San Carlos,Punilla,Ñuble,San Carlos,876.94,codigos especificos Censo 2024
+c16302,p163,r16,16302,163,16,Coihueco,Punilla,Ñuble,Coihueco,1770.87,codigos especificos Censo 2024
+c16303,p163,r16,16303,163,16,Ñiquén,Punilla,Ñuble,niquen,491.91,codigos especificos Censo 2024
+c16304,p163,r16,16304,163,16,San Fabián,Punilla,Ñuble,San Fabian,1541.23,codigos especificos Censo 2024
+c16305,p163,r16,16305,163,16,San Nicolás,Punilla,Ñuble,San Nicolas,565.53,codigos especificos Censo 2024
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,
+,,,,,,,#N/A,,,,

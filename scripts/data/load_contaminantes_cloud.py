@@ -1,9 +1,9 @@
 """
 load_contaminantes_cloud.py
 ----------------------------
-1. Reads seeds/outputs/fct_generacion_electrica.csv (uses a small sample to
+1. Reads seeds/outputs/fct_central_electrica.csv (uses a small sample to
    derive SQL column types).
-2. Creates (or replaces) the table "fct_generacion_electrica" in Cloud SQL
+2. Creates (or replaces) the table "fct_central_electrica" in Cloud SQL
    (PostgreSQL) with the correct data types.
 3. Inserts all rows in configurable batches for memory-efficient loading.
 
@@ -43,7 +43,7 @@ In another terminal, run this script:
 
 Optional flags:
     --db          Database name (default: greenlab)
-    --table       Target table name (default: fct_generacion_electrica)
+    --table       Target table name (default: fct_central_electrica)
     --batch       Rows per insert batch (default: 10000)
     --port        Proxy local port (default: 5433)
     --if-exists   'replace' (default) or 'append'
@@ -61,10 +61,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 import tomllib
 import pandas as pd
 
-CSV_PATH    = "seeds/outputs/fct_generacion_electrica.csv"
+CSV_PATH    = "seeds/outputs/fct_central_electrica.csv"
 CONFIG_PATH = "config/deploy.toml"
 
-TABLE_NAME  = "fct_generacion_electrica"
+TABLE_NAME  = "fct_central_electrica"
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -114,7 +114,7 @@ def build_create_table_ddl(df_sample: pd.DataFrame, table: str) -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Create fct_generacion_electrica table in Cloud SQL and load CSV data"
+        description="Create fct_central_electrica table in Cloud SQL and load CSV data"
     )
     parser.add_argument("--db",           default="greenlab",              help="Database name")
     parser.add_argument("--table",        default=TABLE_NAME,              help="Target table name")
