@@ -1,12 +1,13 @@
-name: geografia
-description: "Archivo	Codigos MAESTROS de Comunas/Provincias/Regiones. Descripcion	todos los codigos de unidades geograficas de Chile de censos, casen, etc"
-url: https://docs.google.com/spreadsheets/d/1hHXUhAbdMPKTNxaHNbzeBlHIlSsgzAXlc4u_r48V62Y/edit#gid=695826548
-tables:
-  - name: codigos_comuna
-    path: seeds/cod_comuna.csv
-  - name: codigos_provincia
-    path: seeds/cod_provincia.csv
-  - name: codigos_region
-    path: seeds/cod_region.csv
-  - name: codigos_pais
-    path: seeds/cod_pais.csv
+sources:
+  - name: geografia
+    description: "Archivo\tCodigos MAESTROS de Comunas/Provincias/Regiones. Descripcion\ttodos los codigos de unidades geograficas de Chile de censos, casen, etc"
+    url: https://docs.google.com/spreadsheets/d/1hHXUhAbdMPKTNxaHNbzeBlHIlSsgzAXlc4u_r48V62Y/edit#gid=695826548
+    tables:
+      - name: codigos_comuna
+        path: seeds/geografia/cod_comuna.csv
+      - name: codigos_provincia
+        path: seeds/geografia/cod_provincia.csv
+      - name: codigos_region
+        path: seeds/geografia/cod_region.csv
+      - name: codigos_pais
+        path: seeds/geografia/cod_pais.csv
