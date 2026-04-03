@@ -12,13 +12,13 @@ def render_model_details(model_name: str):
         df = find_model(model_name)
         
         if df is not None:
-            # 5. Render exact visualizations automatically
-            render_model_lineage(df)
-
             st.subheader("Documentacion")
             render_model_documentation(model_name)
             
             st.subheader("Dataframe")
             render_model_ui(df, table_name=model_name)
+
+            # 5. Render exact visualizations automatically at the bottom
+            render_model_lineage(df)
     else:
         st.warning("No Model Selected.")

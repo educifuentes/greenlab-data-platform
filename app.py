@@ -19,7 +19,7 @@ import os
 pages = {
     "Vistas": [
         st.Page("pages/1_views/2_catalog.py", title="Catalogo", icon=render_icon("catalog"), default=True),
-        st.Page("pages/1_views/3_schemas.py", title="Schemas", icon=render_icon("projects")),
+        st.Page("pages/1_views/3_model_page.py", title="Model Details", icon=render_icon("projects")),
         st.Page("pages/1_views/4_how_to_use.py", title="Guias", icon=render_icon("documentation")),
         st.Page("pages/others/model_details.py", title="view Model", visibility="hidden")
     ],
