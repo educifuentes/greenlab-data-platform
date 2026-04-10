@@ -7,10 +7,11 @@ def generate_lineage_chart(df):
     models_dict = df.attrs.get('models', {})
 
     def get_layer(name):
-        if name.startswith("stg_"): return "staging"
-        elif name.startswith("int_"): return "intermediate"
-        elif name.startswith("fct_"): return "marts"
-        elif name.startswith("exp_"): return "exposures"
+        clean_name = name.lstrip('_')
+        if clean_name.startswith("stg_"): return "staging"
+        elif clean_name.startswith("int_"): return "intermediate"
+        elif clean_name.startswith("fct_") or clean_name.startswith("dim_"): return "marts"
+        elif clean_name.startswith("exp_"): return "exposures"
         return "source"
 
     # Collect all nodes by layer
@@ -26,7 +27,7 @@ def generate_lineage_chart(df):
             if src_layer in layers:
                 layers[src_layer].add(src)
 
-    mermaid_lines = ["graph LR"]
+    mermaid_lines = ["flowchart LR"]
     
     # Generate Subgraphs dynamically
     layer_display_names = {
@@ -40,8 +41,13 @@ def generate_lineage_chart(df):
     for layer_key in layer_display_names.keys():
         if layers[layer_key]:
             mermaid_lines.append(f"    subgraph {layer_key.capitalize()}_Layer [{layer_display_names[layer_key]}]")
-            for node in sorted(list(layers[layer_key])):
+            mermaid_lines.append("        direction TB")
+            nodes = sorted(list(layers[layer_key]))
+            for node in nodes:
                 mermaid_lines.append(f'        {node}["{node}"]')
+            # Interlink nodes invisibly to force vertical layout
+            for i in range(len(nodes) - 1):
+                mermaid_lines.append(f'        {nodes[i]} ~~~ {nodes[i+1]}')
             mermaid_lines.append("    end")
 
     mermaid_lines.append("")
@@ -52,9 +58,7 @@ def generate_lineage_chart(df):
     for i in range(len(populated_layers) - 1):
         current_layer = populated_layers[i]
         next_layer = populated_layers[i + 1]
-        for src in sorted(list(layers[current_layer])):
-            for tgt in sorted(list(layers[next_layer])):
-                mermaid_lines.append(f"    {src} --> {tgt}")
+        mermaid_lines.append(f"    {current_layer.capitalize()}_Layer --> {next_layer.capitalize()}_Layer")
 
     mermaid_lines.append("")
     mermaid_lines.append("    %% Styling")
