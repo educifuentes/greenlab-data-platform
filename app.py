@@ -18,10 +18,10 @@ import os
 # Defining the pages based on the directory structure
 pages = {
     "Vistas": [
-        st.Page("pages/1_views/2_catalog.py", title="Catalogo", icon=render_icon("catalog"), default=True),
-        st.Page("pages/1_views/3_model_page.py", title="Model Details", icon=render_icon("projects")),
-        st.Page("pages/1_views/4_how_to_use.py", title="Guias", icon=render_icon("documentation")),
-        st.Page("pages/others/model_details.py", title="view Model", visibility="hidden")
+        st.Page("pages/1_views/1_catalog.py", title="Catalogo", icon=render_icon("catalog"), default=True),
+        st.Page("pages/1_views/2_model_details.py", title="Model Details", icon=render_icon("projects")),
+        st.Page("pages/1_views/3_documentation.py", title="Documentación", icon=render_icon("documentation")),
+        st.Page("pages/1_views/4_guides.py", title="Guias", icon=render_icon("lineage")),
     ],
 }
 
@@ -29,13 +29,12 @@ pages = {
 is_local = os.environ.get("ENVIRONMENT", "local").lower() == "local"
 if is_local:
     pages["Desarrollo"] = [
-        st.Page("pages/3_dev/1_staging.py", title="Staging", icon=render_icon("staging")),
-        st.Page("pages/3_dev/2_intermediate.py", title="Intermediate", icon=render_icon("intermediate")),
-        st.Page("pages/3_dev/3_marts.py", title="Marts", icon=render_icon("marts")),
-        st.Page("pages/3_dev/4_exposures.py", title="Exposures", icon=render_icon("exposures")),
+        st.Page("pages/2_dev/1_staging.py", title="Staging", icon=render_icon("staging")),
+        st.Page("pages/2_dev/2_intermediate.py", title="Intermediate", icon=render_icon("intermediate")),
+        st.Page("pages/2_dev/3_marts.py", title="Marts", icon=render_icon("marts")),
+        st.Page("pages/2_dev/4_exposures.py", title="Exposures", icon=render_icon("exposures")),
     ]
 
-# Only expose the development environment tabs locally
 
 
 

@@ -32,8 +32,8 @@ def build_global_model_registry(root_path="models"):
                 
                 # If you want to use st.page_link("pages/others/view_model.py", query_params={"model": model_name_full})
                 # or native LinkColumn URL:
-                # The url points to the root of the app, handled by app.py query params intercept via st.switch_page
-                link = f"/?model={model_name_full}"
+                # The url points directly to the model_details page
+                link = f"model_details?model={model_name_full}"
                 
                 records.append({
                     "schema": schema,
