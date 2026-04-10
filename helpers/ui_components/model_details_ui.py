@@ -7,7 +7,7 @@ from helpers.ui_components.render_model_documentation import render_model_docume
 
 def render_model_details(model_name: str):
     if model_name:
-        st.header(f"Model: {model_name}")
+        st.markdown(f"# Model: `{model_name}`")
         
         df = find_model(model_name)
         
