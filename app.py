@@ -44,16 +44,6 @@ with st.sidebar:
     st.caption(f"{get_git_version()}")
     
     st.divider()
-    
-    # current_theme = get_current_theme()
-    # is_light = current_theme == "light"
-    
-    # def on_theme_change():
-    #     new_theme = "light" if st.session_state.theme_toggle else "dark"
-    #     if new_theme != current_theme:
-    #         set_theme(new_theme)
-            
-    # st.toggle("Modo Claro", value=is_light, key="theme_toggle", on_change=on_theme_change)
 
 # --- NAVIGATION ---
 pg = st.navigation(pages)
@@ -61,7 +51,7 @@ pg = st.navigation(pages)
 if "model" in st.query_params:
     st.session_state["selected_model"] = st.query_params["model"]
     if pg.title != "view Model":
-        st.switch_page("pages/others/model_details.py")
+        st.switch_page("pages/1_views/2_model_details.py")
 
 # --- RUN NAVIGATION ---
 pg.run()
