@@ -1,7 +1,7 @@
 import streamlit as st
 
 from helpers.ui_components.render_docs import render_markdown_file
-from helpers.ui_components.icons import render_icon
+from helpers.ui_components.render_icon import render_icon
 
 st.set_page_config(page_title="Guias de Uso", layout="wide")
 

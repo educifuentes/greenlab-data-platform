@@ -1,6 +1,7 @@
 import streamlit as st
 
-from helpers.ui_components.icons import ICONS, render_icon
+from helpers.constants.icons import ICONS
+from helpers.ui_components.render_icon import render_icon
 from helpers.utilities.get_version import get_git_version
 from helpers.utilities.theme_manager import get_current_theme, set_theme
 

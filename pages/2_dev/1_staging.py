@@ -4,7 +4,7 @@ from helpers.utilities.model_catalog import build_global_model_registry
 from helpers.utilities.find_model import find_model
 
 from helpers.ui_components.render_model import render_model_ui
-from helpers.ui_components.icons import render_icon
+from helpers.ui_components.render_icon import render_icon
 
 st.title("Staging")
 
