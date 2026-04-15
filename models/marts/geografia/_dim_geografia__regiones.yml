@@ -1,0 +1,10 @@
+models:
+  - name: _dim_geografia__regiones
+    description: "Tabla dimensión que contiene el catálogo de las regiones del país, construido a partir de los códigos maestros geográficos."
+    columns:
+      - name: codigo_region
+        description: "Código identificador único de la región."
+      - name: nombre_region
+        description: "Nombre oficial y descriptivo de la región."
+      - name: abreviacion_region
+        description: "Sigla, número romano o nombre corto frecuentemente utilizado para referirse a la región."

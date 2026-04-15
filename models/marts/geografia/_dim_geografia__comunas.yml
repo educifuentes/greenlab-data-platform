@@ -1,0 +1,12 @@
+models:
+  - name: _dim_geografia__comunas
+    description: "Tabla dimensión que contiene el catálogo de todas las comunas, construido a partir de los códigos maestros geográficos."
+    columns:
+      - name: codigo_comuna
+        description: "Código identificador único asignado a la comuna."
+      - name: nombre_comuna
+        description: "Nombre descriptivo y oficial de la comuna."
+      - name: codigo_provincia
+        description: "Código de la provincia a la que pertenece la comuna (llave foránea)."
+      - name: codigo_region
+        description: "Código de la región a la que pertenece (opcional, en caso de estar desnormalizado)."

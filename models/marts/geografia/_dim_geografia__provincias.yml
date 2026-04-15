@@ -1,0 +1,10 @@
+models:
+  - name: _dim_geografia__provincias
+    description: "Tabla dimensión que contiene el catálogo de las distintas provincias territoriales, construido a partir de los códigos maestros geográficos."
+    columns:
+      - name: codigo_provincia
+        description: "Código identificador único de la provincia."
+      - name: nombre_provincia
+        description: "Nombre descriptivo y oficial de la provincia."
+      - name: codigo_region
+        description: "Código de la región a la que está adscrita territorialmente la provincia (llave foránea)."

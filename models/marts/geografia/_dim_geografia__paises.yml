@@ -1,0 +1,10 @@
+models:
+  - name: _dim_geografia__paises
+    description: "Tabla dimensión que contiene el catálogo de países, construido a partir de los códigos maestros geográficos."
+    columns:
+      - name: codigo_pais
+        description: "Código identificador único del país."
+      - name: nombre_pais
+        description: "Nombre oficial del país."
+      - name: iso_code
+        description: "Código ISO de dos o tres letras correspondiente al país."
