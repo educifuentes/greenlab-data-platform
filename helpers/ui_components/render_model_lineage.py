@@ -1,7 +1,7 @@
 import streamlit as st
-import streamlit_mermaid as st_mm
 
 from helpers.widgets.generate_lineage_chart import generate_lineage_chart
+from helpers.ui_components.render_mermaid import render_mermaid
 
 def render_model_lineage(df):
     """
@@ -11,7 +11,7 @@ def render_model_lineage(df):
     
     mermaid_code = generate_lineage_chart(df)
     
-    st_mm.st_mermaid(mermaid_code, height=400)
+    render_mermaid(mermaid_code, height=400)
     
     with st.expander("Raw Metadata"):
         st.write(df.attrs)

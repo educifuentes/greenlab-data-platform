@@ -2,11 +2,9 @@
 
 Data se desarrolla en 4 capas, cada una con su propósito definido.
 
-![Data Pipeline](assets/images/model_layers.jpeg)
+## Modelado en Capas
 
-## Concepto: Modelado en Capas
-
-El modelado en capas divide los modelos de datos en diferentes fases lógicas para simplificar la estructura del proyecto. El objetivo es proporcionar un marco de trabajo fácil de mantener y escalar.
+Modulariza el desarollo de datos en diferentes fases lógicas para simplificar la estructura del proyecto.
 
 ### Layers:
 
