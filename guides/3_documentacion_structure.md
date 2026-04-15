@@ -48,32 +48,21 @@ models:
 
 ### Metrics
 
-Las métricas del negocio se definen por esquema en un archivo `<esquema>_metrics.yml` dentro de la carpeta `models/metrics/<esquema>/`. Las métricas se agrupan lógica y funcionalmente, especificando fórmulas de cálculo, unidades y descripción para alimentar la interfaz de documentación.
+Las métricas del negocio se definen por esquema en un archivo `<esquema>_metrics.yml` directamente dentro de la carpeta `models/metrics/`. Las métricas se definen como una lista plana, especificando a qué grupo pertenecen, fórmulas de cálculo, unidades y descripción para alimentar la interfaz de documentación.
 
-**Ejemplo:** `models/metrics/termoelectricas/termoelectricas_metrics.yml`
+**Ejemplo:** `models/metrics/termoelectricas_metrics.yml`
 
 ```yaml
 metrics:
-  - group_name: Emisiones Termoeléctricas
-    description: "Indicadores de seguimiento sobre las emisiones generadas por las centrales termoeléctricas."
-    columns:
-      - name: "Emisiones CO2 Totales"
-        description: "Suma total de emisiones de Dióxido de Carbono en el periodo evaluado."
-        calculation: "Sum(emisiones_co2_toneladas)"
-        unidad: "toneladas"
+  - name: "Emisiones CO2 Totales"
+    group_name: "Emisiones Termoeléctricas"
+    description: "Suma total de emisiones de Dióxido de Carbono en el periodo evaluado."
+    calculation: "Suma de emisiones_co2_toneladas"
+    unidad: "toneladas"
 
-      - name: "Emisiones MP Totales"
-        description: "Suma total de Material Particulado emitido en el periodo evaluado."
-        calculation: "Sum(emisiones_mp_toneladas)"
-        unidad: "toneladas"
-
-      - name: "Intensidad de Emisión CO2"
-        description: "Emisiones de CO2 por unidad de energía generada (tCO2 / MWh)."
-        calculation: "Sum(emisiones_co2_toneladas) / Sum(energia_generada_mwh)"
-        unidad: "tCO2 / MWh"
-
-      - name: "Centrales con Límites Excedidos"
-        description: "Cantidad de centrales termoeléctricas que superaron el límite permitido de emisiones mensuales."
-        calculation: "Count(distinct central_id) where limite_excedido = True"
-        unidad: "cantidad"
+  - name: "Emisiones MP Totales"
+    group_name: "Emisiones Termoeléctricas"
+    description: "Suma total de Material Particulado emitido en el periodo evaluado."
+    calculation: "Suma de emisiones_mp_toneladas"
+    unidad: "toneladas"
 ```

@@ -2,9 +2,7 @@
 
 Data se desarrolla en 4 capas, cada una con su propósito definido.
 
-## Modelado en Capas
-
-Modulariza el desarollo de datos en diferentes fases lógicas para simplificar la estructura del proyecto.
+![Data Pipeline](assets/images/data_pipeline_layers.png)
 
 ### Layers:
 

@@ -60,26 +60,28 @@ def render_metrics_documentation(schema: str):
                 docs = yaml.safe_load(f)
                 
             if docs and "metrics" in docs:
-                for metric_group in docs["metrics"]:
-                    group_name = metric_group.get("group_name", "Métricas")
-                    desc = metric_group.get("description", "")
-                    
+                metrics_list = docs["metrics"]
+                
+                # Group metrics by group_name
+                groups = {}
+                for m in metrics_list:
+                    g_name = m.get("group_name", "Métricas")
+                    if g_name not in groups:
+                        groups[g_name] = []
+                    groups[g_name].append(m)
+                
+                for group_name, cols in groups.items():
                     with st.expander(f"{group_name}", expanded=True):
-                        if desc:
-                            st.write(desc)
+                        st.markdown("#### Detalles de las Métricas")
+                        md_table = "| Métrica | Descripción | Cálculo | Unidad |\n|---|---|---|---|\n"
+                        for col in cols:
+                            col_name = col.get("name", "")
+                            col_desc = col.get("description", "")
+                            col_calc = col.get("calculation", "")
+                            col_unit = col.get("unidad", "")
                             
-                        columns = metric_group.get("columns", [])
-                        if columns:
-                            st.markdown("#### Detalles de las Métricas")
-                            md_table = "| Métrica | Descripción | Cálculo | Unidad |\n|---|---|---|---|\n"
-                            for col in columns:
-                                col_name = col.get("name", "")
-                                col_desc = col.get("description", "")
-                                col_calc = col.get("calculation", "")
-                                col_unit = col.get("unidad", "")
-                                
-                                md_table += f"| `{col_name}` | {col_desc} | {col_calc} | {col_unit} |\n"
-                            st.markdown(md_table)
+                            md_table += f"| `{col_name}` | {col_desc} | {col_calc} | {col_unit} |\n"
+                        st.markdown(md_table)
                 return
         except Exception as e:
             st.error(f"Error leyendo la documentación YAML de métricas: {e}")
