@@ -1,6 +1,56 @@
 import streamlit as st
 import yaml
 import os
+import re
+
+from helpers.ui_components.render_mermaid import render_mermaid
+
+def render_markdown_file(file_path: str):
+    """
+    Renders a markdown file supporting both local images (via st.image) and 
+    Mermaid diagrams (via st_mm).
+    """
+    if not os.path.exists(file_path):
+        st.error(f"Guide file not found: {file_path}")
+        return
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Pattern matches either a mermaid block OR an image markdown tag
+    # Group 1: Mermaid code
+    # Group 2: Image alt text
+    # Group 3: Image path
+    pattern = r"```mermaid\n(.*?)\n```|!\[(.*?)\]\((.*?)\)"
+    
+    last_idx = 0
+    for match in re.finditer(pattern, content, flags=re.DOTALL):
+        start, end = match.span()
+        
+        # Render markdown before the matched block
+        text_before = content[last_idx:start]
+        if text_before.strip():
+            st.markdown(text_before)
+            
+        if match.group(1) is not None:
+            # It's a mermaid block
+            mermaid_code = match.group(1).strip()
+            render_mermaid(mermaid_code)
+        elif match.group(2) is not None:
+            # It's an image
+            alt_text = match.group(2)
+            img_path = match.group(3)
+            if os.path.exists(img_path):
+                st.image(img_path, caption=alt_text, width=400)
+            else:
+                st.markdown(match.group(0)) # fallback
+                
+        last_idx = end
+        
+    # Render remaining markdown
+    remaining_text = content[last_idx:]
+    if remaining_text.strip():
+        st.markdown(remaining_text)
 
 def get_simple_type(t):
     if not t: return "---"
