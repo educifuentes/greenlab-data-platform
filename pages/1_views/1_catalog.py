@@ -10,14 +10,13 @@ st.title(f"{render_icon('logo')} Greenlab Data Platform")
 
 st.markdown(
     "Bienvenido a la plataforma central de gobierno de datos de Greenlab! \n\n"
-    "Explora y descubre nuestro ecosistema de información, diseñado para asegurar "
-    "la trazabilidad, calidad y transparencia en cada capa de nuestros modelos analíticos."
 )
 
+st.caption("Explora y descubre nuestro ecosistema de información, diseñado para asegurar la trazabilidad, calidad y transparencia en cada capa de nuestros modelos analíticos.")
 
 
-st.subheader(f"{render_icon('catalog')} Catalog")
-st.markdown("Browse and search across all multi-schema models registered in the codebase.")
+
+st.subheader(f"{render_icon('catalog')} Catálogo")
 
 # Generate Catalog data dynamically
 df_catalog = build_global_model_registry("models")
