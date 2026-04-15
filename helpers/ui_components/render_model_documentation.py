@@ -40,6 +40,12 @@ def render_model_documentation(model_name: str):
                                     col_desc = col.get("description", "")
                                     md_table += f"| `{col_name}` | {col_desc} |\n"
                                 st.markdown(md_table)
+                            
+                            metrics = model_doc.get("metrics", [])
+                            if metrics:
+                                st.markdown("#### Métricas Asociadas")
+                                for m in metrics:
+                                    st.write(f"- `{m}`")
                             return
             except Exception as e:
                 st.error(f"Error leyendo la documentación YAML: {e}")
