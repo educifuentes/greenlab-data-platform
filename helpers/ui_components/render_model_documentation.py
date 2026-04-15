@@ -77,6 +77,7 @@ def render_metrics_documentation(schema: str):
                                 col_desc = col.get("description", "")
                                 col_calc = col.get("calculation", "")
                                 col_unit = col.get("unidad", "")
+                                
                                 md_table += f"| `{col_name}` | {col_desc} | {col_calc} | {col_unit} |\n"
                             st.markdown(md_table)
                 return
