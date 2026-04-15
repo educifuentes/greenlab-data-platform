@@ -1,7 +1,5 @@
 # Data Pipeline
 
-Desarrollo en capas
-
 @[render_data_pipeline_chart]
 
 ### Capas:
@@ -12,4 +10,4 @@ Desarrollo en capas
 3. **Marts:** Datasets curados "fuente de verdad". Toman forma de Hechos (facts) o dimensiones (dim).
 4. **Exposures:** Combinaciones de los mart models optimizadas para el consumo de herramientas de visualización y análisis (Tableau, R, etc.) (tablas agregadas o formato long wide segun mejor caso de uso)
 
-Nota: inspirado modleo de datos usado por [dbt](https://www.getdbt.com/blog/modular-data-modeling-techniques)
+Nota: inspirado modelado de datos usado por [dbt](https://www.getdbt.com/blog/modular-data-modeling-techniques)
