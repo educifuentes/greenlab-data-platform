@@ -17,11 +17,12 @@ def render_markdown_file(file_path: str):
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Pattern matches either a mermaid block OR an image markdown tag
+    # Pattern matches either a mermaid block OR an image markdown tag OR an embedded component
     # Group 1: Mermaid code
     # Group 2: Image alt text
     # Group 3: Image path
-    pattern = r"```mermaid\n(.*?)\n```|!\[(.*?)\]\((.*?)\)"
+    # Group 4: Component name e.g. @[component_name]
+    pattern = r"```mermaid\n(.*?)\n```|!\[(.*?)\]\((.*?)\)|@\[(.*?)\]"
     
     last_idx = 0
     for match in re.finditer(pattern, content, flags=re.DOTALL):
@@ -42,6 +43,14 @@ def render_markdown_file(file_path: str):
             img_path = match.group(3)
             if os.path.exists(img_path):
                 st.image(img_path, caption=alt_text, width=400)
+            else:
+                st.markdown(match.group(0)) # fallback
+        elif match.group(4) is not None:
+            # It's a special UI component injection
+            component_name = match.group(4)
+            if component_name == "render_data_pipeline_chart":
+                from helpers.ui_components.data_pipeline_chart import render_data_pipeline_chart
+                render_data_pipeline_chart()
             else:
                 st.markdown(match.group(0)) # fallback
                 

@@ -2,7 +2,7 @@
 
 Desarrollo en capas
 
-![Data Pipeline](assets/images/data_pipeline_layers.png)
+@[render_data_pipeline_chart]
 
 ### Capas:
 
