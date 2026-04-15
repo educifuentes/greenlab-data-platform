@@ -52,7 +52,7 @@ def render_metrics_documentation(schema: str):
     Looks for a <schema>_metrics.yml file inside models/metrics/<schema>/ 
     and renders the metrics documentation.
     """
-    yml_path = os.path.join("models", "metrics", schema, f"{schema}_metrics.yml")
+    yml_path = os.path.join("models", "metrics", f"{schema}_metrics.yml")
     
     if os.path.exists(yml_path):
         try:
@@ -64,19 +64,20 @@ def render_metrics_documentation(schema: str):
                     group_name = metric_group.get("group_name", "Métricas")
                     desc = metric_group.get("description", "")
                     
-                    with st.expander(f"Grupo: {group_name}", expanded=False):
+                    with st.expander(f"{group_name}", expanded=True):
                         if desc:
                             st.write(desc)
                             
                         columns = metric_group.get("columns", [])
                         if columns:
                             st.markdown("#### Detalles de las Métricas")
-                            md_table = "| Métrica | Descripción | Cálculo |\n|---|---|---|\n"
+                            md_table = "| Métrica | Descripción | Cálculo | Unidad |\n|---|---|---|---|\n"
                             for col in columns:
                                 col_name = col.get("name", "")
                                 col_desc = col.get("description", "")
                                 col_calc = col.get("calculation", "")
-                                md_table += f"| `{col_name}` | {col_desc} | {col_calc} |\n"
+                                col_unit = col.get("unidad", "")
+                                md_table += f"| `{col_name}` | {col_desc} | {col_calc} | {col_unit} |\n"
                             st.markdown(md_table)
                 return
         except Exception as e:

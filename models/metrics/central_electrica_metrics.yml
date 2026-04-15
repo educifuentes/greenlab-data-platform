@@ -1,0 +1,23 @@
+metrics:
+  - group_name: Generación Eléctrica
+    description: "Métricas consolidadas sobre la generación de energía de las distintas centrales eléctricas."
+    columns:
+      - name: "Energía Total Generada"
+        description: "Suma total de la generación de energía para todas las horas (hora_1 hasta hora_24)."
+        calculation: "Sum(hora_1 + ... + hora_24)"
+        unidad: "MWh"
+
+      - name: "Generación Renovable (ERNC)"
+        description: "Energía generada exclusivamente por aquellas fuentes definidas como ERNC (Energía Renovable No Convencional)."
+        calculation: "Sum(hora_1 + ... + hora_24) where energia_tipo = 'ERNC'"
+        unidad: "MWh"
+
+      - name: "Plantas en Operación"
+        description: "Cantidad de centrales únicas reportando generación en el periodo evaluado."
+        calculation: "Count(distinct llave_nombre)"
+        unidad: "cantidad"
+
+      - name: "Aporte por Tipo de Fuente"
+        description: "Cantidad de energía agrupada por fuente (Solar, Eólica, Térmica, etc.)."
+        calculation: "Sum(Total Generado) group by fuente_tipo"
+        unidad: "MWh"
