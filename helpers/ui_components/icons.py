@@ -5,34 +5,29 @@ ICONS = {
     "home": "home",
     "catalog": "view_list",
     "documentation": "article",
-    "projects": "rocket",
-    "metrics": "calculate",
-    "not_apply": "circle",
-    "query": "query_stats",
-    "lineage": "layers",
     "guides": "help_center",
-    # other pages
+    # validations   
+    "check": "check_box",
+    "warning": "warning",
+    "close": "close",
+    # schemas
+    # energia
+    "contaminantes": "co2",
+    "censos": "family_group",
+    # data pipeline stages
+    "sources": "database_upload",
+    "staging": "steppers",
+    "intermediate": "factory",
+    "marts": "rocket",
+    "exposures": "bar_chart_4_bars",
+    # misc
     "dashboard": "dashboard",
     "search": "search",
     "layers": "layers_clear",
     "settings": "settings_input_component",
     "database": "database",
-    # validations   
-    "check": "check_box",
-    "warning": "warning",
-    "close": "close",
-    # models
-    # censos
-    "person": "person",
-    "hogares": "family_group",
-    # energia
-    "contaminantes": "co2",
-    "censos": "family_group",
-    # dev data build
-    "staging": "steppers",
-    "intermediate": "factory",
-    "marts": "rocket",
-    "exposures": "bar_chart_4_bars",
+    "projects": "rocket",
+    "metrics": "calculate",
 }
 
 def render_icon(icon_key: str) -> str:
