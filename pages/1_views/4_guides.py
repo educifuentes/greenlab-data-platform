@@ -14,12 +14,12 @@ st.markdown("Essential information for developing and contributing to the Greenl
 # Define the guides and their corresponding files
 guides = {
     "Data Pipeline": "guides/1_data_pipeline.md",
-    "Folder Structure": "guides/2_folder_structure_models.md",
-    "YAML Structure": "guides/3_yaml_files_structure.md",
-    "Naming Conventions": "guides/4_naming_conventions.md",
-    "Best Practices": "guides/5_best_practices.md",
+    "Folder and File Structure": "guides/2_folder_structure_models.md",
+    "Documentacion": "guides/3_documentacion_structure.md",
+    "Buenas Practicas": "guides/5_best_practices.md",
     "Git Workflow": "guides/6_git_workflow.md",
-    "Development Setup": "guides/7_development_setup.md"
+    "Development Setup": "guides/7_development_setup.md",
+    "Cloud Hosting": "guides/8_cloud_hosting.md"
 }
 
 # Create tabs

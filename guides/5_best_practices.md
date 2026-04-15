@@ -6,7 +6,9 @@ Orden en las importaciones:
 2. Modelos
 3. Helpers (funciones auxiliares)
 
-# Algunos Principios
+- Organziar helpers en carpetas por tipo, ej. helpers/ui o utilities/data.
+
+# Algunos Principios de Código Limpio
 
 Responsabilidad Única (Single Responsibility):
 Una función debe hacer una cosa y solo una.

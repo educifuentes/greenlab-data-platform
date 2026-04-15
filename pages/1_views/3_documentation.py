@@ -22,9 +22,8 @@ if not df_marts.empty:
         
         for tab, schema in zip(tabs, schemas):
             with tab:
-                st.header(f"Esquema: {schema.replace('_', ' ').title()}")
+                st.subheader(f"Schema: {schema.replace('_', ' ').title()}")
                 
-                # Crear dos sub-pestañas: Tablas y Métricas
                 tab_tables, tab_metrics = st.tabs(["Modelos", "Métricas"])
                 
                 with tab_tables:

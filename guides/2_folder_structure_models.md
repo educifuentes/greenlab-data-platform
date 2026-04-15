@@ -1,6 +1,6 @@
-# Directory Structure Guidelines
+# Folder and File Conventions
 
-This boilerplate project follows a modern data pipeline structure, loosely inspired by dbt layout paradigms but fully natively written in Python and Pandas. 
+This boilerplate project follows a modern data pipeline structure, loosely inspired by dbt layout paradigms but fully natively written in Python and Pandas.
 
 ```text
 models/
@@ -13,4 +13,16 @@ models/
 ```
 
 ## Creating a new schema
+
 When creating models for a new data schema (e.g. `ecommerce`, `marketing`), ensure that subdirectories exist per layer: `models/staging/ecommerce`, `models/marts/ecommerce`, etc., to enforce semantic boundaries.
+
+# Convenciones de Nombres
+
+## Modelos
+
+Formato: `_<capa>_<esquema>__<nombre_tabla>.py`
+
+### Ejemplos:
+
+- `_stg_generacion_electrica__energia_centrales_00_15.py`
+- `_int_generacion_electrica__energia_centrales_00_15.py`
