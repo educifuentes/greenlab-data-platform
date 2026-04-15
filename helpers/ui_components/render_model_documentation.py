@@ -18,7 +18,7 @@ def render_model_documentation(model_name: str):
         stage = model_row.iloc[0]["stage"]
         
         # Build the expected path for the yaml configuration inside the exact same folder
-        yml_path = os.path.join("models", schema, stage, f"{model_name}.yml")
+        yml_path = os.path.join("models", stage, schema, f"{model_name}.yml")
         
         if os.path.exists(yml_path):
             try:
