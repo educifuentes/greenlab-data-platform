@@ -29,3 +29,5 @@ ICONS = {
     "projects": "rocket",
     "metrics": "calculate",
 }
+
+# fuente: https://fonts.google.com/icons
