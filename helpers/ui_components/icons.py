@@ -10,6 +10,7 @@ ICONS = {
     "not_apply": "circle",
     "query": "query_stats",
     "lineage": "layers",
+    "guides": "help_center",
     # other pages
     "dashboard": "dashboard",
     "search": "search",

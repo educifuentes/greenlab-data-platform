@@ -8,7 +8,7 @@ from helpers.ui_components.icons import render_icon
 st.set_page_config(page_title="Guias de Uso", layout="wide")
 
 # Page settings and header
-st.title("User Guides")
+st.title(f"{render_icon('guides')} Guias de Uso")
 st.markdown("Essential information for developing and contributing to the Greenlab Data Platform.")
 
 # Define the guides and their corresponding files

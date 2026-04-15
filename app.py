@@ -42,6 +42,7 @@ if is_local:
 with st.sidebar:
     st.markdown(f"# {render_icon('logo')} Greenlab")
     st.caption(f"{get_git_version()}")
+    st.markdown("[Source Code](https://github.com/educifuentes/greenlab-data-platform)")
     
     st.divider()
 
