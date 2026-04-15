@@ -15,10 +15,10 @@ ICONS = {
     "contaminantes": "co2",
     "censos": "family_group",
     # data pipeline stages
-    "sources": "database_upload",
-    "staging": "steppers",
+    "sources": "cards_stack",
+    "staging": "database_upload",
     "intermediate": "factory",
-    "marts": "rocket",
+    "marts": "hub",
     "exposures": "bar_chart_4_bars",
     # misc
     "dashboard": "dashboard",

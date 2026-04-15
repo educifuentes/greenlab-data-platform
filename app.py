@@ -23,6 +23,7 @@ pages = {
         st.Page("pages/1_views/2_model_details.py", title="Modelos", icon=render_icon("projects")),
         st.Page("pages/1_views/3_documentation.py", title="Documentación", icon=render_icon("documentation")),
         st.Page("pages/1_views/4_guides.py", title="Guias de Uso", icon=render_icon("lineage")),
+        st.Page("pages/1_views/5_demo.py", title="Demo", icon=render_icon("demo")),
     ],
 }
 

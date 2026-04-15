@@ -1,13 +1,15 @@
 # Data Pipeline
 
-Data se desarrolla en 4 capas, cada una con su propósito definido.
+Desarrollo en capas
 
 ![Data Pipeline](assets/images/data_pipeline_layers.png)
 
-### Layers:
+### Capas:
 
-0. **Sources:** Se definen los orígenes en `sources.yml`, representando los datos crudos del data warehouse.
+0. **Sources:** Data raw en variedad de formatos (excels, csv, json, bases de datos, APIs, etc.)
 1. **Staging:** Cada fuente se asocia 1 a 1 a un modelo staging. Preparan la base cruda siendo los bloques de construcción más pequeños del proyecto.
 2. **Intermediate:** Se aplican transformaciones, joins y lógica de negocio. Generan componentes modulares reutilizables para no duplicar código en pasos futuros.
-3. **Marts:** Modelos finales, se combinan modelos anteriores para llegar a tablas curadas de Hechos (facts) o dimensiones (dim).
-4. **Exposures:** Tablas optimizadas para ser consumidas por herramientas de visualización y análisis (Tableau, R, PowerBI, etc.).
+3. **Marts:** Datasets curados "fuente de verdad". Toman forma de Hechos (facts) o dimensiones (dim).
+4. **Exposures:** Combinaciones de los mart models optimizadas para el consumo de herramientas de visualización y análisis (Tableau, R, etc.) (tablas agregadas o formato long wide segun mejor caso de uso)
+
+Nota: inspirado modleo de datos usado por [dbt](https://www.getdbt.com/blog/modular-data-modeling-techniques)
