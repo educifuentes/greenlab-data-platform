@@ -1,0 +1,23 @@
+metrics:
+  - group_name: Emisiones Termoeléctricas
+    description: "Indicadores de seguimiento sobre las emisiones generadas por las centrales termoeléctricas."
+    columns:
+      - name: "Emisiones CO2 Totales"
+        description: "Suma total de emisiones de Dióxido de Carbono en el periodo evaluado."
+        calculation: "Sum(emisiones_co2_toneladas)"
+        unidad: "toneladas"
+
+      - name: "Emisiones MP Totales"
+        description: "Suma total de Material Particulado emitido en el periodo evaluado."
+        calculation: "Sum(emisiones_mp_toneladas)"
+        unidad: "toneladas"
+
+      - name: "Intensidad de Emisión CO2"
+        description: "Emisiones de CO2 por unidad de energía generada (tCO2 / MWh)."
+        calculation: "Sum(emisiones_co2_toneladas) / Sum(energia_generada_mwh)"
+        unidad: "tCO2 / MWh"
+
+      - name: "Centrales con Límites Excedidos"
+        description: "Cantidad de centrales termoeléctricas que superaron el límite permitido de emisiones mensuales."
+        calculation: "Count(distinct central_id) where limite_excedido = True"
+        unidad: "cantidad"

@@ -46,3 +46,41 @@ def render_model_documentation(model_name: str):
                 return
                 
     st.info("No hay documentación (archivo .yml) disponible para este modelo.")
+
+def render_metrics_documentation(schema: str):
+    """
+    Looks for a <schema>_metrics.yml file inside models/metrics/<schema>/ 
+    and renders the metrics documentation.
+    """
+    yml_path = os.path.join("models", "metrics", schema, f"{schema}_metrics.yml")
+    
+    if os.path.exists(yml_path):
+        try:
+            with open(yml_path, 'r', encoding='utf-8') as f:
+                docs = yaml.safe_load(f)
+                
+            if docs and "metrics" in docs:
+                for metric_group in docs["metrics"]:
+                    group_name = metric_group.get("group_name", "Métricas")
+                    desc = metric_group.get("description", "")
+                    
+                    with st.expander(f"Grupo: {group_name}", expanded=False):
+                        if desc:
+                            st.write(desc)
+                            
+                        columns = metric_group.get("columns", [])
+                        if columns:
+                            st.markdown("#### Detalles de las Métricas")
+                            md_table = "| Métrica | Descripción | Cálculo |\n|---|---|---|\n"
+                            for col in columns:
+                                col_name = col.get("name", "")
+                                col_desc = col.get("description", "")
+                                col_calc = col.get("calculation", "")
+                                md_table += f"| `{col_name}` | {col_desc} | {col_calc} |\n"
+                            st.markdown(md_table)
+                return
+        except Exception as e:
+            st.error(f"Error leyendo la documentación YAML de métricas: {e}")
+            return
+            
+    st.info("No hay documentación de métricas (archivo .yml) disponible para este esquema.")

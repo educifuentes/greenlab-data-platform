@@ -1,12 +1,12 @@
 import streamlit as st
 
 from helpers.utilities.model_catalog import build_global_model_registry
-from helpers.ui_components.render_model_documentation import render_model_documentation
+from helpers.ui_components.render_model_documentation import render_model_documentation, render_metrics_documentation
 from helpers.ui_components.icons import render_icon
 
 st.set_page_config(page_title="Documentation", layout="wide")
 
-st.title("Documentación")
+st.title(f"{render_icon('documentation')} Documentación")
 
 # Get model catalog
 df_catalog = build_global_model_registry()
@@ -24,12 +24,19 @@ if not df_marts.empty:
             with tab:
                 st.header(f"Esquema: {schema.replace('_', ' ').title()}")
                 
-                schema_models = df_marts[df_marts["schema"] == schema]
+                # Crear dos sub-pestañas: Tablas y Métricas
+                tab_tables, tab_metrics = st.tabs(["Modelos", "Métricas"])
                 
-                for _, row in schema_models.iterrows():
-                    model_name = row["model"]
-                    with st.expander(f"Modelo: {model_name}", expanded=False):
-                        render_model_documentation(model_name)
+                with tab_tables:
+                    schema_models = df_marts[df_marts["schema"] == schema]
+                    
+                    for _, row in schema_models.iterrows():
+                        model_name = row["model"]
+                        with st.expander(f"`{model_name}`", expanded=False):
+                            render_model_documentation(model_name)
+                            
+                with tab_metrics:
+                    render_metrics_documentation(schema)
     else:
         st.info("No se encontraron esquemas en la etapa marts.")
 else:
