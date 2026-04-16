@@ -6,7 +6,7 @@ from models.marts.geografia._dim_geografia__regiones import dim_geografia__regio
 
 from helpers.utilities.build_model_lineage import build_model_lineage
 
-def exp_central_electrica_by_month():
+def exp_central_electrica_generado_por_mes_region():
     df = fct_central_electrica()
     
     # Identify the 24 hour columns

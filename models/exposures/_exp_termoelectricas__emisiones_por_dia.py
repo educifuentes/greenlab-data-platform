@@ -1,8 +1,9 @@
 import pandas as pd
-from models.exposures.termoelectricas._exp_termoelectricas__emisiones_long import exp_termoelectricas__emisiones_long
 
-def exp_termoelectricas__emisiones_by_day():
-    df = exp_termoelectricas__emisiones_long()
+from models.marts.termoelectricas._fct_termoelectricas__emisiones import fct_termoelectricas__emisiones
+
+def exp_termoelectricas__emisiones_por_dia():
+    df = fct_termoelectricas__emisiones()
     
     df['fecha'] = pd.to_datetime(df['fecha']).dt.floor('D')
     
