@@ -7,3 +7,4 @@ z_legacy_greenlab/*
 config/deploy.toml
 notes/*
 __pycache__
+z_archive/*
