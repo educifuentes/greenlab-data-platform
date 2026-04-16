@@ -33,7 +33,6 @@ def render_model_documentation(model_name: str):
                             
                             columns = model_doc.get("columns", [])
                             if columns:
-                                st.markdown("#### Diccionario de Datos")
                                 md_table = "| Columna | Descripción |\n|---|---|\n"
                                 for col in columns:
                                     col_name = col.get("name", "")

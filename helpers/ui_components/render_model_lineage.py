@@ -13,7 +13,7 @@ def render_model_lineage(df):
     
     render_mermaid(mermaid_code, height=400)
     
-    with st.expander("Raw Metadata"):
-        st.write(df.attrs)
+    # with st.expander("Raw Metadata"):
+    #     st.write(df.attrs)
 
 
