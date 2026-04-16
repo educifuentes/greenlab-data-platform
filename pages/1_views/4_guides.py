@@ -14,10 +14,10 @@ guides = {
     "Data Pipeline": "guides/1_data_pipeline.md",
     "Estructura de Carpetas": "guides/2_folder_structure_models.md",
     "Documentacion": "guides/3_documentacion_structure.md",
-    "Buenas Practicas": "guides/5_best_practices.md",
-    "Git Workflow": "guides/6_git_workflow.md",
-    "Development Setup": "guides/7_development_setup.md",
-    "Cloud Hosting": "guides/8_cloud_hosting.md"
+    # "Buenas Practicas": "guides/5_best_practices.md",
+    # "Git Workflow": "guides/6_git_workflow.md",
+    # "Development Setup": "guides/7_development_setup.md",
+    # "Cloud Hosting": "guides/8_cloud_hosting.md"
 }
 
 # Create tabs

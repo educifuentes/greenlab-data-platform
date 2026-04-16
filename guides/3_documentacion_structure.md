@@ -1,10 +1,6 @@
 # Documentación
 
-Esta guía explica cómo documentar correctamente las distintas capas de datos del proyecto: fuentes (sources), modelos (marts/intermediates/staging) y métricas. Toda la documentación se maneja a través de archivos YAML ubicados junto a los scripts o en su carpeta de esquema correspondiente.
-
 ### Sources
-
-Para documentar las fuentes de datos externas, se crea un archivo `_src_<esquema>.yml` en la carpeta correspondiente dentro de `models/sources/`. Este archivo lista la descripción general de la fuente, su origen (URL si aplica) y las tablas o archivos específicos de donde se lee.
 
 **Ejemplo:** `models/sources/geografia/_src_geografia.yml`
 
@@ -18,17 +14,11 @@ sources:
         path: seeds/geografia/cod_comuna.csv
       - name: codigos_provincia
         path: seeds/geografia/cod_provincia.csv
-      - name: codigos_region
-        path: seeds/geografia/cod_region.csv
-      - name: codigos_pais
-        path: seeds/geografia/cod_pais.csv
+      ...
+
 ```
 
 ### Models
-
-Los modelos (tablas derivadas, ya sean staging, intermediates o marts) se documentan con un archivo `.yml` que debe llevar exactamente el mismo nombre que el script de Python, pero con extensión `.yml`. Este archivo documenta tanto la descripción general del modelo como el diccionario de datos (columnas).
-
-**Ejemplo:** `models/marts/termoelectricas/_fct_termoelectricas__emisiones.yml`
 
 ```yaml
 models:
@@ -47,10 +37,6 @@ models:
 ```
 
 ### Metrics
-
-Las métricas del negocio se definen por esquema en un archivo `<esquema>_metrics.yml` directamente dentro de la carpeta `models/metrics/`. Las métricas se definen como una lista plana, especificando a qué grupo pertenecen, fórmulas de cálculo, unidades y descripción para alimentar la interfaz de documentación.
-
-**Ejemplo:** `models/metrics/termoelectricas_metrics.yml`
 
 ```yaml
 metrics:

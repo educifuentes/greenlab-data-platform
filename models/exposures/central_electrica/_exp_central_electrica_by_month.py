@@ -1,5 +1,9 @@
 import pandas as pd
+
 from models.marts.central_electrica._fct_central_electrica import fct_central_electrica
+from models.marts.geografia._dim_geografia__regiones import dim_geografia__regiones
+
+
 from helpers.utilities.build_model_lineage import build_model_lineage
 
 def exp_central_electrica_by_month():
@@ -21,14 +25,25 @@ def exp_central_electrica_by_month():
     # Generación Renovable (ERNC) calculation
     df['is_ernc'] = df.get('energia_tipo', 'Otro') == 'ERNC'
     df['generacion_renovable_ernc'] = df['energia_total_generada'] * df['is_ernc']
+
+    # save attrs before grouping/merging removes them
+    fct_attrs = df.attrs.copy()
+
+    # join wirh regiones
+    regiones = dim_geografia__regiones()
+    df = df.merge(regiones, left_on='region', right_on='region_nombre_completo', how='left')
     
     # Group by month and nombre_central and calculate metric aggregations
-    final_df = df.groupby(['month', 'nombre_central']).agg(
+    df = df.groupby(['month', 'id_region', 'region_corto']).agg(
         energia_total_generada=('energia_total_generada', 'sum'),
-        generacion_renovable_ernc=('generacion_renovable_ernc', 'sum'),
         plantas_en_operacion=('nombre_central', 'nunique')
     ).reset_index()
     
-    final_df.attrs.update(build_model_lineage())
+    # Restore original general attributes (without wiping out lineage logic)
+    df.attrs.update(fct_attrs)
+    df.attrs.update(regiones.attrs)
+    
+    # Rebuild complete lineage (will automatically find fct_attrs and regiones from locals)
+    df.attrs.update(build_model_lineage())
 
-    return final_df
+    return df

@@ -26,15 +26,23 @@ def build_model_lineage():
         if len(stack) > 1:
             caller_frame = stack[1].frame
             for var_name, var_val in list(caller_frame.f_locals.items()):
+                prev_models = None
+                
+                # Check for DataFrame-like objects with .attrs
                 if hasattr(var_val, 'attrs') and isinstance(var_val.attrs, dict):
                     prev_models = var_val.attrs.get("models", {})
-                    if isinstance(prev_models, dict):
-                        for prev_layer, prev_list in prev_models.items():
-                            if prev_layer not in models_dict:
-                                models_dict[prev_layer] = []
-                            for m_name in prev_list:
-                                if m_name not in models_dict[prev_layer]:
-                                    models_dict[prev_layer].append(m_name)
+                
+                # Also check for simple dicts that have a 'models' dict (like saved attrs)
+                elif isinstance(var_val, dict) and "models" in var_val and isinstance(var_val["models"], dict):
+                    prev_models = var_val["models"]
+                    
+                if isinstance(prev_models, dict):
+                    for prev_layer, prev_list in prev_models.items():
+                        if prev_layer not in models_dict:
+                            models_dict[prev_layer] = []
+                        for m_name in prev_list:
+                            if m_name not in models_dict[prev_layer]:
+                                models_dict[prev_layer].append(m_name)
     except Exception:
         pass
 
@@ -54,9 +62,9 @@ def build_model_lineage():
                             layer = 'staging'
                         elif src.startswith('int_'):
                             layer = 'intermediate'
-                        elif src.startswith('fct_') or src.startswith('fct_'):
+                        elif src.startswith('fct_') or src.startswith('dim_'):
                             layer = 'marts'
-                        elif src.startswith('exp_') or src.startswith('exp_'):
+                        elif src.startswith('exp_'):
                             layer = 'exposures'
                         else:
                             continue # Ignore non-model imports

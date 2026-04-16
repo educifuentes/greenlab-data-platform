@@ -1,28 +1,21 @@
-# Folder and File Conventions
+# Estructura de Carpetas y Archivos
 
-This boilerplate project follows a modern data pipeline structure, loosely inspired by dbt layout paradigms but fully natively written in Python and Pandas.
+Estrcutura de carpetas para los modelos:
 
 ```text
 models/
-├── sources/          # Declarative YAMLs defining where the data initially resides.
-├── staging/          # Light python wrappers / data cleaning (e.g. jaffle_shop, payments).
-├── intermediate/     # Complex joins, aggregations not yet a full fact or dimension.
-├── marts/            # The final business-ready tables (Fact/Dimension logic).
-├── metrics/          # Semantic definitions of metrics, KPIs and calculations.
-└── exposures/        # Final layer that directly serves a BI tool (e.g. Streamlit dashboard).
+├── sources/          # YAMLs que definen donde residen los datos.
+├── staging/          # 1 a 1 con una fuente
+├── intermediate/     # Uniones y agregaciones complejas que aún no son un hecho o dimensión.
+├── marts/            # Tablas listas para el negocio (lógica de hechos y dimensiones).
+├── metrics/          # Definiciones de métricas, KPIs y cálculos.
+└── exposures/        # Capa final que sirve directamente a una herramienta de BI (ej. Tableau)
 ```
-
-## Creating a new schema
-
-When creating models for a new data schema (e.g. `ecommerce`, `marketing`), ensure that subdirectories exist per layer: `models/staging/ecommerce`, `models/marts/ecommerce`, etc., to enforce semantic boundaries.
 
 # Convenciones de Nombres
 
 ## Modelos
 
-Formato: `_<capa>_<esquema>__<nombre_tabla>.py`
+Formato: `_<capa>_<schema>__<nombre_tabla>.py`
 
-### Ejemplos:
-
-- `_stg_generacion_electrica__energia_centrales_00_15.py`
-- `_int_generacion_electrica__energia_centrales_00_15.py`
+i.e. `_stg_generacion_electrica__energia_centrales_00_15.py`
