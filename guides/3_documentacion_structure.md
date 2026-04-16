@@ -7,7 +7,7 @@
 ```yaml
 sources:
   - name: geografia
-    description: "Archivo Codigos MAESTROS de Comunas/Provincias/Regiones. Descripcion todos los codigos de unidades geograficas de Chile de censos, casen, etc"
+    description: "Codigos maestros de comunas, provincias y regiones. Todos los codigos de unidades geograficas de Chile de censos, casen, etc"
     url: https://docs.google.com/spreadsheets/d/1hHXUhAbdMPKTNxaHNbzeBlHIlSsgzAXlc4u_r48V62Y/edit#gid=695826548
     tables:
       - name: codigos_comuna
@@ -31,8 +31,6 @@ models:
         description: "Nombre de la chimenea asociada a la UGE."
       - name: uge
         description: "Unidad Generadora Eléctrica."
-      - name: dia
-        description: "Fecha (agregación diaria)."
       # ... Puedes agregar cuantas columnas sean necesarias en este formato ...
 ```
 
