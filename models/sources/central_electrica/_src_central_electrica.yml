@@ -1,5 +1,5 @@
 sources:
-  - name: energia
+  - name: cenral electrica
     schema_url: https://www.dropbox.com/home/Datos/3_Datos_Originales/Energia
     description: central_electrica - energia generado por las centrales. generacion_centrales
     tables:
